@@ -20,7 +20,7 @@ CcVi3CZ_5_9$chromosome <- factor(c(rep(0, times=19), rep(1, times=19), rep(2, ti
 
 # Order according column "chromosome" (ascending) and then according chromosomal length (descending)
 ```
-CcVi3CZ_5_6 [order(CcVi3CZ_5_6$chromosome, -CcVi3CZ_5_6$d),]
+CcVi3CZ_5_6 <- CcVi3CZ_5_6 [order(CcVi3CZ_5_6$chromosome, -CcVi3CZ_5_6$d),]
 ```
 
 # column "no" added
