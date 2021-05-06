@@ -39,7 +39,7 @@ r <- sort(CCA$CcHe6Fi_1_2$r)
 ```
 r2, r3 ... r10
 
-table r_sorted for statistics of each ratio in each row:
+###table r_sorted for statistics of each ratio in each row:
 ```
 r_sorted <- data.frame(r=r, r2=r2, r3=r3, r4=r4, r5=r5, r6=r6, r7=r7, r8=r8, r9=r9, r10=r10)
 ```
