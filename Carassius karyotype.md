@@ -32,3 +32,9 @@ CcVi3CZ_5_6$no <- c(1:15, 1:37, 1:16, 1,2, 1:30)
 ```
 CCA <- list(CcVi3CZ_5_10=CcVi3CZ_5_10, CcVi3CZ_5_9=CcVi3CZ_5_9, CcVi3CZ_5_6=CcVi3CZ_5_6)
 ```
+
+# chromosome ratio "r" column extracted from each table and sorted ascendingly
+```
+r <- sort(CCA$CcHe6Fi_1_2$r)
+```
+
