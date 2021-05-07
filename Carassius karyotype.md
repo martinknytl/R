@@ -73,3 +73,14 @@ r_sorted[57, "mean"] <- mean (c(r_sorted[57, "r"], r_sorted[57, "r3"], r_sorted[
 ```
 row 58 contains 5 "Inf" values and 5 real "r" values and was considered as "Inf"
 
+### "Var" column = varriance
+
+varriance of arm ratio of each chromosome inserted into the new column
+
+```
+r_sorted$Var <- apply(r_sorted[,-c(11)], 1, var)
+```
+column 11 excluded because of "mean"
+
+An issue with values "Inf" in the comumn "Var" figured out in same way as it was in the case of mean.
+
