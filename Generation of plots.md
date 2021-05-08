@@ -7,6 +7,3 @@ error message in plot generation: *Error in plot.new() : figure margins too larg
 '''
 par(mar=c(1,1,1,1))
 '''
-´´´
-adsdsd
-´´´
