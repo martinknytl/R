@@ -3,6 +3,9 @@
 ```
 CcVi3CZ_5_5 <- data.frame(p4=p4, q4=q4, d4=q4-p4, r4=q4/p4, i4=100/((q4/p4)+1))
 ```
+```
+for(i in 1:100) {if(CGI1$i1[i]>=35.5) {CGI1$category[i] = "m"} else if (CGI1$i1[i]>=25 & CGI1$i1[i]<35.5){CGI1$category[i] = "sm"} else if (CGI1$i1[i]>=12.5 & CGI1$i1[i]<25){CGI1$category[i] = "st"} else if (CGI1$i1[i]>0 & CGI1$i1[i]<12.5) {CGI1$category[i] = "a"} else {CGI1$category[i] = "T"}}
+```
 
 ### Order in the table according to column "r4"
 
