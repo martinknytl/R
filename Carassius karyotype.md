@@ -6,8 +6,6 @@ CGI <- list (CGI_D10_6g=data.frame(p1=p1, q1=q1, lenght=p1+q1, d1=q1-p1, r1=q1/p
 ### decreasing order according centromeric index
 ```
 > CGI$CGI_D10_6g <- CGI$CGI_D10_6g [order(-CGI$CGI_D10_6g$i1),]
-```
-```
 > CGI$CGI_D5_9g <- CGI$CGI_D5_9g [order(-CGI$CGI_D5_9g$i2),]
 > CGI$CGI_X7_2_7 <- CGI$CGI_X7_2_7 [order(-CGI$CGI_X7_2_7$i3),]
 > CGI$CGI_D10_4g <- CGI$CGI_D10_4g [order(-CGI$CGI_D10_4g$i4),]
