@@ -22,10 +22,12 @@ CGI <- list (CGI_D10_6g=data.frame(p1=p1, q1=q1, lenght=p1+q1, d1=q1-p1, r1=q1/p
 ```
 CGI$lenght_i <- data.frame(lenght1=CGI$CGI_D10_6g$lenght, lenght2=CGI$CGI_D5_9g$lenght, lenght3=CGI$CGI_X7_2_7$lenght, lenght4=CGI$CGI_D10_4g$lenght, lenght5=CGI$CGI_H15_7g$lenght, lenght6=CGI$CGI_D5_2g$lenght, lenght7=CGI$CGI_D5_8g$lenght, lenght8=CGI$CGI_X9_2_1_5$lenght, lenght9=CGI$CGI_X9_2_1_10$lenght, lenght10=CGI$CGI_D11_7g$lenght, i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10)
 ```
-```
-> CGI$lenght_i <- data.frame(lenght1=CGI$CGI_D10_6g$lenght, lenght2=CGI$CGI_D5_9g$lenght, lenght3=CGI$CGI_X7_2_7$lenght, lenght4=CGI$CGI_D10_4g$lenght, lenght5=CGI$CGI_H15_7g$lenght, lenght6=CGI$CGI_D5_2g$lenght, lenght7=CGI$CGI_D5_8g$lenght, lenght8=CGI$CGI_X9_2_1_5$lenght, lenght9=CGI$CGI_X9_2_1_10$lenght, lenght10=CGI$CGI_D11_7g$lenght, mean_lenght=apply (CGI$lenght_i[,1:10], 1, mean), i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10)
-```
 
+### mean of "lenght" and "i" added
+
+```
+CGI$lenght_i <- data.frame(lenght1=CGI$CGI_D10_6g$lenght, lenght2=CGI$CGI_D5_9g$lenght, lenght3=CGI$CGI_X7_2_7$lenght, lenght4=CGI$CGI_D10_4g$lenght, lenght5=CGI$CGI_H15_7g$lenght, lenght6=CGI$CGI_D5_2g$lenght, lenght7=CGI$CGI_D5_8g$lenght, lenght8=CGI$CGI_X9_2_1_5$lenght, lenght9=CGI$CGI_X9_2_1_10$lenght, lenght10=CGI$CGI_D11_7g$lenght, mean_lenght=apply (CGI$lenght_i[,1:10], 1, mean), i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10, mean_i=apply (CGI$lenght_i[,12:21], 1, mean))
+```
 
 
 ### assign of category to each chromosome in the first folder (CGI_D10_6g) of CGI list
@@ -53,23 +55,29 @@ for(i in 1:100) {if(CGI$CGI_D10_4g$i4[i]>=35.5) {CGI$CGI_D10_4g$category[i] = "m
 > CGI$CGI_D10_4g <- CGI$CGI_D10_4g[order(CGI$CGI_D10_4g$category, -CGI$CGI_D10_4g$lenght),]
 ```
 
-### i folder into CGI list
-```
-CGI$i <- data.frame(i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10)
-```
+### "lenght_i" folder into CGI list
+
 ```
 CGI$lenght_i <- data.frame(lenght1=CGI$CGI_D10_6g$lenght, lenght2=CGI$CGI_D5_9g$lenght, lenght3=CGI$CGI_X7_2_7$lenght, lenght4=CGI$CGI_D10_4g$lenght, lenght5=CGI$CGI_H15_7g$lenght, lenght6=CGI$CGI_D5_2g$lenght, lenght7=CGI$CGI_D5_8g$lenght, lenght8=CGI$CGI_X9_2_1_5$lenght, lenght9=CGI$CGI_X9_2_1_10$lenght, lenght10=CGI$CGI_D11_7g$lenght, i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10)
 ```
+### "mean_lenght", "var_lenght", "mean_i" and "var_i" folders added into CGI list. It is not possible to create whole data frame using command with mean and variance. R language has to know other collumns first
 ```
-> CGI$lenght_i <- data.frame(lenght1=CGI$CGI_D10_6g$lenght, lenght2=CGI$CGI_D5_9g$lenght, lenght3=CGI$CGI_X7_2_7$lenght, lenght4=CGI$CGI_D10_4g$lenght, lenght5=CGI$CGI_H15_7g$lenght, lenght6=CGI$CGI_D5_2g$lenght, lenght7=CGI$CGI_D5_8g$lenght, lenght8=CGI$CGI_X9_2_1_5$lenght, lenght9=CGI$CGI_X9_2_1_10$lenght, lenght10=CGI$CGI_D11_7g$lenght, mean_lenght=apply (CGI$lenght_i[,1:10], 1, mean), i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10)
+CGI$lenght_i <- data.frame(lenght1=CGI$CGI_D10_6g$lenght, lenght2=CGI$CGI_D5_9g$lenght, lenght3=CGI$CGI_X7_2_7$lenght, lenght4=CGI$CGI_D10_4g$lenght, lenght5=CGI$CGI_H15_7g$lenght, lenght6=CGI$CGI_D5_2g$lenght, lenght7=CGI$CGI_D5_8g$lenght, lenght8=CGI$CGI_X9_2_1_5$lenght, lenght9=CGI$CGI_X9_2_1_10$lenght, lenght10=CGI$CGI_D11_7g$lenght, mean_lenght=apply (CGI$lenght_i[,1:10], 1, mean), variance_lenght=apply(CGI$lenght_i[,1:10], 1, var), i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10, mean_i=apply (CGI$lenght_i[,13:22], 1, mean), variance_i=apply(CGI$lenght_i[,13:22], 1, var))
 ```
 
+### additional column for corrected mean "i" each value where the number is zero more then 5 times is considered to be zero in mean.
 ```
-CGI$i$var <- apply(CGI$i, 1, var)
+CGI$lenght_i$mean_i_corrected <- apply (CGI$lenght_i[,13:22], 1, mean)
+CGI$lenght_i[51:75, "mean_i_corrected"] <- 0
 ```
 ```
-for(i in 1:100) {if(CGI_D10_6g$i1[i]>=35.5) {CGI_D10_6g$category[i] = "m"} else if (CGI_D10_6g$i1[i]>=25 & CGI_D10_6g$i1[i]<35.5){CGI_D10_6g$category[i] = "sm"} else if (CGI_D10_6g$i1[i]>=12.5 & CGI_D10_6g$i1[i]<25){CGI_D10_6g$category[i] = "st"} else if (CGI_D10_6g$i1[i]>0 & CGI_D10_6g$i1[i]<12.5) {CGI_D10_6g$category[i] = "a"} else {CGI_D10_6g$category[i] = "T"}}
+for(i in 1:100) {if(CGI$lenght_i$mean_i_corrected[i]>=35.5) {CGI$lenght_i$category[i] = "m"} else if (CGI$lenght_i$mean_i_corrected[i]>=25 & CGI$lenght_i$mean_i_corrected[i]<35.5){CGI$lenght_i$category[i] = "sm"} else if (CGI$lenght_i$mean_i_corrected[i]>=12.5 & CGI$lenght_i$mean_i_corrected[i]<25){CGI$lenght_i$category[i] = "st"} else if (CGI$lenght_i$mean_i_corrected[i]>0 & CGI$lenght_i$mean_i_corrected[i]<12.5) {CGI$lenght_i$category[i] = "a"} else {CGI$lenght_i$category[i] = "T"}}
 ```
+
+
+
+
+
 
 ### CCA Table creation
 
