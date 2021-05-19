@@ -3,7 +3,7 @@
 CGI <- list (CGI_D10_6g=data.frame(p1=p1, q1=q1, lenght=p1+q1, d1=q1-p1, r1=q1/p1, i1=100/((q1/p1)+1)), CGI_D5_9g = data.frame(p2=p2, q2=q2, lenght=p2+q2, d2=q2-p2, r2=q2/p2, i2=100/((q2/p2)+1)), CGI_X7_2_7=data.frame(p3=p3, q3=q3, lenght=p3+q3, d3=q3-p3, r3=q3/p3, i3=100/((q3/p3)+1)), CGI_D10_4g = data.frame(p4=p4, q4=q4, lenght=p4+q4, d4=q4-p4, r4=q4/p4, i4=100/((q4/p4)+1)), CGI_H15_7g = data.frame(p5=p5, q5=q5, lenght=p5+q5, d5=q5-p5, r5=q5/p5, i5=100/((q5/p5)+1)), CGI_D5_2g = data.frame(p6=p6, q6=q6, lenght=p6+q6, d6=q6-p6, r6=q6/p6, i6=100/((q6/p6)+1)), CGI_D5_8g = data.frame(p7=p7, q7=q7, lenght=p7+q7, d7=q7-p7, r7=q7/p7, i7=100/((q7/p7)+1)), CGI_X9_2_1_5 = data.frame(p8=p8, q8=q8, lenght=p8+q8, d8=q8-p8, r8=q8/p8, i8=100/((q8/p8)+1)), CGI_X9_2_1_10 = data.frame(p9=p9, q9=q9, lenght=p9+q9, d9=q9-p9, r9=q9/p9, i9=100/((q9/p9)+1)), CGI_D11_7g = data.frame(p10=p10, q10=q10, lenght=p10+q10, d10=q10-p10, r10=q10/p10, i10=100/((q10/p10)+1)))
 ```
 
-### decreasing order according centromeric index
+#### decreasing order according centromeric index
 ```
 CGI$CGI_D10_6g <- CGI$CGI_D10_6g [order(-CGI$CGI_D10_6g$i1),]
 CGI$CGI_D5_9g <- CGI$CGI_D5_9g [order(-CGI$CGI_D5_9g$i2),]
