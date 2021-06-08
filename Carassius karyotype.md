@@ -190,15 +190,15 @@ CAU$lenght_i <- data.frame(lenght1=CAU$CaXX1IL_1_1$lenght1, lenght2=CAU$CaXX1IL_
 ### "mean_lenght", "var_lenght", "mean_i" and "var_i" columns added into "lenght_i" folder of CAU list. It is not possible to create whole data frame using command with mean and variance. R language has to know other collumns first. Also, separately is created "mean_lenght/variance_lenght" and "mean_i/variance_i"
 
 ```
-CAU$lenght_i <- data.frame(lenght1=CAU$CaXX1IL_1_1$lenght1, lenght2=CAU$CaXX1IL_1_2$lenght2, lenght3=CAU$CaXX1IL_1_3$lenght3, lenght4=CAU$CaXX1IL_1_4$lenght4, lenght5=CAU$CaXX1IL_1_7$lenght5, lenght6=CAU$CaXX1IL_1_8$lenght6, lenght7=CAU$CaXX1IL_1_6$lenght7, lenght8=CAU$CaXX1IL_2_1$lenght8, mean_lenght=apply (CAU$lenght_i[,1:8], 1, mean), variance_lenght=apply(CAU$lenght_i[,1:8], 1, var), i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8)
-CAU$lenght_i <- data.frame(lenght1=CAU$CaXX1IL_1_1$lenght1, lenght2=CAU$CaXX1IL_1_2$lenght2, lenght3=CAU$CaXX1IL_1_3$lenght3, lenght4=CAU$CaXX1IL_1_4$lenght4, lenght5=CAU$CaXX1IL_1_7$lenght5, lenght6=CAU$CaXX1IL_1_8$lenght6, lenght7=CAU$CaXX1IL_1_6$lenght7, lenght8=CAU$CaXX1IL_2_1$lenght8, mean_lenght=apply (CAU$lenght_i[,1:8], 1, mean), variance_lenght=apply(CAU$lenght_i[,1:8], 1, var), i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, mean_i=apply (CAU$lenght_i[,11:18], 1, mean), variance_i=apply(CAU$lenght_i[,11:18], 1, var))
+CAU$lenght_i <- data.frame(lenght1=CAU$CaXX1IL_1_1$lenght1, lenght2=CAU$CaXX1IL_1_2$lenght2, lenght3=CAU$CaXX1IL_1_3$lenght3, lenght4=CAU$CaXX1IL_1_4$lenght4, lenght5=CAU$CaXX1IL_1_7$lenght5, lenght6=CAU$CaXX1IL_1_8$lenght6, lenght7=CAU$CaXX1IL_1_6$lenght7, lenght8=CAU$CaXX1IL_2_1$lenght8, lenght9=CAU$CaXX1IL_2_2$lenght9, lenght10=CAU$CaXX1IL_2_3$lenght10, mean_lenght=apply (CAU$lenght_i[,1:10], 1, mean), variance_lenght=apply(CAU$lenght_i[,1:10], 1, var), i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
+CAU$lenght_i <- data.frame(lenght1=CAU$CaXX1IL_1_1$lenght1, lenght2=CAU$CaXX1IL_1_2$lenght2, lenght3=CAU$CaXX1IL_1_3$lenght3, lenght4=CAU$CaXX1IL_1_4$lenght4, lenght5=CAU$CaXX1IL_1_7$lenght5, lenght6=CAU$CaXX1IL_1_8$lenght6, lenght7=CAU$CaXX1IL_1_6$lenght7, lenght8=CAU$CaXX1IL_2_1$lenght8, lenght9=CAU$CaXX1IL_2_2$lenght9, lenght10=CAU$CaXX1IL_2_3$lenght10, mean_lenght=apply (CAU$lenght_i[,1:10], 1, mean), variance_lenght=apply(CAU$lenght_i[,1:10], 1, var), i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10, mean_i=apply (CAU$lenght_i[,13:22], 1, mean), variance_i=apply(CAU$lenght_i[,13:22], 1, var))
 ```
 
 #### additional column for "mean_i_corrected"
 
 each value where the number is zero more then 5 times is considered to be zero in mean.
 ```
-CAU$lenght_i$mean_i_corrected <- apply (CAU$lenght_i[,11:18], 1, mean)
+CAU$lenght_i$mean_i_corrected <- apply (CAU$lenght_i[,13:22], 1, mean)
 
 
 CCA$lenght_i[59:74, "mean_i_corrected"] <- 0
