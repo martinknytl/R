@@ -201,5 +201,20 @@ each value where the number is zero more then 5 times is considered to be zero i
 CAU$lenght_i$mean_i_corrected <- apply (CAU$lenght_i[,13:22], 1, mean)
 
 
-CCA$lenght_i[59:74, "mean_i_corrected"] <- 0
+CAU$lenght_i[66:81, "mean_i_corrected"] <- 0
+```
+
+#### a new column "category" of each chromosome
+```
+for(i in 1:100) {if(CAU$lenght_i$mean_i_corrected[i]>=35.5) {CAU$lenght_i$category[i] = "m"} else if (CAU$lenght_i$mean_i_corrected[i]>=25 & CAU$lenght_i$mean_i_corrected[i]<35.5){CAU$lenght_i$category[i] = "sm"} else if (CAU$lenght_i$mean_i_corrected[i]>=12.5 & CAU$lenght_i$mean_i_corrected[i]<25){CAU$lenght_i$category[i] = "st"} else if (CAU$lenght_i$mean_i_corrected[i]>0 & CAU$lenght_i$mean_i_corrected[i]<12.5) {CAU$lenght_i$category[i] = "a"} else {CAU$lenght_i$category[i] = "T"}}
+```
+
+#### CAU plot creation
+```
+plot(CAU$lenght_i$mean_i_corrected, CAU$lenght_i$mean_lenght, pch=20, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "Dependence of centromeric index on the chromosomal length", abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+```
+
+CAU plot put into variable:
+```
+Plot_CAU <- recordPlot()
 ```
