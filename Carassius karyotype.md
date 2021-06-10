@@ -149,7 +149,7 @@ CCA$lenght_i[59:74, "mean_i_corrected"] <- 0
 #### a new column "category" of each chromosome
 ```
 for(i in 1:100) {if(CCA$lenght_i$mean_i_corrected[i]>=35.5) {CCA$lenght_i$category[i] = "m"} else if (CCA$lenght_i$mean_i_corrected[i]>=25 & CCA$lenght_i$mean_i_corrected[i]<35.5){CCA$lenght_i$category[i] = "sm"} else if (CCA$lenght_i$mean_i_corrected[i]>=12.5 & CCA$lenght_i$mean_i_corrected[i]<25){CCA$lenght_i$category[i] = "st"} else if (CCA$lenght_i$mean_i_corrected[i]>0 & CCA$lenght_i$mean_i_corrected[i]<12.5) {CCA$lenght_i$category[i] = "a"} else {CCA$lenght_i$category[i] = "T"}}
-```
+``` 
 
 #### CCA plot creation
 ```
@@ -159,6 +159,14 @@ plot(CCA$lenght_i$mean_i_corrected, CCA$lenght_i$mean_lenght, pch=20, xlab = "ce
 CCA plot put into variable:
 ```
 Plot_CCA <- recordPlot()
+```
+
+#### CCA boxplot creation
+
+## vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index
+
+```
+c(CCA$CcVi3CZ_5_10$i1[1:2], CCA$CcVi3CZ_5_9$i2[1:2], CCA$CcVi3CZ_5_6$i3[1:2], CCA$CcVi3CZ_5_5$i4[1:2], CCA$CcVi3CZ_2_3$i5[1:2], CCA$CcVi3CZ_3_5$i6[1:2], CCA$CcVi3CZ_3_4$i7[1:2], CCA$CcHe5Fi_1_1$i8[1:2], CCA$CcHe5Fi_2_1$i9[1:2], CCA$CcHe6Fi_1_2$i10[1:2])
 ```
 
 ## CAU list creation with each metaphase as a table
