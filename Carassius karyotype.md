@@ -158,12 +158,12 @@ plot(CCA$lenght_i$mean_i_corrected, CCA$lenght_i$mean_lenght, pch=20, xlab = "ce
 
 CCA plot put into variable:
 ```
-Plot_CCA <- recordPlot()
+CCA_dotplot <- recordPlot()
 ```
 
 #### CCA boxplot creation
 
-## vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index
+## function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
 
 ```
 Select_chrome <- function(i,j){
@@ -224,6 +224,10 @@ chromosome47 <- Select_chrome(93,94)
 chromosome48 <- Select_chrome(95,96)
 chromosome49 <- Select_chrome(97,98)
 chromosome50 <- Select_chrome(99,100)
+```
+
+```
+boxplot(chromosome1, chromosome2, chromosome3, chromosome4, chromosome5, chromosome6, chromosome7, chromosome8, chromosome9, chromosome10, chromosome11, chromosome12, chromosome13, chromosome14, chromosome15, chromosome16, chromosome17, chromosome18, chromosome19, chromosome20, chromosome21, chromosome22, chromosome23, chromosome24, chromosome25, chromosome26, chromosome27, chromosome28, chromosome29, chromosome30, chromosome31, chromosome32, chromosome33, chromosome34, chromosome35, chromosome36, chromosome37, chromosome38, chromosome39, chromosome40, chromosome41, chromosome42, chromosome43, chromosome44, chromosome45, chromosome46, chromosome47, chromosome48, chromosome49, chromosome50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)
 ```
 
 ## CAU list creation with each metaphase as a table
