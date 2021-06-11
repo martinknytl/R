@@ -166,7 +166,15 @@ Plot_CCA <- recordPlot()
 ## vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index
 
 ```
-c(CCA$CcVi3CZ_5_10$i1[1:2], CCA$CcVi3CZ_5_9$i2[1:2], CCA$CcVi3CZ_5_6$i3[1:2], CCA$CcVi3CZ_5_5$i4[1:2], CCA$CcVi3CZ_2_3$i5[1:2], CCA$CcVi3CZ_3_5$i6[1:2], CCA$CcVi3CZ_3_4$i7[1:2], CCA$CcHe5Fi_1_1$i8[1:2], CCA$CcHe5Fi_2_1$i9[1:2], CCA$CcHe6Fi_1_2$i10[1:2])
+Select_chrome <- function(i,j){
+     chromosome <- c(CCA$CcVi3CZ_5_10$i1[i:j],
+                     CCA$CcVi3CZ_5_9$i2[i:j], CCA$CcVi3CZ_5_6$i3[i:j], CCA$CcVi3CZ_5_5$i4[i:j],
+                     CCA$CcVi3CZ_2_3$i5[i:j], CCA$CcVi3CZ_3_5$i6[i:j], CCA$CcVi3CZ_3_4$i7[i:j],
+                     CCA$CcHe5Fi_1_1$i8[i:j], CCA$CcHe5Fi_2_1$i9[i:j], CCA$CcHe6Fi_1_2$i10[i:j])
+ }
+```
+chromosome1 <- Select_chrome(1,2)
+chromosome2 <- Select_chrome(3,4)
 ```
 
 ## CAU list creation with each metaphase as a table
