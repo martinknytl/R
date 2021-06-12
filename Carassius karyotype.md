@@ -441,6 +441,8 @@ CAU_boxplot <- recordPlot()
 
 ## Put all three boxplots together in one
 
+```
 par(mfcol=c(3,1), plot(CAU$lenght_i$mean_i_corrected, CAU$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "C. auratus", abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2)), 
 plot(CCA$lenght_i$mean_i_corrected, CCA$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "C. carassius", abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2)),
 plot(CGI$lenght_i$mean_i_corrected, CGI$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "C. gibelio", abline(v=c(12.5, 25, 35.5), col="gray", lty=2)))
+```
