@@ -45,7 +45,7 @@ for(i in 1:100) {if(CGI$lenght_i$mean_i_corrected[i]>=35.5) {CGI$lenght_i$catego
 
 #### CGI plot creation
 
-error message in plot generation: *Error in plot.new() : figure margins too large*
+In my lapop (different version of R studio): error message in plot generation: *Error in plot.new() : figure margins too large*
 
 > par("mar")
 > 
@@ -60,7 +60,80 @@ par(mar=c(1,1,1,1))
 plot(CGI$lenght_i$mean_i_corrected, CGI$lenght_i$mean_lenght, pch=20, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "Dependence of centromeric index on the chromosomal length", abline(v=c(12.5, 25, 35.5), col="gray", lty=2))
 ```
 
+CGI dotplot put as an object:
+```
+CGI_dotplot <- recordPlot()
+```
 
+#### CGI boxplot creation
+
+## function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
+
+```
+> Select_chrome <- function(i,j) {chromosome <- c(CGI$CGI_D10_6g$i1[i:j], CGI$CGI_D5_9g$i2[i:j], CGI$CGI_X7_2_7$i3[i:j], CGI$CGI_D10_4g$i4[i:j], CGI$CGI_H15_7g$i5[i:j], CGI$CGI_D5_2g$i6[i:j], CGI$CGI_D5_8g$i7[i:j], CGI$CGI_X9_2_1_5$i8[i:j], CGI$CGI_X9_2_1_10$i9[i:j], CGI$CGI_D11_7g$i10[i:j])}
+```
+
+```
+chromosome1 <- Select_chrome(1,2)
+chromosome2 <- Select_chrome(3,4)
+chromosome3 <- Select_chrome(5,6)
+chromosome4 <- Select_chrome(7,8)
+chromosome5 <- Select_chrome(9,10)
+chromosome6 <- Select_chrome(11,12)
+chromosome7 <- Select_chrome(13,14)
+chromosome8 <- Select_chrome(15,16)
+chromosome9 <- Select_chrome(17,18)
+chromosome10 <- Select_chrome(19,20)
+chromosome11 <- Select_chrome(21,22)
+chromosome12 <- Select_chrome(23,24)
+chromosome13 <- Select_chrome(25,26)
+chromosome14 <- Select_chrome(27,28)
+chromosome15 <- Select_chrome(29,30)
+chromosome16 <- Select_chrome(31,32)
+chromosome17 <- Select_chrome(33,34)
+chromosome18 <- Select_chrome(35,36)
+chromosome19 <- Select_chrome(37,38)
+chromosome20 <- Select_chrome(39,40)
+chromosome21 <- Select_chrome(41,42)
+chromosome22 <- Select_chrome(43,44)
+chromosome23 <- Select_chrome(45,46)
+chromosome24 <- Select_chrome(47,48)
+chromosome25 <- Select_chrome(49,50)
+chromosome26 <- Select_chrome(51,52)
+chromosome27 <- Select_chrome(53,54)
+chromosome28 <- Select_chrome(55,56)
+chromosome29 <- Select_chrome(57,58)
+chromosome30 <- Select_chrome(59,60)
+chromosome31 <- Select_chrome(61,62)
+chromosome32 <- Select_chrome(63,64)
+chromosome33 <- Select_chrome(65,66)
+chromosome34 <- Select_chrome(67,68)
+chromosome35 <- Select_chrome(69,70)
+chromosome36 <- Select_chrome(71,72)
+chromosome37 <- Select_chrome(73,74)
+chromosome38 <- Select_chrome(75,76)
+chromosome39 <- Select_chrome(77,78)
+chromosome40 <- Select_chrome(79,80)
+chromosome41 <- Select_chrome(81,82)
+chromosome42 <- Select_chrome(83,84)
+chromosome43 <- Select_chrome(85,86)
+chromosome44 <- Select_chrome(87,88)
+chromosome45 <- Select_chrome(89,90)
+chromosome46 <- Select_chrome(91,92)
+chromosome47 <- Select_chrome(93,94)
+chromosome48 <- Select_chrome(95,96)
+chromosome49 <- Select_chrome(97,98)
+chromosome50 <- Select_chrome(99,100)
+```
+
+```
+boxplot(chromosome1, chromosome2, chromosome3, chromosome4, chromosome5, chromosome6, chromosome7, chromosome8, chromosome9, chromosome10, chromosome11, chromosome12, chromosome13, chromosome14, chromosome15, chromosome16, chromosome17, chromosome18, chromosome19, chromosome20, chromosome21, chromosome22, chromosome23, chromosome24, chromosome25, chromosome26, chromosome27, chromosome28, chromosome29, chromosome30, chromosome31, chromosome32, chromosome33, chromosome34, chromosome35, chromosome36, chromosome37, chromosome38, chromosome39, chromosome40, chromosome41, chromosome42, chromosome43, chromosome44, chromosome45, chromosome46, chromosome47, chromosome48, chromosome49, chromosome50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "yellow3", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)
+```
+
+CGI boxplot put as an object:
+```
+CGI_boxplot <- recordPlot()
+```
 
 
 
@@ -156,7 +229,7 @@ for(i in 1:100) {if(CCA$lenght_i$mean_i_corrected[i]>=35.5) {CCA$lenght_i$catego
 plot(CCA$lenght_i$mean_i_corrected, CCA$lenght_i$mean_lenght, pch=20, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "Dependence of centromeric index on the chromosomal length", abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
 
-CCA plot put into variable:
+CCA dotplot put as an object:
 ```
 CCA_dotplot <- recordPlot()
 ```
@@ -230,6 +303,14 @@ chromosome50 <- Select_chrome(99,100)
 boxplot(chromosome1, chromosome2, chromosome3, chromosome4, chromosome5, chromosome6, chromosome7, chromosome8, chromosome9, chromosome10, chromosome11, chromosome12, chromosome13, chromosome14, chromosome15, chromosome16, chromosome17, chromosome18, chromosome19, chromosome20, chromosome21, chromosome22, chromosome23, chromosome24, chromosome25, chromosome26, chromosome27, chromosome28, chromosome29, chromosome30, chromosome31, chromosome32, chromosome33, chromosome34, chromosome35, chromosome36, chromosome37, chromosome38, chromosome39, chromosome40, chromosome41, chromosome42, chromosome43, chromosome44, chromosome45, chromosome46, chromosome47, chromosome48, chromosome49, chromosome50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)
 ```
 
+CCA boxplot put as an object
+```
+CCA_boxplot <- recordPlot()
+```
+
+
+
+
 ## CAU list creation with each metaphase as a table
 
 Vectors were written manually from measuring of each chromosome
@@ -278,12 +359,82 @@ CAU$lenght_i[66:81, "mean_i_corrected"] <- 0
 for(i in 1:100) {if(CAU$lenght_i$mean_i_corrected[i]>=35.5) {CAU$lenght_i$category[i] = "m"} else if (CAU$lenght_i$mean_i_corrected[i]>=25 & CAU$lenght_i$mean_i_corrected[i]<35.5){CAU$lenght_i$category[i] = "sm"} else if (CAU$lenght_i$mean_i_corrected[i]>=12.5 & CAU$lenght_i$mean_i_corrected[i]<25){CAU$lenght_i$category[i] = "st"} else if (CAU$lenght_i$mean_i_corrected[i]>0 & CAU$lenght_i$mean_i_corrected[i]<12.5) {CAU$lenght_i$category[i] = "a"} else {CAU$lenght_i$category[i] = "T"}}
 ```
 
-#### CAU plot creation
+#### CAU dotplot creation
 ```
 plot(CAU$lenght_i$mean_i_corrected, CAU$lenght_i$mean_lenght, pch=20, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "Dependence of centromeric index on the chromosomal length", abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
 
-CAU plot put into variable:
+CAU dotplot put as an object:
 ```
-Plot_CAU <- recordPlot()
+CAU_dotplot <- recordPlot()
+```
+
+#### CAU boxplot creation
+
+## function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
+
+```
+Select_chrome <- function(i,j) {chromosome <- c(CAU$CaXX1IL_1_1$i1[i:j], CAU$CaXX1IL_1_2$i2[i:j], CAU$CaXX1IL_1_3$i3[i:j], CAU$CaXX1IL_1_4$i4[i:j], CAU$CaXX1IL_1_7$i5[i:j], CAU$CaXX1IL_1_8$i6[i:j], CAU$CaXX1IL_1_6$i7[i:j], CAU$CaXX1IL_2_1$i8[i:j], CAU$CaXX1IL_2_2$i9[i:j], CAU$CaXX1IL_2_3$i10[i:j])}
+```
+
+```
+chromosome1 <- Select_chrome(1,2)
+chromosome2 <- Select_chrome(3,4)
+chromosome3 <- Select_chrome(5,6)
+chromosome4 <- Select_chrome(7,8)
+chromosome5 <- Select_chrome(9,10)
+chromosome6 <- Select_chrome(11,12)
+chromosome7 <- Select_chrome(13,14)
+chromosome8 <- Select_chrome(15,16)
+chromosome9 <- Select_chrome(17,18)
+chromosome10 <- Select_chrome(19,20)
+chromosome11 <- Select_chrome(21,22)
+chromosome12 <- Select_chrome(23,24)
+chromosome13 <- Select_chrome(25,26)
+chromosome14 <- Select_chrome(27,28)
+chromosome15 <- Select_chrome(29,30)
+chromosome16 <- Select_chrome(31,32)
+chromosome17 <- Select_chrome(33,34)
+chromosome18 <- Select_chrome(35,36)
+chromosome19 <- Select_chrome(37,38)
+chromosome20 <- Select_chrome(39,40)
+chromosome21 <- Select_chrome(41,42)
+chromosome22 <- Select_chrome(43,44)
+chromosome23 <- Select_chrome(45,46)
+chromosome24 <- Select_chrome(47,48)
+chromosome25 <- Select_chrome(49,50)
+chromosome26 <- Select_chrome(51,52)
+chromosome27 <- Select_chrome(53,54)
+chromosome28 <- Select_chrome(55,56)
+chromosome29 <- Select_chrome(57,58)
+chromosome30 <- Select_chrome(59,60)
+chromosome31 <- Select_chrome(61,62)
+chromosome32 <- Select_chrome(63,64)
+chromosome33 <- Select_chrome(65,66)
+chromosome34 <- Select_chrome(67,68)
+chromosome35 <- Select_chrome(69,70)
+chromosome36 <- Select_chrome(71,72)
+chromosome37 <- Select_chrome(73,74)
+chromosome38 <- Select_chrome(75,76)
+chromosome39 <- Select_chrome(77,78)
+chromosome40 <- Select_chrome(79,80)
+chromosome41 <- Select_chrome(81,82)
+chromosome42 <- Select_chrome(83,84)
+chromosome43 <- Select_chrome(85,86)
+chromosome44 <- Select_chrome(87,88)
+chromosome45 <- Select_chrome(89,90)
+chromosome46 <- Select_chrome(91,92)
+chromosome47 <- Select_chrome(93,94)
+chromosome48 <- Select_chrome(95,96)
+chromosome49 <- Select_chrome(97,98)
+chromosome50 <- Select_chrome(99,100)
+```
+
+```
+boxplot(chromosome1, chromosome2, chromosome3, chromosome4, chromosome5, chromosome6, chromosome7, chromosome8, chromosome9, chromosome10, chromosome11, chromosome12, chromosome13, chromosome14, chromosome15, chromosome16, chromosome17, chromosome18, chromosome19, chromosome20, chromosome21, chromosome22, chromosome23, chromosome24, chromosome25, chromosome26, chromosome27, chromosome28, chromosome29, chromosome30, chromosome31, chromosome32, chromosome33, chromosome34, chromosome35, chromosome36, chromosome37, chromosome38, chromosome39, chromosome40, chromosome41, chromosome42, chromosome43, chromosome44, chromosome45, chromosome46, chromosome47, chromosome48, chromosome49, chromosome50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "blue", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)
+```
+
+CAU boxplot put as an object
+```
+CAU_boxplot <- recordPlot()
 ```
