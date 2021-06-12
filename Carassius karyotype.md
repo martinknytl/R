@@ -438,3 +438,6 @@ CAU boxplot put as an object
 ```
 CAU_boxplot <- recordPlot()
 ```
+
+## Put all three boxplots together in one
+
