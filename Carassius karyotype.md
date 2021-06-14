@@ -74,56 +74,7 @@ CGI_dotplot <- recordPlot()
 ```
 
 ```
-chromosome1 <- Select_chrome(1,2)
-chromosome2 <- Select_chrome(3,4)
-chromosome3 <- Select_chrome(5,6)
-chromosome4 <- Select_chrome(7,8)
-chromosome5 <- Select_chrome(9,10)
-chromosome6 <- Select_chrome(11,12)
-chromosome7 <- Select_chrome(13,14)
-chromosome8 <- Select_chrome(15,16)
-chromosome9 <- Select_chrome(17,18)
-chromosome10 <- Select_chrome(19,20)
-chromosome11 <- Select_chrome(21,22)
-chromosome12 <- Select_chrome(23,24)
-chromosome13 <- Select_chrome(25,26)
-chromosome14 <- Select_chrome(27,28)
-chromosome15 <- Select_chrome(29,30)
-chromosome16 <- Select_chrome(31,32)
-chromosome17 <- Select_chrome(33,34)
-chromosome18 <- Select_chrome(35,36)
-chromosome19 <- Select_chrome(37,38)
-chromosome20 <- Select_chrome(39,40)
-chromosome21 <- Select_chrome(41,42)
-chromosome22 <- Select_chrome(43,44)
-chromosome23 <- Select_chrome(45,46)
-chromosome24 <- Select_chrome(47,48)
-chromosome25 <- Select_chrome(49,50)
-chromosome26 <- Select_chrome(51,52)
-chromosome27 <- Select_chrome(53,54)
-chromosome28 <- Select_chrome(55,56)
-chromosome29 <- Select_chrome(57,58)
-chromosome30 <- Select_chrome(59,60)
-chromosome31 <- Select_chrome(61,62)
-chromosome32 <- Select_chrome(63,64)
-chromosome33 <- Select_chrome(65,66)
-chromosome34 <- Select_chrome(67,68)
-chromosome35 <- Select_chrome(69,70)
-chromosome36 <- Select_chrome(71,72)
-chromosome37 <- Select_chrome(73,74)
-chromosome38 <- Select_chrome(75,76)
-chromosome39 <- Select_chrome(77,78)
-chromosome40 <- Select_chrome(79,80)
-chromosome41 <- Select_chrome(81,82)
-chromosome42 <- Select_chrome(83,84)
-chromosome43 <- Select_chrome(85,86)
-chromosome44 <- Select_chrome(87,88)
-chromosome45 <- Select_chrome(89,90)
-chromosome46 <- Select_chrome(91,92)
-chromosome47 <- Select_chrome(93,94)
-chromosome48 <- Select_chrome(95,96)
-chromosome49 <- Select_chrome(97,98)
-chromosome50 <- Select_chrome(99,100)
+  <- Select_chrome(99,100)
 ```
 
 ```
@@ -439,10 +390,51 @@ CAU boxplot put as an object
 CAU_boxplot <- recordPlot()
 ```
 
-## Put all three boxplots together in one
+## All lists (CAU, CCA, CGI) put together in one environment
+
+all three scripts (CAU, CCA, CGI) uploaded (CAU as the last one) = CAU chromosome1-50 remained on the environment
+
+## Put all dotplots on one pic and put all boxplots together as a single plot
 
 ```
-par(mfcol=c(3,1), plot(CAU$lenght_i$mean_i_corrected, CAU$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "C. auratus", abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2)), 
-plot(CCA$lenght_i$mean_i_corrected, CCA$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "C. carassius", abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2)),
-plot(CGI$lenght_i$mean_i_corrected, CGI$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, main = "C. gibelio", abline(v=c(12.5, 25, 35.5), col="gray", lty=2)))
+CAU_CCA_CGI_dotplot <- recordPlot(par(mfcol=c(3,1), mai=c(0.53,0.55,0.12,0.1), plot(CAU$lenght_i$mean_i_corrected, CAU$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2)), plot(CCA$lenght_i$mean_i_corrected, CCA$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2)), plot(CGI$lenght_i$mean_i_corrected, CGI$lenght_i$mean_lenght, pch=16, xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, abline(v=c(12.5, 25, 35.5), col="gray", lty=2))))
+```
+
+
+```
+paste0("chromosome", 1:50, "=chromosome", 1:50, collapse = ",")
+```
+[1] "chromosome1=chromosome1,chromosome2=chromosome2,chromosome3=chromosome3,chromosome4=chromosome4,chromosome5=chromosome5,chromosome6=chromosome6,chromosome7=chromosome7,chromosome8=chromosome8,chromosome9=chromosome9,chromosome10=chromosome10,chromosome11=chromosome11,chromosome12=chromosome12,chromosome13=chromosome13,chromosome14=chromosome14,chromosome15=chromosome15,chromosome16=chromosome16,chromosome17=chromosome17,chromosome18=chromosome18,chromosome19=chromosome19,chromosome20=chromosome20,chromosome21=chromosome21,chromosome22=chromosome22,chromosome23=chromosome23,chromosome24=chromosome24,chromosome25=chromosome25,chromosome26=chromosome26,chromosome27=chromosome27,chromosome28=chromosome28,chromosome29=chromosome29,chromosome30=chromosome30,chromosome31=chromosome31,chromosome32=chromosome32,chromosome33=chromosome33,chromosome34=chromosome34,chromosome35=chromosome35,chromosome36=chromosome36,chromosome37=chromosome37,chromosome38=chromosome38,chromosome39=chromosome39,chromosome40=chromosome40,chromosome41=chromosome41,chromosome42=chromosome42,chromosome43=chromosome43,chromosome44=chromosome44,chromosome45=chromosome45,chromosome46=chromosome46,chromosome47=chromosome47,chromosome48=chromosome48,chromosome49=chromosome49,chromosome50=chromosome50"
+
+The result of the command "paste()" put into the keyboard and paste as a new command behind the "list()"
+```
+list(chromosome1=chromosome1,chromosome2=chromosome2,chromosome3=chromosome3,chromosome4=chromosome4,chromosome5=chromosome5,chromosome6=chromosome6,chromosome7=chromosome7,chromosome8=chromosome8,chromosome9=chromosome9,chromosome10=chromosome10,chromosome11=chromosome11,chromosome12=chromosome12,chromosome13=chromosome13,chromosome14=chromosome14,chromosome15=chromosome15,chromosome16=chromosome16,chromosome17=chromosome17,chromosome18=chromosome18,chromosome19=chromosome19,chromosome20=chromosome20,chromosome21=chromosome21,chromosome22=chromosome22,chromosome23=chromosome23,chromosome24=chromosome24,chromosome25=chromosome25,chromosome26=chromosome26,chromosome27=chromosome27,chromosome28=chromosome28,chromosome29=chromosome29,chromosome30=chromosome30,chromosome31=chromosome31,chromosome32=chromosome32,chromosome33=chromosome33,chromosome34=chromosome34,chromosome35=chromosome35,chromosome36=chromosome36,chromosome37=chromosome37,chromosome38=chromosome38,chromosome39=chromosome39,chromosome40=chromosome40,chromosome41=chromosome41,chromosome42=chromosome42,chromosome43=chromosome43,chromosome44=chromosome44,chromosome45=chromosome45,chromosome46=chromosome46,chromosome47=chromosome47,chromosome48=chromosome48,chromosome49=chromosome49,chromosome50=chromosome50)
+```
+
+##remove chromosome1-50 and p/q vectors from CAU and put chromosomes from another (CCA) species
+```
+paste0("chromosome", 1:50, collapse = ",")
+```
+[1] "chromosome1,chromosome2,chromosome3,chromosome4,chromosome5,chromosome6,chromosome7,chromosome8,chromosome9,chromosome10,chromosome11,chromosome12,chromosome13,chromosome14,chromosome15,chromosome16,chromosome17,chromosome18,chromosome19,chromosome20,chromosome21,chromosome22,chromosome23,chromosome24,chromosome25,chromosome26,chromosome27,chromosome28,chromosome29,chromosome30,chromosome31,chromosome32,chromosome33,chromosome34,chromosome35,chromosome36,chromosome37,chromosome38,chromosome39,chromosome40,chromosome41,chromosome42,chromosome43,chromosome44,chromosome45,chromosome46,chromosome47,chromosome48,chromosome49,chromosome50"
+
+```
+CAU_chrome1_50 <- list(chromosome1=chromosome1,chromosome2=chromosome2,chromosome3=chromosome3,chromosome4=chromosome4,chromosome5=chromosome5,chromosome6=chromosome6,chromosome7=chromosome7,chromosome8=chromosome8,chromosome9=chromosome9,chromosome10=chromosome10,chromosome11=chromosome11,chromosome12=chromosome12,chromosome13=chromosome13,chromosome14=chromosome14,chromosome15=chromosome15,chromosome16=chromosome16,chromosome17=chromosome17,chromosome18=chromosome18,chromosome19=chromosome19,chromosome20=chromosome20,chromosome21=chromosome21,chromosome22=chromosome22,chromosome23=chromosome23,chromosome24=chromosome24,chromosome25=chromosome25,chromosome26=chromosome26,chromosome27=chromosome27,chromosome28=chromosome28,chromosome29=chromosome29,chromosome30=chromosome30,chromosome31=chromosome31,chromosome32=chromosome32,chromosome33=chromosome33,chromosome34=chromosome34,chromosome35=chromosome35,chromosome36=chromosome36,chromosome37=chromosome37,chromosome38=chromosome38,chromosome39=chromosome39,chromosome40=chromosome40,chromosome41=chromosome41,chromosome42=chromosome42,chromosome43=chromosome43,chromosome44=chromosome44,chromosome45=chromosome45,chromosome46=chromosome46,chromosome47=chromosome47,chromosome48=chromosome48,chromosome49=chromosome49,chromosome50=chromosome50)
+```
+```
+rm(chromosome1,chromosome2,chromosome3,chromosome4,chromosome5,chromosome6,chromosome7,chromosome8,chromosome9,chromosome10,chromosome11,chromosome12,chromosome13,chromosome14,chromosome15,chromosome16,chromosome17,chromosome18,chromosome19,chromosome20,chromosome21,chromosome22,chromosome23,chromosome24,chromosome25,chromosome26,chromosome27,chromosome28,chromosome29,chromosome30,chromosome31,chromosome32,chromosome33,chromosome34,chromosome35,chromosome36,chromosome37,chromosome38,chromosome39,chromosome40,chromosome41,chromosome42,chromosome43,chromosome44,chromosome45,chromosome46,chromosome47,chromosome48,chromosome49,chromosome50)
+```
+##CCA environment uploaded
+
+```
+CCA_chrome1_50 <- list(chromosome1=chromosome1,chromosome2=chromosome2,chromosome3=chromosome3,chromosome4=chromosome4,chromosome5=chromosome5,chromosome6=chromosome6,chromosome7=chromosome7,chromosome8=chromosome8,chromosome9=chromosome9,chromosome10=chromosome10,chromosome11=chromosome11,chromosome12=chromosome12,chromosome13=chromosome13,chromosome14=chromosome14,chromosome15=chromosome15,chromosome16=chromosome16,chromosome17=chromosome17,chromosome18=chromosome18,chromosome19=chromosome19,chromosome20=chromosome20,chromosome21=chromosome21,chromosome22=chromosome22,chromosome23=chromosome23,chromosome24=chromosome24,chromosome25=chromosome25,chromosome26=chromosome26,chromosome27=chromosome27,chromosome28=chromosome28,chromosome29=chromosome29,chromosome30=chromosome30,chromosome31=chromosome31,chromosome32=chromosome32,chromosome33=chromosome33,chromosome34=chromosome34,chromosome35=chromosome35,chromosome36=chromosome36,chromosome37=chromosome37,chromosome38=chromosome38,chromosome39=chromosome39,chromosome40=chromosome40,chromosome41=chromosome41,chromosome42=chromosome42,chromosome43=chromosome43,chromosome44=chromosome44,chromosome45=chromosome45,chromosome46=chromosome46,chromosome47=chromosome47,chromosome48=chromosome48,chromosome49=chromosome49,chromosome50=chromosome50)
+```
+```
+rm(chromosome1,chromosome2,chromosome3,chromosome4,chromosome5,chromosome6,chromosome7,chromosome8,chromosome9,chromosome10,chromosome11,chromosome12,chromosome13,chromosome14,chromosome15,chromosome16,chromosome17,chromosome18,chromosome19,chromosome20,chromosome21,chromosome22,chromosome23,chromosome24,chromosome25,chromosome26,chromosome27,chromosome28,chromosome29,chromosome30,chromosome31,chromosome32,chromosome33,chromosome34,chromosome35,chromosome36,chromosome37,chromosome38,chromosome39,chromosome40,chromosome41,chromosome42,chromosome43,chromosome44,chromosome45,chromosome46,chromosome47,chromosome48,chromosome49,chromosome50)
+```
+
+
+
+
+```
+CAU_CCA_CGI_boxplot <- recordPlot(par(mfcol=c(3,1), mai=c(0.53,0.55,0.1,0.1), boxplot(CAU_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "blue", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50), boxplot(CCA_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50), boxplot(CGI_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "yellow3", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)))
 ```
