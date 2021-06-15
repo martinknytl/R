@@ -494,10 +494,13 @@ text(51, 40, "Carassius gibelio", col = "yellow3", adj = 1)
 ```
 CAU_CCA_CGI_boxplot <- recordPlot
 ```
-```
+
 
 #### boxplot for each chromosome separately for comparison in each species
 
+```
 par_boxplot_supplement <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.1,0.1), font = 4, las = 1)
-
+```
+```
 boxplot(CAU_chrome1_50$chromosome1, CCA_chrome1_50$chromosome1, CGI_chrome1_50$chromosome1, horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", whisklty = 3, boxcol = c("blue", "red", "yellow3"), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7)
+```
