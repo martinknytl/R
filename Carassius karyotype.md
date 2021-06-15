@@ -470,7 +470,7 @@ rm(chromosome1,chromosome2,chromosome3,chromosome4,chromosome5,chromosome6,chrom
 
 
 
-
+```
 (par_boxplot <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.1,0.1), font = 4))
 ```
 ```
