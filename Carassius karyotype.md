@@ -1,4 +1,6 @@
-# CAU list creation with each metaphase as a table
+# CAU 
+
+#### list creation with each metaphase as a table
 
 Vectors were written manually from measuring of each chromosome
 ```
@@ -24,7 +26,7 @@ CAU$CaXX1IL_2_3 <- CAU$CaXX1IL_2_3 [order(-CAU$CaXX1IL_2_3$i10),]
 CAU$lenght_i <- data.frame(lenght1=CAU$CaXX1IL_1_1$lenght1, lenght2=CAU$CaXX1IL_1_2$lenght2, lenght3=CAU$CaXX1IL_1_3$lenght3, lenght4=CAU$CaXX1IL_1_4$lenght4, lenght5=CAU$CaXX1IL_1_7$lenght5, lenght6=CAU$CaXX1IL_1_8$lenght6, lenght7=CAU$CaXX1IL_1_6$lenght7, lenght8=CAU$CaXX1IL_2_1$lenght8, lenght9=CAU$CaXX1IL_2_2$lenght9, lenght10=CAU$CaXX1IL_2_3$lenght10, i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
 ```
 
-### "mean_lenght", "var_lenght", "mean_i" and "var_i" columns added into "lenght_i" folder of CAU list. It is not possible to create whole data frame using command with mean and variance. R language has to know other collumns first. Also, separately is created "mean_lenght/variance_lenght" and "mean_i/variance_i"
+#### "mean_lenght", "var_lenght", "mean_i" and "var_i" columns added into "lenght_i" folder of CAU list. It is not possible to create whole data frame using command with mean and variance. R language has to know other collumns first. Also, separately is created "mean_lenght/variance_lenght" and "mean_i/variance_i"
 
 ```
 CAU$lenght_i <- data.frame(lenght1=CAU$CaXX1IL_1_1$lenght1, lenght2=CAU$CaXX1IL_1_2$lenght2, lenght3=CAU$CaXX1IL_1_3$lenght3, lenght4=CAU$CaXX1IL_1_4$lenght4, lenght5=CAU$CaXX1IL_1_7$lenght5, lenght6=CAU$CaXX1IL_1_8$lenght6, lenght7=CAU$CaXX1IL_1_6$lenght7, lenght8=CAU$CaXX1IL_2_1$lenght8, lenght9=CAU$CaXX1IL_2_2$lenght9, lenght10=CAU$CaXX1IL_2_3$lenght10, mean_lenght=apply (CAU$lenght_i[,1:10], 1, mean), variance_lenght=apply(CAU$lenght_i[,1:10], 1, var), i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
@@ -61,7 +63,7 @@ CAU_dotplot <- recordPlot()
 
 #### CAU boxplot creation
 
-## function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
+##### function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
 
 ```
 Select_chrome <- function(i,j) {chromosome <- c(CAU$CaXX1IL_1_1$i1[i:j], CAU$CaXX1IL_1_2$i2[i:j], CAU$CaXX1IL_1_3$i3[i:j], CAU$CaXX1IL_1_4$i4[i:j], CAU$CaXX1IL_1_7$i5[i:j], CAU$CaXX1IL_1_8$i6[i:j], CAU$CaXX1IL_1_6$i7[i:j], CAU$CaXX1IL_2_1$i8[i:j], CAU$CaXX1IL_2_2$i9[i:j], CAU$CaXX1IL_2_3$i10[i:j])}
@@ -135,7 +137,9 @@ CAU_boxplot <- recordPlot()
 
 
 
-# CCA list creation with each metaphase as a table
+# CCA 
+
+#### list creation with each metaphase as a table
 
 Vectors were written manually from measuring of each chromosome
 ```
@@ -199,7 +203,7 @@ CCA_dotplot <- recordPlot()
 
 #### CCA boxplot creation
 
-## function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
+##### function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
 
 ```
 Select_chrome <- function(i,j){
@@ -280,7 +284,9 @@ CCA_boxplot <- recordPlot()
 
 
 
-# CGI list creation with each metaphase as a table
+# CGI 
+
+#### list creation with each metaphase as a table
 
 Vectors were written manually from measuring of each chromosome
 ```
@@ -338,7 +344,7 @@ CGI_dotplot <- recordPlot()
 
 #### CGI boxplot creation
 
-## function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
+##### function for creation of 50 vectors = 50 homologous chromosomal pairs. The first vector from all first two lines of "i" (centromeric index) of each folder (data frame) = chromosome with the highest centromeric index (chromosome1)
 
 ```
 > Select_chrome <- function(i,j) {chromosome <- c(CGI$CGI_D10_6g$i1[i:j], CGI$CGI_D5_9g$i2[i:j], CGI$CGI_X7_2_7$i3[i:j], CGI$CGI_D10_4g$i4[i:j], CGI$CGI_H15_7g$i5[i:j], CGI$CGI_D5_2g$i6[i:j], CGI$CGI_D5_8g$i7[i:j], CGI$CGI_X9_2_1_5$i8[i:j], CGI$CGI_X9_2_1_10$i9[i:j], CGI$CGI_D11_7g$i10[i:j])}
@@ -400,14 +406,14 @@ for(i in 1:100) {if(CGI$CGI_D10_4g$i4[i]>=35.5) {CGI$CGI_D10_4g$category[i] = "m
 
 
 
-## All lists (CAU, CCA, CGI) put together in one environment
+# All lists (CAU, CCA, CGI) put together in one environment
 
 all three scripts (CAU, CCA, CGI) uploaded (CAU as the last one) = CAU chromosome1-50 remained on the environment
 
-## Put all dotplots on one pic and put all boxplots together as a single plot
+#### Put all dotplots on one pic and put all boxplots together as a single plot
 
 ```
-par(mfcol=c(3,1), mai=c(0.53,0.55,0.17,0.1))
+(par_dotplot <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.17,0.1), font=3))
 ```
 ```
 plot(CAU$lenght_i$mean_i_corrected, CAU$lenght_i$mean_lenght, pch=16, col="blue", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
@@ -440,7 +446,7 @@ The result of the command "paste()" put into the keyboard and paste as a new com
 list(chromosome1=chromosome1,chromosome2=chromosome2,chromosome3=chromosome3,chromosome4=chromosome4,chromosome5=chromosome5,chromosome6=chromosome6,chromosome7=chromosome7,chromosome8=chromosome8,chromosome9=chromosome9,chromosome10=chromosome10,chromosome11=chromosome11,chromosome12=chromosome12,chromosome13=chromosome13,chromosome14=chromosome14,chromosome15=chromosome15,chromosome16=chromosome16,chromosome17=chromosome17,chromosome18=chromosome18,chromosome19=chromosome19,chromosome20=chromosome20,chromosome21=chromosome21,chromosome22=chromosome22,chromosome23=chromosome23,chromosome24=chromosome24,chromosome25=chromosome25,chromosome26=chromosome26,chromosome27=chromosome27,chromosome28=chromosome28,chromosome29=chromosome29,chromosome30=chromosome30,chromosome31=chromosome31,chromosome32=chromosome32,chromosome33=chromosome33,chromosome34=chromosome34,chromosome35=chromosome35,chromosome36=chromosome36,chromosome37=chromosome37,chromosome38=chromosome38,chromosome39=chromosome39,chromosome40=chromosome40,chromosome41=chromosome41,chromosome42=chromosome42,chromosome43=chromosome43,chromosome44=chromosome44,chromosome45=chromosome45,chromosome46=chromosome46,chromosome47=chromosome47,chromosome48=chromosome48,chromosome49=chromosome49,chromosome50=chromosome50)
 ```
 
-##remove chromosome1-50 and p/q vectors from CAU and put chromosomes from another (CCA) species
+#### remove chromosome1-50 and p/q vectors from CAU and put chromosomes from another (CCA) species
 ```
 paste0("chromosome", 1:50, collapse = ",")
 ```
@@ -452,7 +458,7 @@ CAU_chrome1_50 <- list(chromosome1=chromosome1,chromosome2=chromosome2,chromosom
 ```
 rm(chromosome1,chromosome2,chromosome3,chromosome4,chromosome5,chromosome6,chromosome7,chromosome8,chromosome9,chromosome10,chromosome11,chromosome12,chromosome13,chromosome14,chromosome15,chromosome16,chromosome17,chromosome18,chromosome19,chromosome20,chromosome21,chromosome22,chromosome23,chromosome24,chromosome25,chromosome26,chromosome27,chromosome28,chromosome29,chromosome30,chromosome31,chromosome32,chromosome33,chromosome34,chromosome35,chromosome36,chromosome37,chromosome38,chromosome39,chromosome40,chromosome41,chromosome42,chromosome43,chromosome44,chromosome45,chromosome46,chromosome47,chromosome48,chromosome49,chromosome50)
 ```
-##CCA environment uploaded
+#### CCA environment uploaded
 
 ```
 CCA_chrome1_50 <- list(chromosome1=chromosome1,chromosome2=chromosome2,chromosome3=chromosome3,chromosome4=chromosome4,chromosome5=chromosome5,chromosome6=chromosome6,chromosome7=chromosome7,chromosome8=chromosome8,chromosome9=chromosome9,chromosome10=chromosome10,chromosome11=chromosome11,chromosome12=chromosome12,chromosome13=chromosome13,chromosome14=chromosome14,chromosome15=chromosome15,chromosome16=chromosome16,chromosome17=chromosome17,chromosome18=chromosome18,chromosome19=chromosome19,chromosome20=chromosome20,chromosome21=chromosome21,chromosome22=chromosome22,chromosome23=chromosome23,chromosome24=chromosome24,chromosome25=chromosome25,chromosome26=chromosome26,chromosome27=chromosome27,chromosome28=chromosome28,chromosome29=chromosome29,chromosome30=chromosome30,chromosome31=chromosome31,chromosome32=chromosome32,chromosome33=chromosome33,chromosome34=chromosome34,chromosome35=chromosome35,chromosome36=chromosome36,chromosome37=chromosome37,chromosome38=chromosome38,chromosome39=chromosome39,chromosome40=chromosome40,chromosome41=chromosome41,chromosome42=chromosome42,chromosome43=chromosome43,chromosome44=chromosome44,chromosome45=chromosome45,chromosome46=chromosome46,chromosome47=chromosome47,chromosome48=chromosome48,chromosome49=chromosome49,chromosome50=chromosome50)
@@ -464,6 +470,34 @@ rm(chromosome1,chromosome2,chromosome3,chromosome4,chromosome5,chromosome6,chrom
 
 
 
+
+(par_boxplot <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.1,0.1), font = 4))
 ```
-CAU_CCA_CGI_boxplot <- recordPlot(par(mfcol=c(3,1), mai=c(0.53,0.55,0.1,0.1), boxplot(CAU_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "blue", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50), boxplot(CCA_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50), boxplot(CGI_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "yellow3", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)))
 ```
+boxplot(CAU_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, whisklty = 3, boxcol = "blue", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)
+```
+```
+text(51, 40, "Carassius auratus", col = "blue", adj = 1)
+```
+```
+boxplot(CCA_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)
+```
+```
+text(51, 40, "Carassius carassius", col = "red", adj = 1)
+```
+```
+boxplot(CGI_chrome1_50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, whisklty = 3, boxcol = "yellow3", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)
+```
+```
+text(51, 40, "Carassius gibelio", col = "yellow3", adj = 1)
+```
+```
+CAU_CCA_CGI_boxplot <- recordPlot
+```
+```
+
+#### boxplot for each chromosome separately for comparison in each species
+
+par_boxplot_supplement <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.1,0.1), font = 4, las = 1)
+
+boxplot(CAU_chrome1_50$chromosome1, CCA_chrome1_50$chromosome1, CGI_chrome1_50$chromosome1, horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", whisklty = 3, boxcol = c("blue", "red", "yellow3"), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7)
