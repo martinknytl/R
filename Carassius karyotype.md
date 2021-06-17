@@ -499,8 +499,65 @@ CAU_CCA_CGI_boxplot <- recordPlot
 #### boxplot for each chromosome separately for comparison in each species
 
 ```
-par_boxplot_supplement <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.1,0.1), font = 4, las = 1)
+par_boxplot_supplement <- par(mfcol=c(25,2), mar=c(0.1,2,0.1,0.1), cex.axis = 0.7, ann = F, font = 4, las = 1, yaxp = c(0, 50, 10), xaxt = "n")
 ```
 ```
-boxplot(CAU_chrome1_50$chromosome1, CCA_chrome1_50$chromosome1, CGI_chrome1_50$chromosome1, horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", whisklty = 3, boxcol = c("blue", "red", "yellow3"), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7)
+par(par_boxplot_supplement)
+```
+```
+for (i in 1:50) {cat(paste0("boxplot(CAU_chrome1_50$chromosome", i, ", CCA_chrome1_50$chromosome", i, ", CGI_chrome1_50$chromosome", i), ", ylab = 'centromeric index', xlab =", paste0("'chromosome", i,"',"), " whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7)", collapse = ",", "\n")}
+```
+
+copy and paste entire concateneted text:
+```
+boxplot(CAU_chrome1_50$chromosome1, CCA_chrome1_50$chromosome1, CGI_chrome1_50$chromosome1, ylab = 'centromeric index', xlab = 'chromosome1',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome2, CCA_chrome1_50$chromosome2, CGI_chrome1_50$chromosome2, ylab = 'centromeric index', xlab = 'chromosome2',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome3, CCA_chrome1_50$chromosome3, CGI_chrome1_50$chromosome3, ylab = 'centromeric index', xlab = 'chromosome3',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome4, CCA_chrome1_50$chromosome4, CGI_chrome1_50$chromosome4, ylab = 'centromeric index', xlab = 'chromosome4',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome5, CCA_chrome1_50$chromosome5, CGI_chrome1_50$chromosome5, ylab = 'centromeric index', xlab = 'chromosome5',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome6, CCA_chrome1_50$chromosome6, CGI_chrome1_50$chromosome6, ylab = 'centromeric index', xlab = 'chromosome6',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome7, CCA_chrome1_50$chromosome7, CGI_chrome1_50$chromosome7, ylab = 'centromeric index', xlab = 'chromosome7',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome8, CCA_chrome1_50$chromosome8, CGI_chrome1_50$chromosome8, ylab = 'centromeric index', xlab = 'chromosome8',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome9, CCA_chrome1_50$chromosome9, CGI_chrome1_50$chromosome9, ylab = 'centromeric index', xlab = 'chromosome9',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome10, CCA_chrome1_50$chromosome10, CGI_chrome1_50$chromosome10, ylab = 'centromeric index', xlab = 'chromosome10',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome11, CCA_chrome1_50$chromosome11, CGI_chrome1_50$chromosome11, ylab = 'centromeric index', xlab = 'chromosome11',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome12, CCA_chrome1_50$chromosome12, CGI_chrome1_50$chromosome12, ylab = 'centromeric index', xlab = 'chromosome12',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome13, CCA_chrome1_50$chromosome13, CGI_chrome1_50$chromosome13, ylab = 'centromeric index', xlab = 'chromosome13',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome14, CCA_chrome1_50$chromosome14, CGI_chrome1_50$chromosome14, ylab = 'centromeric index', xlab = 'chromosome14',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome15, CCA_chrome1_50$chromosome15, CGI_chrome1_50$chromosome15, ylab = 'centromeric index', xlab = 'chromosome15',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome16, CCA_chrome1_50$chromosome16, CGI_chrome1_50$chromosome16, ylab = 'centromeric index', xlab = 'chromosome16',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome17, CCA_chrome1_50$chromosome17, CGI_chrome1_50$chromosome17, ylab = 'centromeric index', xlab = 'chromosome17',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome18, CCA_chrome1_50$chromosome18, CGI_chrome1_50$chromosome18, ylab = 'centromeric index', xlab = 'chromosome18',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome19, CCA_chrome1_50$chromosome19, CGI_chrome1_50$chromosome19, ylab = 'centromeric index', xlab = 'chromosome19',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome20, CCA_chrome1_50$chromosome20, CGI_chrome1_50$chromosome20, ylab = 'centromeric index', xlab = 'chromosome20',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome21, CCA_chrome1_50$chromosome21, CGI_chrome1_50$chromosome21, ylab = 'centromeric index', xlab = 'chromosome21',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome22, CCA_chrome1_50$chromosome22, CGI_chrome1_50$chromosome22, ylab = 'centromeric index', xlab = 'chromosome22',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome23, CCA_chrome1_50$chromosome23, CGI_chrome1_50$chromosome23, ylab = 'centromeric index', xlab = 'chromosome23',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome24, CCA_chrome1_50$chromosome24, CGI_chrome1_50$chromosome24, ylab = 'centromeric index', xlab = 'chromosome24',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome25, CCA_chrome1_50$chromosome25, CGI_chrome1_50$chromosome25, ylab = 'centromeric index', xlab = 'chromosome25',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome26, CCA_chrome1_50$chromosome26, CGI_chrome1_50$chromosome26, ylab = 'centromeric index', xlab = 'chromosome26',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome27, CCA_chrome1_50$chromosome27, CGI_chrome1_50$chromosome27, ylab = 'centromeric index', xlab = 'chromosome27',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome28, CCA_chrome1_50$chromosome28, CGI_chrome1_50$chromosome28, ylab = 'centromeric index', xlab = 'chromosome28',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome29, CCA_chrome1_50$chromosome29, CGI_chrome1_50$chromosome29, ylab = 'centromeric index', xlab = 'chromosome29',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome30, CCA_chrome1_50$chromosome30, CGI_chrome1_50$chromosome30, ylab = 'centromeric index', xlab = 'chromosome30',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome31, CCA_chrome1_50$chromosome31, CGI_chrome1_50$chromosome31, ylab = 'centromeric index', xlab = 'chromosome31',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome32, CCA_chrome1_50$chromosome32, CGI_chrome1_50$chromosome32, ylab = 'centromeric index', xlab = 'chromosome32',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome33, CCA_chrome1_50$chromosome33, CGI_chrome1_50$chromosome33, ylab = 'centromeric index', xlab = 'chromosome33',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome34, CCA_chrome1_50$chromosome34, CGI_chrome1_50$chromosome34, ylab = 'centromeric index', xlab = 'chromosome34',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome35, CCA_chrome1_50$chromosome35, CGI_chrome1_50$chromosome35, ylab = 'centromeric index', xlab = 'chromosome35',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome36, CCA_chrome1_50$chromosome36, CGI_chrome1_50$chromosome36, ylab = 'centromeric index', xlab = 'chromosome36',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome37, CCA_chrome1_50$chromosome37, CGI_chrome1_50$chromosome37, ylab = 'centromeric index', xlab = 'chromosome37',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome38, CCA_chrome1_50$chromosome38, CGI_chrome1_50$chromosome38, ylab = 'centromeric index', xlab = 'chromosome38',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome39, CCA_chrome1_50$chromosome39, CGI_chrome1_50$chromosome39, ylab = 'centromeric index', xlab = 'chromosome39',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome40, CCA_chrome1_50$chromosome40, CGI_chrome1_50$chromosome40, ylab = 'centromeric index', xlab = 'chromosome40',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome41, CCA_chrome1_50$chromosome41, CGI_chrome1_50$chromosome41, ylab = 'centromeric index', xlab = 'chromosome41',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome42, CCA_chrome1_50$chromosome42, CGI_chrome1_50$chromosome42, ylab = 'centromeric index', xlab = 'chromosome42',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome43, CCA_chrome1_50$chromosome43, CGI_chrome1_50$chromosome43, ylab = 'centromeric index', xlab = 'chromosome43',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome44, CCA_chrome1_50$chromosome44, CGI_chrome1_50$chromosome44, ylab = 'centromeric index', xlab = 'chromosome44',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome45, CCA_chrome1_50$chromosome45, CGI_chrome1_50$chromosome45, ylab = 'centromeric index', xlab = 'chromosome45',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome46, CCA_chrome1_50$chromosome46, CGI_chrome1_50$chromosome46, ylab = 'centromeric index', xlab = 'chromosome46',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome47, CCA_chrome1_50$chromosome47, CGI_chrome1_50$chromosome47, ylab = 'centromeric index', xlab = 'chromosome47',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome48, CCA_chrome1_50$chromosome48, CGI_chrome1_50$chromosome48, ylab = 'centromeric index', xlab = 'chromosome48',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome49, CCA_chrome1_50$chromosome49, CGI_chrome1_50$chromosome49, ylab = 'centromeric index', xlab = 'chromosome49',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
+boxplot(CAU_chrome1_50$chromosome50, CCA_chrome1_50$chromosome50, CGI_chrome1_50$chromosome50, ylab = 'centromeric index', xlab = 'chromosome50', whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.7) 
 ```
