@@ -50,13 +50,8 @@ for(i in 1:100) {if(CAU$lenght_i$mean_i_corrected[i]>=35.5) {CAU$lenght_i$catego
 
 #### CAU dotplot creation
 ```
-plot(CAU$lenght_i$mean_i_corrected, CAU$lenght_i$mean_lenght, pch=16, col="blue", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+plot(CAU$lenght_i$mean_i, CAU$lenght_i$mean_lenght, pch=16, col="blue", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
-```
-legend("bottomright", legend = "Carassius auratus", pch = 16, col = "blue")
-```
-
-CAU dotplot put as an object:
 ```
 CAU_dotplot <- recordPlot()
 ```
@@ -136,7 +131,6 @@ CAU_boxplot <- recordPlot()
 
 
 
-
 # CCA 
 
 #### list creation with each metaphase as a table
@@ -188,15 +182,10 @@ CCA$lenght_i[59:74, "mean_i_corrected"] <- 0
 for(i in 1:100) {if(CCA$lenght_i$mean_i_corrected[i]>=35.5) {CCA$lenght_i$category[i] = "m"} else if (CCA$lenght_i$mean_i_corrected[i]>=25 & CCA$lenght_i$mean_i_corrected[i]<35.5){CCA$lenght_i$category[i] = "sm"} else if (CCA$lenght_i$mean_i_corrected[i]>=12.5 & CCA$lenght_i$mean_i_corrected[i]<25){CCA$lenght_i$category[i] = "st"} else if (CCA$lenght_i$mean_i_corrected[i]>0 & CCA$lenght_i$mean_i_corrected[i]<12.5) {CCA$lenght_i$category[i] = "a"} else {CCA$lenght_i$category[i] = "T"}}
 ``` 
 
-#### CCA plot creation
+#### CCA dotplot creation
 ```
-plot(CCA$lenght_i$mean_i_corrected, CCA$lenght_i$mean_lenght, pch=16, col="red", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+plot(CCA$lenght_i$mean_i, CCA$lenght_i$mean_lenght, pch=16, col="red", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
-```
-> legend("bottomright", legend = "Carassius carassius", pch = 16, col = "red")
-```
-
-CCA dotplot put as an object:
 ```
 CCA_dotplot <- recordPlot()
 ```
@@ -331,13 +320,10 @@ CGI$lenght_i[51:75, "mean_i_corrected"] <- 0
 for(i in 1:100) {if(CGI$lenght_i$mean_i_corrected[i]>=35.5) {CGI$lenght_i$category[i] = "m"} else if (CGI$lenght_i$mean_i_corrected[i]>=25 & CGI$lenght_i$mean_i_corrected[i]<35.5){CGI$lenght_i$category[i] = "sm"} else if (CGI$lenght_i$mean_i_corrected[i]>=12.5 & CGI$lenght_i$mean_i_corrected[i]<25){CGI$lenght_i$category[i] = "st"} else if (CGI$lenght_i$mean_i_corrected[i]>0 & CGI$lenght_i$mean_i_corrected[i]<12.5) {CGI$lenght_i$category[i] = "a"} else {CGI$lenght_i$category[i] = "T"}}
 ```
 
-#### CGI plot creation
-
+#### CGI dotplot creation
 ```
-plot(CGI$lenght_i$mean_i_corrected, CGI$lenght_i$mean_lenght, pch=16, col="yellow3", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(12.5, 25, 35.5), col="gray", lty=2))
+plot(CGI$lenght_i$mean_i, CGI$lenght_i$mean_lenght, pch=16, col="yellow3", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
-
-CGI dotplot put as an object:
 ```
 CGI_dotplot <- recordPlot()
 ```
@@ -362,6 +348,14 @@ CGI boxplot put as an object:
 ```
 CGI_boxplot <- recordPlot()
 ```
+
+
+
+
+
+
+
+
 
 #### assign of category to each chromosome in the "mean_i_corrected" folder
 
@@ -403,9 +397,6 @@ for(i in 1:100) {if(CGI$CGI_D10_4g$i4[i]>=35.5) {CGI$CGI_D10_4g$category[i] = "m
 
 
 
-
-
-
 # All lists (CAU, CCA, CGI) put together in one environment
 
 all three scripts (CAU, CCA, CGI) uploaded (CAU as the last one) = CAU chromosome1-50 remained on the environment
@@ -416,19 +407,19 @@ all three scripts (CAU, CCA, CGI) uploaded (CAU as the last one) = CAU chromosom
 (par_dotplot <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.17,0.1), font=3))
 ```
 ```
-plot(CAU$lenght_i$mean_i_corrected, CAU$lenght_i$mean_lenght, pch=16, col="blue", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+plot(CAU$lenght_i$mean_i, CAU$lenght_i$mean_lenght, pch=16, col="blue", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
 ```
 legend("bottomright", legend = "Carassius auratus", pch = 16, col = "blue")
 ```
 ```
-plot(CCA$lenght_i$mean_i_corrected, CCA$lenght_i$mean_lenght, pch=16, col="red", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+plot(CCA$lenght_i$mean_i, CCA$lenght_i$mean_lenght, pch=16, col="red", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
 ```
 legend("bottomright", legend = "Carassius carassius", pch = 16, col = "red")
 ```
 ```
-plot(CGI$lenght_i$mean_i_corrected, CGI$lenght_i$mean_lenght, pch=16, col="yellow3", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(12.5, 25, 35.5), col="gray", lty=2))
+plot(CGI$lenght_i$mean_i, CGI$lenght_i$mean_lenght, pch=16, col="yellow3", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
 ```
 legend("topright", legend = "Carassius gibelio", pch = 16, col = "yellow3")
@@ -499,7 +490,8 @@ CAU_CCA_CGI_boxplot <- recordPlot
 #### boxplot for each chromosome separately for comparison in each species
 
 ```
-par_boxplot_supplement <- par(mfcol=c(25,2), mar=c(0.1,2,0.1,0.1), cex.axis = 0.7, ann = F, font = 2, las = 1, yaxp = c(0, 50, 10), xaxt = "n")```
+par_boxplot_supplement <- par(mfcol=c(25,2), mar=c(0.1,2,0.1,0.1), cex.axis = 0.7, ann = F, font = 2, las = 1, yaxp = c(0, 50, 10), xaxt = "n")
+```
 ```
 par(par_boxplot_supplement)
 ```
@@ -507,7 +499,7 @@ par(par_boxplot_supplement)
 for (i in 1:50) {cat(paste0("boxplot(CAU_chrome1_50$chromosome", i, ", CCA_chrome1_50$chromosome", i, ", CGI_chrome1_50$chromosome", i), ", ylim = c(1, 50), ylab = 'centromeric index', xlab =", paste0("'chromosome", i,"',"), " whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5)", "\n", paste0('text(3.6, 30, "chr',i,'", adj = 1)'), "\n")}
 ```
 
-copy and paste entire concateneted text:
+copied and pastee entire concateneted text and added grid(col = "lightgray") into boxplots of chr8, 11-31. Boxplots were evaluated usinf function "stats" and CAU with CGI vary in values of the second and third quartile.
 ```
 boxplot(CAU_chrome1_50$chromosome1, CCA_chrome1_50$chromosome1, CGI_chrome1_50$chromosome1 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome1',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
 text(3.6, 30, "chr1", adj = 1) 
@@ -524,53 +516,53 @@ text(3.6, 30, "chr6", adj = 1)
 boxplot(CAU_chrome1_50$chromosome7, CCA_chrome1_50$chromosome7, CGI_chrome1_50$chromosome7 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome7',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
 text(3.6, 30, "chr7", adj = 1) 
 boxplot(CAU_chrome1_50$chromosome8, CCA_chrome1_50$chromosome8, CGI_chrome1_50$chromosome8 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome8',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr8", adj = 1) 
+text(3.6, 30, "chr8", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome9, CCA_chrome1_50$chromosome9, CGI_chrome1_50$chromosome9 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome9',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
 text(3.6, 30, "chr9", adj = 1) 
 boxplot(CAU_chrome1_50$chromosome10, CCA_chrome1_50$chromosome10, CGI_chrome1_50$chromosome10 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome10',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
 text(3.6, 30, "chr10", adj = 1) 
 boxplot(CAU_chrome1_50$chromosome11, CCA_chrome1_50$chromosome11, CGI_chrome1_50$chromosome11 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome11',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr11", adj = 1) 
+text(3.6, 30, "chr11", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome12, CCA_chrome1_50$chromosome12, CGI_chrome1_50$chromosome12 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome12',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr12", adj = 1) 
+text(3.6, 30, "chr12", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome13, CCA_chrome1_50$chromosome13, CGI_chrome1_50$chromosome13 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome13',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr13", adj = 1) 
+text(3.6, 30, "chr13", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome14, CCA_chrome1_50$chromosome14, CGI_chrome1_50$chromosome14 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome14',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr14", adj = 1) 
+text(3.6, 30, "chr14", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome15, CCA_chrome1_50$chromosome15, CGI_chrome1_50$chromosome15 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome15',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr15", adj = 1) 
+text(3.6, 30, "chr15", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome16, CCA_chrome1_50$chromosome16, CGI_chrome1_50$chromosome16 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome16',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr16", adj = 1) 
+text(3.6, 30, "chr16", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome17, CCA_chrome1_50$chromosome17, CGI_chrome1_50$chromosome17 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome17',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr17", adj = 1) 
+text(3.6, 30, "chr17", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome18, CCA_chrome1_50$chromosome18, CGI_chrome1_50$chromosome18 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome18',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr18", adj = 1) 
+text(3.6, 30, "chr18", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome19, CCA_chrome1_50$chromosome19, CGI_chrome1_50$chromosome19 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome19',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr19", adj = 1) 
+text(3.6, 30, "chr19", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome20, CCA_chrome1_50$chromosome20, CGI_chrome1_50$chromosome20 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome20',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr20", adj = 1) 
+text(3.6, 30, "chr20", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome21, CCA_chrome1_50$chromosome21, CGI_chrome1_50$chromosome21 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome21',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr21", adj = 1) 
+text(3.6, 30, "chr21", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome22, CCA_chrome1_50$chromosome22, CGI_chrome1_50$chromosome22 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome22',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr22", adj = 1) 
+text(3.6, 30, "chr22", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome23, CCA_chrome1_50$chromosome23, CGI_chrome1_50$chromosome23 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome23',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr23", adj = 1) 
+text(3.6, 30, "chr23", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome24, CCA_chrome1_50$chromosome24, CGI_chrome1_50$chromosome24 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome24',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr24", adj = 1) 
+text(3.6, 30, "chr24", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome25, CCA_chrome1_50$chromosome25, CGI_chrome1_50$chromosome25 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome25',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr25", adj = 1) 
+text(3.6, 30, "chr25", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome26, CCA_chrome1_50$chromosome26, CGI_chrome1_50$chromosome26 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome26',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr26", adj = 1) 
+text(3.6, 30, "chr26", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome27, CCA_chrome1_50$chromosome27, CGI_chrome1_50$chromosome27 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome27',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr27", adj = 1) 
+text(3.6, 30, "chr27", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome28, CCA_chrome1_50$chromosome28, CGI_chrome1_50$chromosome28 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome28',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr28", adj = 1) 
+text(3.6, 30, "chr28", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome29, CCA_chrome1_50$chromosome29, CGI_chrome1_50$chromosome29 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome29',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr29", adj = 1) 
+text(3.6, 30, "chr29", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome30, CCA_chrome1_50$chromosome30, CGI_chrome1_50$chromosome30 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome30',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr30", adj = 1) 
+text(3.6, 30, "chr30", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome31, CCA_chrome1_50$chromosome31, CGI_chrome1_50$chromosome31 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome31',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
-text(3.6, 30, "chr31", adj = 1) 
+text(3.6, 30, "chr31", adj = 1, grid(col = "lightgray")) 
 boxplot(CAU_chrome1_50$chromosome32, CCA_chrome1_50$chromosome32, CGI_chrome1_50$chromosome32 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome32',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
 text(3.6, 30, "chr32", adj = 1) 
 boxplot(CAU_chrome1_50$chromosome33, CCA_chrome1_50$chromosome33, CGI_chrome1_50$chromosome33 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome33',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5) 
