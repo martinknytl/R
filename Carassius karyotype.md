@@ -603,3 +603,35 @@ boxplot(CAU_chrome1_50$chromosome50, CCA_chrome1_50$chromosome50, CGI_chrome1_50
 text(3.6, 30, "chr50", adj = 1)
 ```
 
+Output value ($\$stats$) compared between each species. The $i$ values within the the first quartile (Q1), median (Q2) and the third quartile (Q3) were detaily investigated, especially if some some $i$ values of each individual chromosome are shared in each Carassius species.
+
+e.g.:
+
+```
+(boxplot(CAU_chrome1_50$chromosome8, CCA_chrome1_50$chromosome8, CGI_chrome1_50$chromosome8 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome8',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5))
+```
+$stats
+         [,1]     [,2]     [,3]
+[1,] 38.57225 35.57611 36.14993
+[2,] 39.34915 36.76658 37.37413
+[3,] 40.84316 37.89800 38.41969
+[4,] 42.04733 39.80127 39.01074
+[5,] 44.08874 41.62508 41.42052
+
+$n
+[1] 20 20 20
+
+$conf
+         [,1]     [,2]     [,3]
+[1,] 39.88989 36.82584 37.84148
+[2,] 41.79642 38.97015 38.99790
+
+$out
+numeric(0)
+
+$group
+numeric(0)
+
+$names
+[1] "" "" ""
+
