@@ -298,7 +298,7 @@ CGI$CGI_D11_7g <- CGI$CGI_D11_7g [order(-CGI$CGI_D11_7g$i10),]
 
 #### "lenght_i" folder into CGI list
 ```
-CGI$lenght_i <- data.frame(lenght1=CGI$CGI_D10_6g$lenght, lenght2=CGI$CGI_D5_9g$lenght, lenght3=CGI$CGI_X7_2_7$lenght, lenght4=CGI$CGI_D10_4g$lenght, lenght5=CGI$CGI_H15_7g$lenght, lenght6=CGI$CGI_D5_2g$lenght, lenght7=CGI$CGI_D5_8g$lenght, lenght8=CGI$CGI_X9_2_1_5$lenght, lenght9=CGI$CGI_X9_2_1_10$lenght, lenght10=CGI$CGI_D11_7g$lenght, i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10)
+CGI$length_i <- data.frame(length1=CGI$CGI_D10_6g$lenght, lenght2=CGI$CGI_D5_9g$lenght, lenght3=CGI$CGI_X7_2_7$lenght, lenght4=CGI$CGI_D10_4g$lenght, lenght5=CGI$CGI_H15_7g$lenght, lenght6=CGI$CGI_D5_2g$lenght, lenght7=CGI$CGI_D5_8g$lenght, lenght8=CGI$CGI_X9_2_1_5$lenght, lenght9=CGI$CGI_X9_2_1_10$lenght, lenght10=CGI$CGI_D11_7g$lenght, i1=CGI$CGI_D10_6g$i1, i2=CGI$CGI_D5_9g$i2, i3=CGI$CGI_X7_2_7$i3, i4=CGI$CGI_D10_4g$i4, i5=CGI$CGI_H15_7g$i5, i6=CGI$CGI_D5_2g$i6, i7=CGI$CGI_D5_8g$i7, i8=CGI$CGI_X9_2_1_5$i8, i9=CGI$CGI_X9_2_1_10$i9, i10=CGI$CGI_D11_7g$i10)
 ```
 
 #### "mean_lenght", "var_lenght", "mean_i" and "var_i" columns added into "lenght_i" folder of CGI list. It is not possible to create whole data frame using command with mean and variance. R language has to know other collumns first. Also, separately is created "mean_lenght/variance_lenght" and "mean_i/variance_i"
@@ -610,6 +610,7 @@ e.g.:
 ```
 (boxplot(CAU_chrome1_50$chromosome8, CCA_chrome1_50$chromosome8, CGI_chrome1_50$chromosome8 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome8',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5))
 ```
+
 $stats
          [,1]     [,2]     [,3]
 [1,] 38.57225 35.57611 36.14993
@@ -635,3 +636,44 @@ numeric(0)
 $names
 [1] "" "" ""
 
+
+Rename "lenght" to "length"
+
+cat(names(CAU) )
+
+CaXX1IL_1_1 
+CaXX1IL_1_2 
+CaXX1IL_1_3 
+CaXX1IL_1_4 
+CaXX1IL_1_7 
+CaXX1IL_1_8 
+CaXX1IL_1_6 
+CaXX1IL_2_1 
+CaXX1IL_2_2 
+CaXX1IL_2_3
+
+for (i in 1:10) {
++     cat(paste0(" <- c('p", i, "', q", i, "', length", i, "', d", i, "', r", i, "', i", i,"')"), "\n")
++ } 
+
+<- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
+ <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
+ <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
+ <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
+ <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
+ <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
+ <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
+ <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
+ <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
+ <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
+
+names() <- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
+ names() <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
+ names() <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
+ names() <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
+ names() <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
+ names() <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
+ names() <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
+ names() <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
+ names() <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
+ names() <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
