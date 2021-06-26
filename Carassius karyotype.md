@@ -414,6 +414,7 @@ legend("bottomright", legend = "Carassius carassius", pch = 16, col = "red")
 plot(CGI$length_i$mean_i, CGI$length_i$mean_length, pch=16, col="yellow3", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5,50), col="gray", lty=2))
 legend("topright", legend = "Carassius gibelio", pch = 16, col = "yellow3")
 ```
+```
 CAU_CCA_CGI_dotplot <- recordPlot
 ```
 ```
