@@ -638,17 +638,6 @@ $names
 
 #### Additional editations
 
-names(CAU$CaXX1IL_1_1) <- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
-> names(CAU$CaXX1IL_1_2) <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
-> names(CAU$CaXX1IL_1_3) <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
-> names(CAU$CaXX1IL_1_4) <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
-> names(CAU$CaXX1IL_1_7) <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
-> names(CAU$CaXX1IL_1_8) <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
-> names(CAU$CaXX1IL_1_6) <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
-> names(CAU$CaXX1IL_2_1) <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
-> names(CAU$CaXX1IL_2_2) <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
-> names(CAU$CaXX1IL_2_3) <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
-
 ````
 > cat(names(CAU$lenght_i), fill=1, sep = "'")
 ````
@@ -721,4 +710,72 @@ CaXX1IL_2_1
 CaXX1IL_2_2 
 CaXX1IL_2_3 
 lenght_i
+````
+````
+names(CAU) <- c("CaXX1IL_1_1", "CaXX1IL_1_2", "CaXX1IL_1_3", "CaXX1IL_1_4", "CaXX1IL_1_7", "CaXX1IL_1_8", "CaXX1IL_1_6", "CaXX1IL_2_1", "CaXX1IL_2_2", "CaXX1IL_2_3", "length_i")
+````
+````
+> paste0("CCA$", names(CCA) )
+ ````
+```` 
+names(CCA$CcVi3CZ_5_10) <- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
+ 
+names(CCA$CcVi3CZ_5_9) <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
+ 
+names(CCA$CcVi3CZ_5_6)  <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
+ 
+names(CCA$CcVi3CZ_5_5)  <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
+ 
+names(CCA$CcVi3CZ_2_3)  <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
+ 
+names(CCA$CcVi3CZ_3_5)  <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
+ 
+names(CCA$CcVi3CZ_3_4)  <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
+ 
+names(CCA$CcHe5Fi_1_1)  <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
+
+names(CCA$CcHe5Fi_2_1)  <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
+ 
+names(CCA$CcHe6Fi_1_2)  <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
+                              
+names(CCA$lenght_i) <- c('length1', 'length2', 'length3', 'length4', 'length5', 'length6', 'length7', 'length8', 'length9', 'length10', 'mean_length', 'variance_length', 'i1', 'i2', 'i3', 'i4', 'i5', 'i6', 'i7', 'i8', 'i9', 'i10', 'mean_i', 'variance_i', 'mean_i_corrected', 'category')
+````
+````
+> names(CCA)
+ [1] "CcVi3CZ_5_10" "CcVi3CZ_5_9"  "CcVi3CZ_5_6"  "CcVi3CZ_5_5" 
+ [5] "CcVi3CZ_2_3"  "CcVi3CZ_3_5"  "CcVi3CZ_3_4"  "CcHe5Fi_1_1" 
+ [9] "CcHe5Fi_2_1"  "CcHe6Fi_1_2"  "lenght_i"   
+````
+````
+names(CCA) <- c("CcVi3CZ_5_10", "CcVi3CZ_5_9", "CcVi3CZ_5_6", "CcVi3CZ_5_5", "CcVi3CZ_2_3", "CcVi3CZ_3_5", "CcVi3CZ_3_4", "CcHe5Fi_1_1", "CcHe5Fi_2_1", "CcHe6Fi_1_2",  "length_i")
+````
+````
+> paste0("CGI$", names(CGI) )
+ 
+````
+````
+names(CGI$CGI_D10_6g) <- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
+ 
+names(CGI$CGI_D5_9g) <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
+ 
+names(CGI$CGI_X7_2_7)  <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
+ 
+names(CGI$CGI_D10_4g)  <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
+ 
+names(CGI$CGI_H15_7g)  <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
+ 
+names(CGI$CGI_D5_2g)  <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
+ 
+names(CGI$CGI_D5_8g)  <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
+ 
+names(CGI$CGI_X9_2_1_5)  <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
+
+names(CGI$CGI_X9_2_1_10)  <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
+ 
+names(CGI$CGI_D11_7g)  <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
+                              
+names(CGI$lenght_i) <- c('length1', 'length2', 'length3', 'length4', 'length5', 'length6', 'length7', 'length8', 'length9', 'length10', 'mean_length', 'variance_length', 'i1', 'i2', 'i3', 'i4', 'i5', 'i6', 'i7', 'i8', 'i9', 'i10', 'mean_i', 'variance_i', 'mean_i_corrected', 'category')
+````
+````
+names(CGI) <- c("CGI_D10_6g", "CGI_D5_9g", "CGI_X7_2_7", "CGI_D10_4g", "CGI_H15_7g", "CGI_D5_2g", "CGI_D5_8g", "CGI_X9_2_1_5", "CGI_X9_2_1_10", "CGI_D11_7g", "length_i")
 ````
