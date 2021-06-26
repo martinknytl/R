@@ -608,7 +608,7 @@ Output value ($\$stats$) compared between each species. The $i$ values within th
 e.g.:
 
 ```
-(boxplot(CAU_chrome1_50$chromosome8, CCA_chrome1_50$chromosome8, CGI_chrome1_50$chromosome8 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome8',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5))
+> (boxplot(CAU_chrome1_50$chromosome8, CCA_chrome1_50$chromosome8, CGI_chrome1_50$chromosome8 , ylim = c(1, 50), ylab = 'centromeric index', xlab = 'chromosome8',  whisklty = 3, boxcol = c(4, 2, 'yellow3'), boxfill = gray(0.95), boxlwd = 3, boxwex = 0.5))
 
 $stats
          [,1]     [,2]     [,3]
