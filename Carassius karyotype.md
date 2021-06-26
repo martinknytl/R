@@ -636,11 +636,80 @@ numeric(0)
 $names
 [1] "" "" ""
 
+#### Additional editations
 
-Rename "lenght" to "length"
+names(CAU$CaXX1IL_1_1) <- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
+> names(CAU$CaXX1IL_1_2) <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
+> names(CAU$CaXX1IL_1_3) <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
+> names(CAU$CaXX1IL_1_4) <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
+> names(CAU$CaXX1IL_1_7) <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
+> names(CAU$CaXX1IL_1_8) <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
+> names(CAU$CaXX1IL_1_6) <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
+> names(CAU$CaXX1IL_2_1) <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
+> names(CAU$CaXX1IL_2_2) <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
+> names(CAU$CaXX1IL_2_3) <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
 
-cat(names(CAU) )
+````
+> cat(names(CAU$lenght_i), fill=1, sep = "'")
+````
+manually  added the first ' and comma
 
+'lenght1',
+'lenght2',
+'lenght3',
+'lenght4',
+'lenght5',
+'lenght6',
+'lenght7',
+'lenght8',
+'lenght9',
+'lenght10',
+'mean_lenght',
+'variance_lenght',
+'i1',
+'i2',
+'i3',
+'i4',
+'i5',
+'i6',
+'i7',
+'i8',
+'i9',
+'i10',
+'mean_i',
+'variance_i',
+'mean_i_corrected',
+'category
+
+
+```
+cat(names(CAU), fill = 1, paste0(" <- c('p", 1:10, "', 'q", 1:10, "', 'length", 1:10, "', 'd", 1:10, "', 'r", 1:10, "', 'i", 1:10,"')"))
+```
+```
+names(CAU$CaXX1IL_1_1) <- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
+ 
+names(CAU$CaXX1IL_1_2) <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
+ 
+names(CAU$CaXX1IL_1_3)  <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
+ 
+names(CAU$CaXX1IL_1_4)  <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
+ 
+names(CAU$CaXX1IL_1_7)  <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
+ 
+names(CAU$CaXX1IL_1_8)  <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
+ 
+names(CAU$CaXX1IL_1_6)  <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
+ 
+names(CAU$CaXX1IL_2_1)  <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
+
+names(CAU$CaXX1IL_2_2)  <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
+ 
+names(CAU$CaXX1IL_2_3)  <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
+                              
+names(CAU$lenght_i) <- c('length1', 'length2', 'length3', 'length4', 'length5', 'length6', 'length7', 'length8', 'length9', 'length10', 'mean_length', 'variance_length', 'i1', 'i2', 'i3', 'i4', 'i5', 'i6', 'i7', 'i8', 'i9', 'i10', 'mean_i', 'variance_i', 'mean_i_corrected', 'category')
+```
+````
+> cat(names(CAU), fill = 1)
 CaXX1IL_1_1 
 CaXX1IL_1_2 
 CaXX1IL_1_3 
@@ -650,34 +719,6 @@ CaXX1IL_1_8
 CaXX1IL_1_6 
 CaXX1IL_2_1 
 CaXX1IL_2_2 
-CaXX1IL_2_3
-
-for (i in 1:10) {
-+     cat(paste0(" <- c('p", i, "', q", i, "', length", i, "', d", i, "', r", i, "', i", i,"')"), "\n")
-+ } 
-
-<- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
- <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
- <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
- <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
- <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
- <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
- <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
- <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
- <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
- <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
-
-names(CAU$CaXX1IL_1_1) <- c('p1', 'q1', 'length1', 'd1', 'r1', 'i1') 
- names(CAU$CaXX1IL_1_2) <- c('p2', 'q2', 'length2', 'd2', 'r2', 'i2') 
- names(CAU$CaXX1IL_1_3) <- c('p3', 'q3', 'length3', 'd3', 'r3', 'i3') 
- names(CAU$CaXX1IL_1_4) <- c('p4', 'q4', 'length4', 'd4', 'r4', 'i4') 
- names(CAU$CaXX1IL_1_7) <- c('p5', 'q5', 'length5', 'd5', 'r5', 'i5') 
- names(CAU$CaXX1IL_1_8) <- c('p6', 'q6', 'length6', 'd6', 'r6', 'i6') 
- names(CAU$CaXX1IL_1_6) <- c('p7', 'q7', 'length7', 'd7', 'r7', 'i7') 
- names(CAU$CaXX1IL_2_1) <- c('p8', 'q8', 'length8', 'd8', 'r8', 'i8') 
- names(CAU$CaXX1IL_2_2) <- c('p9', 'q9', 'length9', 'd9', 'r9', 'i9') 
- names(CAU$CaXX1IL_2_3) <- c('p10', 'q10', 'length10', 'd10', 'r10', 'i10')
- names(CAU$lenght_i 10)
- cat(paste0("CAU$", names(CAU) ))
- > 
-CAU$CaXX1IL_1_1 CAU$CaXX1IL_1_2 CAU$CaXX1IL_1_3 CAU$CaXX1IL_1_4 CAU$CaXX1IL_1_7 CAU$CaXX1IL_1_8 CAU$CaXX1IL_1_6 CAU$CaXX1IL_2_1 CAU$CaXX1IL_2_2 CAU$CaXX1IL_2_3 CAU$lenght_i 10
+CaXX1IL_2_3 
+lenght_i
+````
