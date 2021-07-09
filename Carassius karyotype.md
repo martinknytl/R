@@ -769,3 +769,13 @@ names(CGI$lenght_i) <- c('length1', 'length2', 'length3', 'length4', 'length5', 
 ````
 names(CGI) <- c("CGI_D10_6g", "CGI_D5_9g", "CGI_X7_2_7", "CGI_D10_4g", "CGI_H15_7g", "CGI_D5_2g", "CGI_D5_8g", "CGI_X9_2_1_5", "CGI_X9_2_1_10", "CGI_D11_7g", "length_i")
 ````
+
+#### creation of data.frame with median of each species
+````
+CAU_CCA_CGI_median <- data.frame(CAU_median=sapply(CAU_chrome1_50, median), CCA_median=sapply(CCA_chrome1_50, median), CGI_median=sapply(CGI_chrome1_50, median))
+````
+````
+for(i in 1:50) {if(CAU_CCA_CGI_median$CAU_median[i]>=37.5) {CAU_CCA_CGI_median$CAU_category[i] = "m"} else if (CAU_CCA_CGI_median$CAU_median[i]>=25 & CAU_CCA_CGI_median$CAU_median[i]<37.5){CAU_CCA_CGI_median$CAU_category[i] = "sm"} else if (CAU_CCA_CGI_median$CAU_median[i]>=12.5 & CAU_CCA_CGI_median$CAU_median[i]<25){CAU_CCA_CGI_median$CAU_category[i] = "st"} else if (CAU_CCA_CGI_median$CAU_median[i]>0 & CAU_CCA_CGI_median$CAU_median[i]<12.5) {CAU_CCA_CGI_median$CAU_category[i] = "a"} else {CAU_CCA_CGI_median$CAU_category[i] = "T"}}
+for(i in 1:50) {if(CAU_CCA_CGI_median$CCA_median[i]>=37.5) {CAU_CCA_CGI_median$CCA_category[i] = "m"} else if (CAU_CCA_CGI_median$CCA_median[i]>=25 & CAU_CCA_CGI_median$CCA_median[i]<37.5){CAU_CCA_CGI_median$CCA_category[i] = "sm"} else if (CAU_CCA_CGI_median$CCA_median[i]>=12.5 & CAU_CCA_CGI_median$CCA_median[i]<25){CAU_CCA_CGI_median$CCA_category[i] = "st"} else if (CAU_CCA_CGI_median$CCA_median[i]>0 & CAU_CCA_CGI_median$CCA_median[i]<12.5) {CAU_CCA_CGI_median$CCA_category[i] = "a"} else {CAU_CCA_CGI_median$CCA_category[i] = "T"}}
+for(i in 1:50) {if(CAU_CCA_CGI_median$CGI_median[i]>=37.5) {CAU_CCA_CGI_median$CGI_category[i] = "m"} else if (CAU_CCA_CGI_median$CGI_median[i]>=25 & CAU_CCA_CGI_median$CGI_median[i]<37.5){CAU_CCA_CGI_median$CGI_category[i] = "sm"} else if (CAU_CCA_CGI_median$CGI_median[i]>=12.5 & CAU_CCA_CGI_median$CGI_median[i]<25){CAU_CCA_CGI_median$CGI_category[i] = "st"} else if (CAU_CCA_CGI_median$CGI_median[i]>0 & CAU_CCA_CGI_median$CGI_median[i]<12.5) {CAU_CCA_CGI_median$CGI_category[i] = "a"} else {CAU_CCA_CGI_median$CGI_category[i] = "T"}}
+````
