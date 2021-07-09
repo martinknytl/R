@@ -626,7 +626,7 @@ $names
 [1] "" "" ""
 ```
 
-#### Additional editations
+#### Additional editations (lenght -> length)
 
 ````
 > cat(names(CAU$lenght_i), fill=1, sep = "'")
