@@ -779,3 +779,14 @@ for(i in 1:50) {if(CAU_CCA_CGI_median$CAU_median[i]>=37.5) {CAU_CCA_CGI_median$C
 for(i in 1:50) {if(CAU_CCA_CGI_median$CCA_median[i]>=37.5) {CAU_CCA_CGI_median$CCA_category[i] = "m"} else if (CAU_CCA_CGI_median$CCA_median[i]>=25 & CAU_CCA_CGI_median$CCA_median[i]<37.5){CAU_CCA_CGI_median$CCA_category[i] = "sm"} else if (CAU_CCA_CGI_median$CCA_median[i]>=12.5 & CAU_CCA_CGI_median$CCA_median[i]<25){CAU_CCA_CGI_median$CCA_category[i] = "st"} else if (CAU_CCA_CGI_median$CCA_median[i]>0 & CAU_CCA_CGI_median$CCA_median[i]<12.5) {CAU_CCA_CGI_median$CCA_category[i] = "a"} else {CAU_CCA_CGI_median$CCA_category[i] = "T"}}
 for(i in 1:50) {if(CAU_CCA_CGI_median$CGI_median[i]>=37.5) {CAU_CCA_CGI_median$CGI_category[i] = "m"} else if (CAU_CCA_CGI_median$CGI_median[i]>=25 & CAU_CCA_CGI_median$CGI_median[i]<37.5){CAU_CCA_CGI_median$CGI_category[i] = "sm"} else if (CAU_CCA_CGI_median$CGI_median[i]>=12.5 & CAU_CCA_CGI_median$CGI_median[i]<25){CAU_CCA_CGI_median$CGI_category[i] = "st"} else if (CAU_CCA_CGI_median$CGI_median[i]>0 & CAU_CCA_CGI_median$CGI_median[i]<12.5) {CAU_CCA_CGI_median$CGI_category[i] = "a"} else {CAU_CCA_CGI_median$CGI_category[i] = "T"}}
 ````
+
+#### export data frame to LaTeX
+```
+install.packages("xtable")
+```
+```
+library(xtable)
+```
+```
+print(xtable(CAU_CCA_CGI_median, type = "latex"), file = "CAU_CCA_CGI_median_i.tex")
+```
