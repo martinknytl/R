@@ -21,11 +21,3 @@ CAU$CaXX1IL_2_3 <- CAU$CaXX1IL_2_3 [order(-CAU$CaXX1IL_2_3$i10),]
 ````
 
 
-
-> CAU$length_i <- data.frame(length1=CAU$CaXX1IL_1_1$length1, length2=CAU$CaXX1IL_1_2$length2, length3=CAU$CaXX1IL_1_3$length3, length4=CAU$CaXX1IL_1_4$length4, length5=CAU$CaXX1IL_1_7$length5, length6=CAU$CaXX1IL_1_8$length6, length7=CAU$CaXX1IL_1_6$length7, length8=CAU$CaXX1IL_2_1$length8, length9=CAU$CaXX1IL_2_2$length9, length10=CAU$CaXX1IL_2_3$length10, mean_length=apply (CAU$length_i[,1:10], 1, mean), variance_length=apply(CAU$length_i[,1:10], 1, var), i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
-
-> CAU$length_i <- data.frame(length1=CAU$CaXX1IL_1_1$length1, length2=CAU$CaXX1IL_1_2$length2, length3=CAU$CaXX1IL_1_3$length3, length4=CAU$CaXX1IL_1_4$length4, length5=CAU$CaXX1IL_1_7$length5, length6=CAU$CaXX1IL_1_8$length6, length7=CAU$CaXX1IL_1_6$length7, length8=CAU$CaXX1IL_2_1$length8, length9=CAU$CaXX1IL_2_2$length9, length10=CAU$CaXX1IL_2_3$length10, mean_length=apply (CAU$length_i[,1:10], 1, mean), variance_length=apply(CAU$length_i[,1:10], 1, var), i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10, mean_i=apply (CAU$length_i[,13:22], 1, mean), variance_i=apply(CAU$length_i[,13:22], 1, var))
-
-
-````
-
