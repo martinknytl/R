@@ -17,7 +17,7 @@ CAU$CaXX1IL_2_3 <- CAU$CaXX1IL_2_3 [order(-CAU$CaXX1IL_2_3$i10),]
 > CAU$length_i$mean_length <- apply (CAU$length_i[,1:10], 1, mean)
 > CAU$length_i$mean_i <- apply (CAU$length_i[,11:20], 1, mean)
 
-> plot(CAU$length_i$mean_i, CAU$length_i$mean_length, pch=16, col="blue", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5, 50), col="gray", lty=2))
+> plot(CAU$length_i$mean_i, CAU$length_i$mean_length, pch=16, col="yellow3", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5, 50), col="gray", lty=2))
 ````
 
 
