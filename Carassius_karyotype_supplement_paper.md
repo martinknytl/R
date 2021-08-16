@@ -78,6 +78,13 @@
 > boxplot(chromosome1, chromosome2, chromosome3, chromosome4, chromosome5, chromosome6, chromosome7, chromosome8, chromosome9, chromosome10, chromosome11, chromosome12, chromosome13, chromosome14, chromosome15, chromosome16, chromosome17, chromosome18, chromosome19, chromosome20, chromosome21, chromosome22, chromosome23, chromosome24, chromosome25, chromosome26, chromosome27, chromosome28, chromosome29, chromosome30, chromosome31, chromosome32, chromosome33, chromosome34, chromosome35, chromosome36, chromosome37, chromosome38, chromosome39, chromosome40, chromosome41, chromosome42, chromosome43, chromosome44, chromosome45, chromosome46, chromosome47, chromosome48, chromosome49, chromosome50, ylim=c(-1, 50), xlim=c(1, 50), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "yellow3", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = 1:50)
 > text(51, 40, "Carassius auratus", col = "yellow3", adj = 1)
 
+CAU$length <- data.frame(length1=CAU$CaXX1IL_1_1$length1, length2=CAU$CaXX1IL_1_2$length2, length3=CAU$CaXX1IL_1_3$length3, length4=CAU$CaXX1IL_1_4$length4, length5=CAU$CaXX1IL_1_7$length5, length6=CAU$CaXX1IL_1_8$length6, length7=CAU$CaXX1IL_1_6$length7, length8=CAU$CaXX1IL_2_1$length8, length9=CAU$CaXX1IL_2_2$length9, length10=CAU$CaXX1IL_2_3$length10)
+
+CAU$length$mean_length <- apply (CAU$length[,1:10], 1, mean)
+
+CAU$i <- data.frame(i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
+
+> CAU$i$mean_i <- apply (CAU$i[,1:10], 1, mean)
 
 ````
 
