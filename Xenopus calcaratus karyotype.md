@@ -1,6 +1,6 @@
 # XCA 
 
-####Vectors were written manually from measuring of each chromosome
+###Vectors were written manually from measuring of each chromosome
 
 e.g. for chromosome1, p1, and q1
 ```
