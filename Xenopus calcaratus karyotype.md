@@ -147,6 +147,18 @@ XCA <- list(XCA1_1_1=data.frame(p1=p1,q1=q1,l1=p1+q1,r1_1=p1/q1,r2_1=q1/p1,i1=10
 paste0(" data.frame(p", 25:35, "=p", 25:35, ",q", 25:35, "=q", 25:35, ",l", 25:35, "=p", 25:35, "+q", 25:35, ",r1_", 25:35, "=p", 25:35, "/q", 25:35, ",r2_", 25:35, "=q", 25:35, "/p", 25:35, ",i", 25:35, "=100/((q", 25:35, "/p", 25:35, ")+1))", collapse = ",")
 ```
 
+#### "XCA <- list(" and name of individuals manually added
+
+XCA$CHR7_Image_20=data.frame(p25=p25,q25=q25,l25=p25+q25,r1_25=p25/q25,r2_25=q25/p25,i25=100/((q25/p25)+1))
+XCA$XCA20_CHR6_Image_11=data.frame(p26=p26,q26=q26,l26=p26+q26,r1_26=p26/q26,r2_26=q26/p26,i26=100/((q26/p26)+1))
+XCA$XCABaF1_2_2II_Image_13=data.frame(p27=p27,q27=q27,l27=p27+q27,r1_27=p27/q27,r2_27=q27/p27,i27=100/((q27/p27)+1))
+XCA$XCABaF1_2_9II_Image_16=data.frame(p28=p28,q28=q28,l28=p28+q28,r1_28=p28/q28,r2_28=q28/p28,i28=100/((q28/p28)+1))
+XCA$XCAF1_2_CHR3_Image_7=data.frame(p29=p29,q29=q29,l29=p29+q29,r1_29=p29/q29,r2_29=q29/p29,i29=100/((q29/p29)+1))
+XCA$XCABaF1_2_13II_Image_2=data.frame(p30=p30,q30=q30,l30=p30+q30,r1_30=p30/q30,r2_30=q30/p30,i30=100/((q30/p30)+1))
+
+data.frame(p31=p31,q31=q31,l31=p31+q31,r1_31=p31/q31,r2_31=q31/p31,i31=100/((q31/p31)+1)), data.frame(p32=p32,q32=q32,l32=p32+q32,r1_32=p32/q32,r2_32=q32/p32,i32=100/((q32/p32)+1)), data.frame(p33=p33,q33=q33,l33=p33+q33,r1_33=p33/q33,r2_33=q33/p33,i33=100/((q33/p33)+1)), data.frame(p34=p34,q34=q34,l34=p34+q34,r1_34=p34/q34,r2_34=q34/p34,i34=100/((q34/p34)+1)), data.frame(p35=p35,q35=q35,l35=p35+q35,r1_35=p35/q35,r2_35=q35/p35,i35=100/((q35/p35)+1))
+
+
 ```
 XCA$XCA1_1_1$l1_percentage <- (XCA$XCA1_1_1$l1*100)/sum(XCA$XCA1_1_1$l1)
 ```
