@@ -107,10 +107,68 @@ XCA <- list(XCA1_1_1=data.frame(p1=p1,q1=q1,l1=p1+q1,r1_1=p1/q1,r2_1=q1/p1,i1=10
 
 #### "l_percentage_i" folder into XCA list
 
-XCA$l_percentage_i <- data.frame(
-l_percentage1=(XCA$XCA1_1_$l1*100)/sum(XCA$XCA1_1_1$l1)
-
+paste0(
+    "l_percentage", 1:36, "=(XCA$$l", 1:36, "*100)/sum(XCA$$l", 1:36, ")", collapse = ","
 )
+
+command result is:
+
+```
+[1]"l_percentage1=(XCA$$l1*100)/sum(XCA$$l1),l_percentage2=(XCA$$l2*100)/sum(XCA$$l2),l_percentage3=(XCA$$l3*100)/sum(XCA$$l3),l_percentage4=(XCA$$l4*100)/sum(XCA$$l4),l_percentage5=(XCA$$l5*100)/sum(XCA$$l5),l_percentage6=(XCA$$l6*100)/sum(XCA$$l6),l_percentage7=(XCA$$l7*100)/sum(XCA$$l7),l_percentage8=(XCA$$l8*100)/sum(XCA$$l8),l_percentage9=(XCA$$l9*100)/sum(XCA$$l9),l_percentage10=(XCA$$l10*100)/sum(XCA$$l10),l_percentage11=(XCA$$l11*100)/sum(XCA$$l11),l_percentage12=(XCA$$l12*100)/sum(XCA$$l12),l_percentage13=(XCA$$l13*100)/sum(XCA$$l13),l_percentage14=(XCA$$l14*100)/sum(XCA$$l14),l_percentage15=(XCA$$l15*100)/sum(XCA$$l15),l_percentage16=(XCA$$l16*100)/sum(XCA$$l16),l_percentage17=(XCA$$l17*100)/sum(XCA$$l17),l_percentage18=(XCA$$l18*100)/sum(XCA$$l18),l_percentage19=(XCA$$l19*100)/sum(XCA$$l19),l_percentage20=(XCA$$l20*100)/sum(XCA$$l20),l_percentage21=(XCA$$l21*100)/sum(XCA$$l21),l_percentage22=(XCA$$l22*100)/sum(XCA$$l22),l_percentage23=(XCA$$l23*100)/sum(XCA$$l23),l_percentage24=(XCA$$l24*100)/sum(XCA$$l24),l_percentage25=(XCA$$l25*100)/sum(XCA$$l25),l_percentage26=(XCA$$l26*100)/sum(XCA$$l26),l_percentage27=(XCA$$l27*100)/sum(XCA$$l27),l_percentage28=(XCA$$l28*100)/sum(XCA$$l28),l_percentage29=(XCA$$l29*100)/sum(XCA$$l29),l_percentage30=(XCA$$l30*100)/sum(XCA$$l30),l_percentage31=(XCA$$l31*100)/sum(XCA$$l31),l_percentage32=(XCA$$l32*100)/sum(XCA$$l32),l_percentage33=(XCA$$l33*100)/sum(XCA$$l33),l_percentage34=(XCA$$l34*100)/sum(XCA$$l34),l_percentage35=(XCA$$l35*100)/sum(XCA$$l35),l_percentage36=(XCA$$l36*100)/sum(XCA$$l36)"
+```
+```
+> names(XCA)
+ [1] "XCA1_1_1"                 "XCA1_2_5"                 "XCA1_3_4"                 "XCA1_3_8"                
+ [5] "XCA1_4_1"                 "XCA1_9_3"                 "XCA2_1_5"                 "XCA2_4_1"                
+ [9] "XCA2_12_2"                "XCA3_1_2"                 "XCA3_1_13"                "XCA3_7_14"               
+[13] "XCA3_7_18"                "XCA3_7_19"                "CHR2_Image_9"             "CHR9_XCA_F1_2_17_Image_6"
+[17] "XCA28_CHR10_Image_1"      "XCA3_CBAND_Image_8"       "XCABaF1_2_7II_Image_15"   "XCA4_CHR8_Image_1"       
+[21] "XCABaF1_2_19II_Image_31"  "XCABaF1_2_10II_Image_4"   "XCABaF1_2_4II_Image_7"    "XCABaF1_2_15II_Image_5"  
+[25] "CHR7_Image_20"            "XCA20_CHR6_Image_11"      "XCABaF1_2_2II_Image_13"   "XCABaF1_2_9II_Image_16"  
+[29] "XCAF1_2_CHR3_Image_7"     "XCABaF1_2_13II_Image_2"   "XCABaF1_2_14II_Image_4"   "XCAPCC5_8_Image_7ab"     
+[33] "XCA_F1_2_16_CHR5_Image_5" "CHR1_XCA2_2_Image_15"     "XCABaF1_2_7II_Image_7"    "l_percentage_i"
+```
+
+XCA$l_percentage_i <- data.frame(
+        l_percentage1=(XCA$names(XCA[1])$l1*100)/sum(XCA$$l1),
+        l_percentage2=(XCA$$l2*100)/sum(XCA$$l2),
+        l_percentage3=(XCA$$l3*100)/sum(XCA$$l3),
+        l_percentage4=(XCA$$l4*100)/sum(XCA$$l4),
+        l_percentage5=(XCA$$l5*100)/sum(XCA$$l5),
+        l_percentage6=(XCA$$l6*100)/sum(XCA$$l6),
+        l_percentage7=(XCA$$l7*100)/sum(XCA$$l7),
+        l_percentage8=(XCA$$l8*100)/sum(XCA$$l8),
+        l_percentage9=(XCA$$l9*100)/sum(XCA$$l9),
+        l_percentage10=(XCA$$l10*100)/sum(XCA$$l10),
+        l_percentage11=(XCA$$l11*100)/sum(XCA$$l11),
+        l_percentage12=(XCA$$l12*100)/sum(XCA$$l12),
+        l_percentage13=(XCA$$l13*100)/sum(XCA$$l13),
+        l_percentage14=(XCA$$l14*100)/sum(XCA$$l14),
+        l_percentage15=(XCA$$l15*100)/sum(XCA$$l15),
+        l_percentage16=(XCA$$l16*100)/sum(XCA$$l16),
+        l_percentage17=(XCA$$l17*100)/sum(XCA$$l17),
+        l_percentage18=(XCA$$l18*100)/sum(XCA$$l18),
+        l_percentage19=(XCA$$l19*100)/sum(XCA$$l19),
+        l_percentage20=(XCA$$l20*100)/sum(XCA$$l20),
+        l_percentage21=(XCA$$l21*100)/sum(XCA$$l21),
+        l_percentage22=(XCA$$l22*100)/sum(XCA$$l22),
+        l_percentage23=(XCA$$l23*100)/sum(XCA$$l23),
+        l_percentage24=(XCA$$l24*100)/sum(XCA$$l24),
+        l_percentage25=(XCA$$l25*100)/sum(XCA$$l25),
+        l_percentage26=(XCA$$l26*100)/sum(XCA$$l26),
+        l_percentage27=(XCA$$l27*100)/sum(XCA$$l27),
+        l_percentage28=(XCA$$l28*100)/sum(XCA$$l28),
+        l_percentage29=(XCA$$l29*100)/sum(XCA$$l29),
+        l_percentage30=(XCA$$l30*100)/sum(XCA$$l30),
+        l_percentage31=(XCA$$l31*100)/sum(XCA$$l31),
+        l_percentage32=(XCA$$l32*100)/sum(XCA$$l32),
+        l_percentage33=(XCA$$l33*100)/sum(XCA$$l33),
+        l_percentage34=(XCA$$l34*100)/sum(XCA$$l34),
+        l_percentage35=(XCA$$l35*100)/sum(XCA$$l35),
+        l_percentage36=(XCA$$l36*100)/sum(XCA$$l36)
+)
+
+
 
 lenght2=CAU$CaXX1IL_1_2$lenght2, lenght3=CAU$CaXX1IL_1_3$lenght3, lenght4=CAU$CaXX1IL_1_4$lenght4, lenght5=CAU$CaXX1IL_1_7$lenght5, lenght6=CAU$CaXX1IL_1_8$lenght6, lenght7=CAU$CaXX1IL_1_6$lenght7, lenght8=CAU$CaXX1IL_2_1$lenght8, lenght9=CAU$CaXX1IL_2_2$lenght9, lenght10=CAU$CaXX1IL_2_3$lenght10, i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
 
