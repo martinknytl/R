@@ -105,7 +105,7 @@ XCA <- list(XCA1_1_1=data.frame(p1=p1,q1=q1,l1=p1+q1,r1_1=p1/q1,r2_1=q1/p1,i1=10
 =data.frame(p36=p36,q36=q36,l36=p36+q36,r1_36=p36/q36,r2_36=q36/p36,i36=100/((q36/p36)+1)))
 
 
-#### "l_percentage_i" folder into XCA list
+#### "l_percentage" folder into XCA list
 
 ```
 > paste0(
@@ -166,6 +166,8 @@ XCA$l_percentage <- data.frame(
 ```
 l_percentage36=(XCA$$l36*100)/sum(XCA$$l36)
 
+#### "i" folder into XCA list
+
 ```
 > paste0("i", 1:36, "=(XCA$, names(XCA[1:36]) ,$i", 1:36, ")", collapse = ",")
 [1] "i1=(XCA$$i1),i2=(XCA$XCA1_2_5$i2),i3=(XCA$$i3),i4=(XCA$$i4),i5=(XCA$$i5),i6=(XCA$$i6),i7=(XCA$$i7),i8=(XCA$$i8),i9=(XCA$$i9),i10=(XCA$$i10),i11=(XCA$$i11),i12=(XCA$$i12),i13=(XCA$$i13),i14=(XCA$$i14),i15=(XCA$$i15),i16=(XCA$$i16),i17=(XCA$$i17),i18=(XCA$$i18),i19=(XCA$$i19),i20=(XCA$$i20),i21=(XCA$$i21),i22=(XCA$$i22),i23=(XCA$$i23),i24=(XCA$$i24),i25=(XCA$$i25),i26=(XCA$$i26),i27=(XCA$$i27),i28=(XCA$$i28),i29=(XCA$$i29),i30=(XCA$$i30),i31=(XCA$$i31),i32=(XCA$$i32),i33=(XCA$$i33),i34=(XCA$$i34),i35=(XCA$$i35),i36=(XCA$$i36)"
@@ -193,40 +195,53 @@ XCA$i <- data.frame(
 ```
 ,i36=(XCA$$i36)
 
-i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
-
-
-
-
-
-XCA$XCA1_1_1 <- XCA$XCA1_1_1[order(XCA$XCA1_1_1$chromosome1),]
-XCA$XCA1_2_5 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-
-
-XCA$XCA1_3_4 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA1_3_8 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA1_4_1 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA1_9_3  <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA2_1_5 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA2_4_1 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA2_12_2  <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA3_1_2 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA3_1_13 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA3_7_14 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA3_7_18 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA3_7_19 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$CHR2_Image_9 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$CHR9_XCA_F1_2_17_Image_6 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA28_CHR10_Image_1 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA3_CBAND_Image_8 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCABaF1_2_7II_Image_15 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCA4_CHR8_Image_1 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCABaF1_2_19II_Image_31 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCABaF1_2_10II_Image_4 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCABaF1_2_4II_Image_7 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-XCA$XCABaF1_2_15II_Image_5 <- XCA$XCA1_2_5[order(XCA$XCA1_2_5$chromosome2),]
-
 ```
-XCA$XCA1_1_1$l1_percentage <- (XCA$XCA1_1_1$l1*100)/sum(XCA$XCA1_1_1$l1)
+XCA$l_percentage$mean_l=apply (XCA$l_percentage, 1, mean)
+XCA$l_percentage$median_l=apply (XCA$l_percentage, 1, median)
 ```
  
+Select_chrome <- function(i,j) {chromosome <- c(CAU$CaXX1IL_1_1$i1[i:j], CAU$CaXX1IL_1_2$i2[i:j], CAU$CaXX1IL_1_3$i3[i:j], CAU$CaXX1IL_1_4$i4[i:j], CAU$CaXX1IL_1_7$i5[i:j], CAU$CaXX1IL_1_8$i6[i:j], CAU$CaXX1IL_1_6$i7[i:j], CAU$CaXX1IL_2_1$i8[i:j], CAU$CaXX1IL_2_2$i9[i:j], CAU$CaXX1IL_2_3$i10[i:j])}
+
+> chromosome1 <- Select_chrome(1,2)
+> chromosome2 <- Select_chrome(3,4)
+> chromosome3 <- Select_chrome(5,6)
+> chromosome4 <- Select_chrome(7,8)
+> chromosome5 <- Select_chrome(9,10)
+> chromosome6 <- Select_chrome(11,12)
+> chromosome7 <- Select_chrome(13,14)
+> chromosome8 <- Select_chrome(15,16)
+> chromosome9 <- Select_chrome(17,18)
+> chromosome10 <- Select_chrome(19,20)
+> chromosome11 <- Select_chrome(21,22)
+> chromosome12 <- Select_chrome(23,24)
+> chromosome13 <- Select_chrome(25,26)
+> chromosome14 <- Select_chrome(27,28)
+> chromosome15 <- Select_chrome(29,30)
+> chromosome16 <- Select_chrome(31,32)
+> chromosome17 <- Select_chrome(33,34)
+> chromosome18 <- Select_chrome(35,36)
+> chromosome19 <- Select_chrome(37,38)
+> chromosome20 <- Select_chrome(39,40)
+
+Select_chrome <- function(i,j) {chromosome <- c(CAU$CaXX1IL_1_1$i1[i:j], CAU$CaXX1IL_1_2$i2[i:j], CAU$CaXX1IL_1_3$i3[i:j], CAU$CaXX1IL_1_4$i4[i:j], CAU$CaXX1IL_1_7$i5[i:j], CAU$CaXX1IL_1_8$i6[i:j], CAU$CaXX1IL_1_6$i7[i:j], CAU$CaXX1IL_2_1$i8[i:j], CAU$CaXX1IL_2_2$i9[i:j], CAU$CaXX1IL_2_3$i10[i:j])}
+
+> chromosome1 <- Select_chrome(1,2)
+> chromosome2 <- Select_chrome(3,4)
+> chromosome3 <- Select_chrome(5,6)
+> chromosome4 <- Select_chrome(7,8)
+> chromosome5 <- Select_chrome(9,10)
+> chromosome6 <- Select_chrome(11,12)
+> chromosome7 <- Select_chrome(13,14)
+> chromosome8 <- Select_chrome(15,16)
+> chromosome9 <- Select_chrome(17,18)
+> chromosome10 <- Select_chrome(19,20)
+> chromosome11 <- Select_chrome(21,22)
+> chromosome12 <- Select_chrome(23,24)
+> chromosome13 <- Select_chrome(25,26)
+> chromosome14 <- Select_chrome(27,28)
+> chromosome15 <- Select_chrome(29,30)
+> chromosome16 <- Select_chrome(31,32)
+> chromosome17 <- Select_chrome(33,34)
+> chromosome18 <- Select_chrome(35,36)
+> chromosome19 <- Select_chrome(37,38)
+> chromosome20 <- Select_chrome(39,40)
