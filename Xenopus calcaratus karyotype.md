@@ -126,7 +126,7 @@ XCA <- list(XCA1_1_1=data.frame(p1=p1,q1=q1,l1=p1+q1,r1_1=p1/q1,r2_1=q1/p1,i1=10
 [33] "XCA_F1_2_16_CHR5_Image_5" "CHR1_XCA2_2_Image_15"     "XCABaF1_2_7II_Image_7"    "l_percentage_i"
 ```
 ```
-XCA$l_percentage_i <- data.frame(
+XCA$l_percentage <- data.frame(
         l_percentage1=(XCA$XCA1_1_1$l1*100)/sum(XCA$XCA1_1_1$l1),
         l_percentage2=(XCA$XCA1_2_5$l2*100)/sum(XCA$XCA1_2_5$l2),
         l_percentage3=(XCA$XCA1_3_4$l3*100)/sum(XCA$XCA1_3_4$l3),
@@ -162,15 +162,38 @@ XCA$l_percentage_i <- data.frame(
         l_percentage33=(XCA$XCA_F1_2_16_CHR5_Image_5$l33*100)/sum(XCA$XCA_F1_2_16_CHR5_Image_5$l33),
         l_percentage34=(XCA$CHR1_XCA2_2_Image_15$l34*100)/sum(XCA$CHR1_XCA2_2_Image_15$l34),
         l_percentage35=(XCA$XCABaF1_2_7II_Image_7$l35*100)/sum(XCA$XCABaF1_2_7II_Image_7$l35)
-        
-)
-
+     )
+```
 l_percentage36=(XCA$$l36*100)/sum(XCA$$l36)
 
+```
+> paste0("i", 1:36, "=(XCA$, names(XCA[1:36]) ,$i", 1:36, ")", collapse = ",")
+[1] "i1=(XCA$$i1),i2=(XCA$XCA1_2_5$i2),i3=(XCA$$i3),i4=(XCA$$i4),i5=(XCA$$i5),i6=(XCA$$i6),i7=(XCA$$i7),i8=(XCA$$i8),i9=(XCA$$i9),i10=(XCA$$i10),i11=(XCA$$i11),i12=(XCA$$i12),i13=(XCA$$i13),i14=(XCA$$i14),i15=(XCA$$i15),i16=(XCA$$i16),i17=(XCA$$i17),i18=(XCA$$i18),i19=(XCA$$i19),i20=(XCA$$i20),i21=(XCA$$i21),i22=(XCA$$i22),i23=(XCA$$i23),i24=(XCA$$i24),i25=(XCA$$i25),i26=(XCA$$i26),i27=(XCA$$i27),i28=(XCA$$i28),i29=(XCA$$i29),i30=(XCA$$i30),i31=(XCA$$i31),i32=(XCA$$i32),i33=(XCA$$i33),i34=(XCA$$i34),i35=(XCA$$i35),i36=(XCA$$i36)"
+```
+```
+XCA$i <- data.frame(
+        i1=XCA$XCA1_1_1$i1,
+        i2=XCA$XCA1_2_5$i2,
+        i3=XCA$XCA1_3_4$i3,
+        i4=XCA$XCA1_3_8$i4,
+        i5=XCA$XCA1_4_1$i5,
+        i6=XCA$XCA1_9_3$i6,
+        i7=XCA$XCA2_1_5$i7,
+        i8=XCA$XCA2_4_1$i8,
+        i9=XCA$XCA2_12_2$i9,
+        i10=XCA$XCA3_1_2$i10,
+        i11=XCA$XCA3_1_13$i11,
+        i12=XCA$XCA3_7_14$i12,
+        i13=XCA$XCA3_7_18$i13,
+        i14=XCA$XCA3_7_19$i14,
+        i15=XCA$CHR2_Image_9$i15,
+        i16=XCA$CHR9_XCA_F1_2_17_Image_6$i16,
+        i17=(XCA$XCA28_CHR10_Image_1$i17),i18=(XCA$XCA3_CBAND_Image_8$i18),i19=(XCA$XCABaF1_2_7II_Image_15$i19),i20=(XCA$XCA4_CHR8_Image_1$i20),i21=(XCA$XCABaF1_2_19II_Image_31$i21),i22=(XCA$XCABaF1_2_10II_Image_4$i22),i23=(XCA$XCABaF1_2_4II_Image_7$i23),i24=(XCA$XCABaF1_2_15II_Image_5$i24),i25=(XCA$CHR7_Image_20$i25),i26=(XCA$XCA20_CHR6_Image_11$i26),i27=(XCA$XCABaF1_2_2II_Image_13$i27),i28=(XCA$XCABaF1_2_9II_Image_16$i28),i29=(XCA$XCAF1_2_CHR3_Image_7$i29),i30=(XCA$XCABaF1_2_13II_Image_2$i30),i31=(XCA$XCABaF1_2_14II_Image_4$i31),i32=(XCA$XCAPCC5_8_Image_7ab$i32),i33=(XCA$XCA_F1_2_16_CHR5_Image_5$i33),i34=(XCA$CHR1_XCA2_2_Image_15$i34),i35=(XCA$XCABaF1_2_7II_Image_7$i35)
+)
+```
+,i36=(XCA$$i36)
 
-
-
-lenght2=CAU$CaXX1IL_1_2$lenght2, lenght3=CAU$CaXX1IL_1_3$lenght3, lenght4=CAU$CaXX1IL_1_4$lenght4, lenght5=CAU$CaXX1IL_1_7$lenght5, lenght6=CAU$CaXX1IL_1_8$lenght6, lenght7=CAU$CaXX1IL_1_6$lenght7, lenght8=CAU$CaXX1IL_2_1$lenght8, lenght9=CAU$CaXX1IL_2_2$lenght9, lenght10=CAU$CaXX1IL_2_3$lenght10, i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
+i1=CAU$CaXX1IL_1_1$i1, i2=CAU$CaXX1IL_1_2$i2, i3=CAU$CaXX1IL_1_3$i3, i4=CAU$CaXX1IL_1_4$i4, i5=CAU$CaXX1IL_1_7$i5, i6=CAU$CaXX1IL_1_8$i6, i7=CAU$CaXX1IL_1_6$i7, i8= CAU$CaXX1IL_2_1$i8, i9= CAU$CaXX1IL_2_2$i9, i10= CAU$CaXX1IL_2_3$i10)
 
 
 
