@@ -169,8 +169,8 @@ l_percentage36=(XCA$$l36*100)/sum(XCA$$l36)
 #### "i" folder into XCA list
 
 ```
-> paste0("i", 1:36, "=(XCA$, names(XCA[1:36]) ,$i", 1:36, ")", collapse = ",")
-[1] "i1=(XCA$$i1),i2=(XCA$XCA1_2_5$i2),i3=(XCA$$i3),i4=(XCA$$i4),i5=(XCA$$i5),i6=(XCA$$i6),i7=(XCA$$i7),i8=(XCA$$i8),i9=(XCA$$i9),i10=(XCA$$i10),i11=(XCA$$i11),i12=(XCA$$i12),i13=(XCA$$i13),i14=(XCA$$i14),i15=(XCA$$i15),i16=(XCA$$i16),i17=(XCA$$i17),i18=(XCA$$i18),i19=(XCA$$i19),i20=(XCA$$i20),i21=(XCA$$i21),i22=(XCA$$i22),i23=(XCA$$i23),i24=(XCA$$i24),i25=(XCA$$i25),i26=(XCA$$i26),i27=(XCA$$i27),i28=(XCA$$i28),i29=(XCA$$i29),i30=(XCA$$i30),i31=(XCA$$i31),i32=(XCA$$i32),i33=(XCA$$i33),i34=(XCA$$i34),i35=(XCA$$i35),i36=(XCA$$i36)"
+> paste0("i", 1:36, "=(XCA$", names(XCA[1:36]) ,"$i", 1:36, ")", collapse = ",")
+[1] "i1=(XCA$XCA1_1_1$i1),i2=(XCA$XCA1_2_5$i2),i3=(XCA$XCA1_3_4$i3),i4=(XCA$XCA1_3_8$i4),i5=(XCA$XCA1_4_1$i5),i6=(XCA$XCA1_9_3$i6),i7=(XCA$XCA2_1_5$i7),i8=(XCA$XCA2_4_1$i8),i9=(XCA$XCA2_12_2$i9),i10=(XCA$XCA3_1_2$i10),i11=(XCA$XCA3_1_13$i11),i12=(XCA$XCA3_7_14$i12),i13=(XCA$XCA3_7_18$i13),i14=(XCA$XCA3_7_19$i14),i15=(XCA$CHR2_Image_9$i15),i16=(XCA$CHR9_XCA_F1_2_17_Image_6$i16),i17=(XCA$XCA28_CHR10_Image_1$i17),i18=(XCA$XCA3_CBAND_Image_8$i18),i19=(XCA$XCABaF1_2_7II_Image_15$i19),i20=(XCA$XCA4_CHR8_Image_1$i20),i21=(XCA$XCABaF1_2_19II_Image_31$i21),i22=(XCA$XCABaF1_2_10II_Image_4$i22),i23=(XCA$XCABaF1_2_4II_Image_7$i23),i24=(XCA$XCABaF1_2_15II_Image_5$i24),i25=(XCA$CHR7_Image_20$i25),i26=(XCA$XCA20_CHR6_Image_11$i26),i27=(XCA$XCABaF1_2_2II_Image_13$i27),i28=(XCA$XCABaF1_2_9II_Image_16$i28),i29=(XCA$XCAF1_2_CHR3_Image_7$i29),i30=(XCA$XCABaF1_2_13II_Image_2$i30),i31=(XCA$XCABaF1_2_14II_Image_4$i31),i32=(XCA$XCAPCC5_8_Image_7ab$i32),i33=(XCA$XCA_F1_2_16_CHR5_Image_5$i33),i34=(XCA$CHR1_XCA2_2_Image_15$i34),i35=(XCA$XCABaF1_2_7II_Image_7$i35),i36=(XCA$l_percentage$i36)"
 ```
 ```
 XCA$i <- data.frame(
@@ -240,7 +240,7 @@ l_chromosome20 <- Select_chrome(39,40)
 ```
 
 ```
-> Select_chrome <- function(i,j) {chromosome <- c(XCA$i$i1[i:j],XCA$i$i2[i:j],XCA$i$i3[i:j],XCA$i$i4[i:j],XCA$i$i5[i:j],XCA$i$i6[i:j],XCA$i$i7[i:j],XCA$i$i8[i:j],XCA$i$i9[i:j],XCA$i$i10[i:j],XCA$i$i11[i:j],XCA$i$i12[i:j],XCA$i$i13[i:j],XCA$i$i14[i:j],XCA$i$i15[i:j],XCA$i$i16[i:j],XCA$i$i17[i:j],XCA$i$i18[i:j],XCA$i$i19[i:j],XCA$i$i20[i:j],XCA$i$i21[i:j],XCA$i$i22[i:j],XCA$i$i23[i:j],XCA$i$i24[i:j],XCA$i$i25[i:j],XCA$i$i26[i:j],XCA$i$i27[i:j],XCA$i$i28[i:j],XCA$i$i29[i:j],XCA$i$i30[i:j],XCA$i$i31[i:j],XCA$i$i32[i:j],XCA$i$i33[i:j],XCA$i$i34[i:j],XCA$i$i35[i:j])
+> Select_chromeII<- function(i,j) {chromosome <- c(XCA$i$i1[i:j],XCA$i$i2[i:j],XCA$i$i3[i:j],XCA$i$i4[i:j],XCA$i$i5[i:j],XCA$i$i6[i:j],XCA$i$i7[i:j],XCA$i$i8[i:j],XCA$i$i9[i:j],XCA$i$i10[i:j],XCA$i$i11[i:j],XCA$i$i12[i:j],XCA$i$i13[i:j],XCA$i$i14[i:j],XCA$i$i15[i:j],XCA$i$i16[i:j],XCA$i$i17[i:j],XCA$i$i18[i:j],XCA$i$i19[i:j],XCA$i$i20[i:j],XCA$i$i21[i:j],XCA$i$i22[i:j],XCA$i$i23[i:j],XCA$i$i24[i:j],XCA$i$i25[i:j],XCA$i$i26[i:j],XCA$i$i27[i:j],XCA$i$i28[i:j],XCA$i$i29[i:j],XCA$i$i30[i:j],XCA$i$i31[i:j],XCA$i$i32[i:j],XCA$i$i33[i:j],XCA$i$i34[i:j],XCA$i$i35[i:j])
 }
 
 i_chromosome1 <- Select_chrome(1,2)
@@ -281,5 +281,101 @@ c(median(l_chromosome1),median(l_chromosome2),median(l_chromosome3),median(l_chr
 ```
 median_i <- c(median(i_chromosome1),median(i_chromosome2),median(i_chromosome3),median(i_chromosome4),median(i_chromosome5),median(i_chromosome6),median(i_chromosome7),median(i_chromosome8),median(i_chromosome9),median(i_chromosome10),median(i_chromosome11),median(i_chromosome12),median(i_chromosome13),median(i_chromosome14),median(i_chromosome15),median(i_chromosome16),median(i_chromosome17),median(i_chromosome18),median(i_chromosome19),median(i_chromosome20))
 ```
-
+```
 rm(i_chromosome1),rm(i_chromosome2),rm(i_chromosome3),rm(i_chromosome4),rm(i_chromosome5),rm(i_chromosome6),rm(i_chromosome7),rm(i_chromosome8),rm(i_chromosome9),rm(i_chromosome10),rm(i_chromosome11),rm(i_chromosome12),rm(i_chromosome13),rm(i_chromosome14),rm(i_chromosome15),rm(i_chromosome16),rm(i_chromosome17),rm(i_chromosome18),rm(i_chromosome19),rm(i_chromosome20)
+```
+```
+i_chromosome1_20 <- list(i_chromosome1=i_chromosome1,i_chromosome2=i_chromosome2,i_chromosome3=i_chromosome3,i_chromosome4=i_chromosome4,i_chromosome5=i_chromosome5,i_chromosome6=i_chromosome6,i_chromosome7=i_chromosome7,i_chromosome8=i_chromosome8,i_chromosome9=i_chromosome9,i_chromosome10=i_chromosome10,i_chromosome11=i_chromosome11,i_chromosome12=i_chromosome12,i_chromosome13=i_chromosome13,i_chromosome14=i_chromosome14,i_chromosome15=i_chromosome15,i_chromosome16=i_chromosome16,i_chromosome17=i_chromosome17,i_chromosome18=i_chromosome18,i_chromosome19=i_chromosome19,i_chromosome20=i_chromosome20)
+```
+
+#### "r1" folder into XCA list
+```
+> paste0("r1_", 1:35, "=(XCA$", names(XCA[1:35]), "$r1_", 1:35, ")", collapse = ",")
+[1] "r1_1=(XCA$XCA1_1_1$r1_1),r1_2=(XCA$XCA1_2_5$r1_2),r1_3=(XCA$XCA1_3_4$r1_3),r1_4=(XCA$XCA1_3_8$r1_4),r1_5=(XCA$XCA1_4_1$r1_5),r1_6=(XCA$XCA1_9_3$r1_6),r1_7=(XCA$XCA2_1_5$r1_7),r1_8=(XCA$XCA2_4_1$r1_8),r1_9=(XCA$XCA2_12_2$r1_9),r1_10=(XCA$XCA3_1_2$r1_10),r1_11=(XCA$XCA3_1_13$r1_11),r1_12=(XCA$XCA3_7_14$r1_12),r1_13=(XCA$XCA3_7_18$r1_13),r1_14=(XCA$XCA3_7_19$r1_14),r1_15=(XCA$CHR2_Image_9$r1_15),r1_16=(XCA$CHR9_XCA_F1_2_17_Image_6$r1_16),r1_17=(XCA$XCA28_CHR10_Image_1$r1_17),r1_18=(XCA$XCA3_CBAND_Image_8$r1_18),r1_19=(XCA$XCABaF1_2_7II_Image_15$r1_19),r1_20=(XCA$XCA4_CHR8_Image_1$r1_20),r1_21=(XCA$XCABaF1_2_19II_Image_31$r1_21),r1_22=(XCA$XCABaF1_2_10II_Image_4$r1_22),r1_23=(XCA$XCABaF1_2_4II_Image_7$r1_23),r1_24=(XCA$XCABaF1_2_15II_Image_5$r1_24),r1_25=(XCA$CHR7_Image_20$r1_25),r1_26=(XCA$XCA20_CHR6_Image_11$r1_26),r1_27=(XCA$XCABaF1_2_2II_Image_13$r1_27),r1_28=(XCA$XCABaF1_2_9II_Image_16$r1_28),r1_29=(XCA$XCAF1_2_CHR3_Image_7$r1_29),r1_30=(XCA$XCABaF1_2_13II_Image_2$r1_30),r1_31=(XCA$XCABaF1_2_14II_Image_4$r1_31),r1_32=(XCA$XCAPCC5_8_Image_7ab$r1_32),r1_33=(XCA$XCA_F1_2_16_CHR5_Image_5$r1_33),r1_34=(XCA$CHR1_XCA2_2_Image_15$r1_34),r1_35=(XCA$XCABaF1_2_7II_Image_7$r1_35)"
+```
+```
+XCA$r1 <- data.frame(r1_1=(XCA$XCA1_1_1$r1_1),r1_2=(XCA$XCA1_2_5$r1_2),r1_3=(XCA$XCA1_3_4$r1_3),r1_4=(XCA$XCA1_3_8$r1_4),r1_5=(XCA$XCA1_4_1$r1_5),r1_6=(XCA$XCA1_9_3$r1_6),r1_7=(XCA$XCA2_1_5$r1_7),r1_8=(XCA$XCA2_4_1$r1_8),r1_9=(XCA$XCA2_12_2$r1_9),r1_10=(XCA$XCA3_1_2$r1_10),r1_11=(XCA$XCA3_1_13$r1_11),r1_12=(XCA$XCA3_7_14$r1_12),r1_13=(XCA$XCA3_7_18$r1_13),r1_14=(XCA$XCA3_7_19$r1_14),r1_15=(XCA$CHR2_Image_9$r1_15),r1_16=(XCA$CHR9_XCA_F1_2_17_Image_6$r1_16),r1_17=(XCA$XCA28_CHR10_Image_1$r1_17),r1_18=(XCA$XCA3_CBAND_Image_8$r1_18),r1_19=(XCA$XCABaF1_2_7II_Image_15$r1_19),r1_20=(XCA$XCA4_CHR8_Image_1$r1_20),r1_21=(XCA$XCABaF1_2_19II_Image_31$r1_21),r1_22=(XCA$XCABaF1_2_10II_Image_4$r1_22),r1_23=(XCA$XCABaF1_2_4II_Image_7$r1_23),r1_24=(XCA$XCABaF1_2_15II_Image_5$r1_24),r1_25=(XCA$CHR7_Image_20$r1_25),r1_26=(XCA$XCA20_CHR6_Image_11$r1_26),r1_27=(XCA$XCABaF1_2_2II_Image_13$r1_27),r1_28=(XCA$XCABaF1_2_9II_Image_16$r1_28),r1_29=(XCA$XCAF1_2_CHR3_Image_7$r1_29),r1_30=(XCA$XCABaF1_2_13II_Image_2$r1_30),r1_31=(XCA$XCABaF1_2_14II_Image_4$r1_31),r1_32=(XCA$XCAPCC5_8_Image_7ab$r1_32),r1_33=(XCA$XCA_F1_2_16_CHR5_Image_5$r1_33),r1_34=(XCA$CHR1_XCA2_2_Image_15$r1_34),r1_35=(XCA$XCABaF1_2_7II_Image_7$r1_35))
+```
+```
+> paste0("XCA$r1$r1_", 1:35, "[i:j]", collapse = ",")
+[1] "XCA$r1$r1_1[i:j],XCA$r1$r1_2[i:j],XCA$r1$r1_3[i:j],XCA$r1$r1_4[i:j],XCA$r1$r1_5[i:j],XCA$r1$r1_6[i:j],XCA$r1$r1_7[i:j],XCA$r1$r1_8[i:j],XCA$r1$r1_9[i:j],XCA$r1$r1_10[i:j],XCA$r1$r1_11[i:j],XCA$r1$r1_12[i:j],XCA$r1$r1_13[i:j],XCA$r1$r1_14[i:j],XCA$r1$r1_15[i:j],XCA$r1$r1_16[i:j],XCA$r1$r1_17[i:j],XCA$r1$r1_18[i:j],XCA$r1$r1_19[i:j],XCA$r1$r1_20[i:j],XCA$r1$r1_21[i:j],XCA$r1$r1_22[i:j],XCA$r1$r1_23[i:j],XCA$r1$r1_24[i:j],XCA$r1$r1_25[i:j],XCA$r1$r1_26[i:j],XCA$r1$r1_27[i:j],XCA$r1$r1_28[i:j],XCA$r1$r1_29[i:j],XCA$r1$r1_30[i:j],XCA$r1$r1_31[i:j],XCA$r1$r1_32[i:j],XCA$r1$r1_33[i:j],XCA$r1$r1_34[i:j],XCA$r1$r1_35[i:j]"
+```
+```
+> Select_chromeIII <- function(i,j) {chromosome <- 
+c(XCA$r1$r1_1[i:j],XCA$r1$r1_2[i:j],XCA$r1$r1_3[i:j],XCA$r1$r1_4[i:j],XCA$r1$r1_5[i:j],XCA$r1$r1_6[i:j],XCA$r1$r1_7[i:j],XCA$r1$r1_8[i:j],XCA$r1$r1_9[i:j],XCA$r1$r1_10[i:j],XCA$r1$r1_11[i:j],XCA$r1$r1_12[i:j],XCA$r1$r1_13[i:j],XCA$r1$r1_14[i:j],XCA$r1$r1_15[i:j],XCA$r1$r1_16[i:j],XCA$r1$r1_17[i:j],XCA$r1$r1_18[i:j],XCA$r1$r1_19[i:j],XCA$r1$r1_20[i:j],XCA$r1$r1_21[i:j],XCA$r1$r1_22[i:j],XCA$r1$r1_23[i:j],XCA$r1$r1_24[i:j],XCA$r1$r1_25[i:j],XCA$r1$r1_26[i:j],XCA$r1$r1_27[i:j],XCA$r1$r1_28[i:j],XCA$r1$r1_29[i:j],XCA$r1$r1_30[i:j],XCA$r1$r1_31[i:j],XCA$r1$r1_32[i:j],XCA$r1$r1_33[i:j],XCA$r1$r1_34[i:j],XCA$r1$r1_35[i:j])
+return(r1_chromosome1_20 <- list(r1_chromosome1=r1_chromosome1, r1_chromosome2=r1_chromosome2))
+}
+
+r1_chromosome1 <- Select_chromeIII(1,2)
+r1_chromosome2 <- Select_chromeIII(3,4)
+r1_chromosome3 <- Select_chromeIII(5,6)
+r1_chromosome4 <- Select_chromeIII(7,8)
+r1_chromosome5 <- Select_chromeIII(9,10)
+r1_chromosome6 <- Select_chromeIII(11,12)
+r1_chromosome7 <- Select_chromeIII(13,14)
+r1_chromosome8 <- Select_chromeIII(15,16)
+r1_chromosome9 <- Select_chromeIII(17,18)
+r1_chromosome10 <- Select_chromeIII(19,20)
+r1_chromosome11 <- Select_chromeIII(21,22)
+r1_chromosome12 <- Select_chromeIII(23,24)
+r1_chromosome13 <- Select_chromeIII(25,26)
+r1_chromosome14 <- Select_chromeIII(27,28)
+r1_chromosome15 <- Select_chromeIII(29,30)
+r1_chromosome16 <- Select_chromeIII(31,32)
+r1_chromosome17 <- Select_chromeIII(33,34)
+r1_chromosome18 <- Select_chromeIII(35,36)
+r1_chromosome19 <- Select_chromeIII(37,38)
+r1_chromosome20 <- Select_chromeIII(39,40)
+```
+```
+> paste0("r1_chromosome", 1:20, "=r1_chromosome", 1:20, collapse = ",")
+[1] "r1_chromosome1=r1_chromosome1,r1_chromosome2=r1_chromosome2,r1_chromosome3=r1_chromosome3,r1_chromosome4=r1_chromosome4,r1_chromosome5=r1_chromosome5,r1_chromosome6=r1_chromosome6,r1_chromosome7=r1_chromosome7,r1_chromosome8=r1_chromosome8,r1_chromosome9=r1_chromosome9,r1_chromosome10=r1_chromosome10,r1_chromosome11=r1_chromosome11,r1_chromosome12=r1_chromosome12,r1_chromosome13=r1_chromosome13,r1_chromosome14=r1_chromosome14,r1_chromosome15=r1_chromosome15,r1_chromosome16=r1_chromosome16,r1_chromosome17=r1_chromosome17,r1_chromosome18=r1_chromosome18,r1_chromosome19=r1_chromosome19,r1_chromosome20=r1_chromosome20"
+> r1_chromosome1_20 <- list(r1_chromosome1=r1_chromosome1,r1_chromosome2=r1_chromosome2,r1_chromosome3=r1_chromosome3,r1_chromosome4=r1_chromosome4,r1_chromosome5=r1_chromosome5,r1_chromosome6=r1_chromosome6,r1_chromosome7=r1_chromosome7,r1_chromosome8=r1_chromosome8,r1_chromosome9=r1_chromosome9,r1_chromosome10=r1_chromosome10,r1_chromosome11=r1_chromosome11,r1_chromosome12=r1_chromosome12,r1_chromosome13=r1_chromosome13,r1_chromosome14=r1_chromosome14,r1_chromosome15=r1_chromosome15,r1_chromosome16=r1_chromosome16,r1_chromosome17=r1_chromosome17,r1_chromosome18=r1_chromosome18,r1_chromosome19=r1_chromosome19,r1_chromosome20=r1_chromosome20)
+```
+```
+> for (i in 1:20) {
++     cat("rm(r1_chromosome", i, ")", "\n")    
++ }
+rm(r1_chromosome 1 ) 
+rm(r1_chromosome 2 ) 
+rm(r1_chromosome 3 ) 
+rm(r1_chromosome 4 ) 
+rm(r1_chromosome 5 ) 
+rm(r1_chromosome 6 ) 
+rm(r1_chromosome 7 ) 
+rm(r1_chromosome 8 ) 
+rm(r1_chromosome 9 ) 
+rm(r1_chromosome 10 ) 
+rm(r1_chromosome 11 ) 
+rm(r1_chromosome 12 ) 
+rm(r1_chromosome 13 ) 
+rm(r1_chromosome 14 ) 
+rm(r1_chromosome 15 ) 
+rm(r1_chromosome 16 ) 
+rm(r1_chromosome 17 ) 
+rm(r1_chromosome 18 ) 
+rm(r1_chromosome 19 ) 
+rm(r1_chromosome 20 )
+```
+```
+> rm(r1_chromosome1) 
+> rm(r1_chromosome2) 
+> rm(r1_chromosome3) 
+> rm(r1_chromosome4) 
+> rm(r1_chromosome5) 
+> rm(r1_chromosome6) 
+> rm(r1_chromosome7) 
+> rm(r1_chromosome8) 
+> rm(r1_chromosome9) 
+> rm(r1_chromosome10) 
+> rm(r1_chromosome11) 
+> rm(r1_chromosome12) 
+> rm(r1_chromosome13) 
+> rm(r1_chromosome14) 
+> rm(r1_chromosome15) 
+> rm(r1_chromosome16) 
+> rm(r1_chromosome17) 
+> rm(r1_chromosome18) 
+> rm(r1_chromosome19) 
+> rm(r1_chromosome20)
+```
