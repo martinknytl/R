@@ -438,7 +438,13 @@ rm(r1_chromosome 20 )
 [1] "l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20"
 > l_chromosome1_20 <- list(l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20)
 ```
-
-median r1 vector
-
-final table
+```
+> paste0("median(r1_chromosome1_20$r1_chromosome", 1:20, ")", collapse = ",")
+[1] "median(r1_chromosome1_20$r1_chromosome1),median(r1_chromosome1_20$r1_chromosome2),median(r1_chromosome1_20$r1_chromosome3),median(r1_chromosome1_20$r1_chromosome4),median(r1_chromosome1_20$r1_chromosome5),median(r1_chromosome1_20$r1_chromosome6),median(r1_chromosome1_20$r1_chromosome7),median(r1_chromosome1_20$r1_chromosome8),median(r1_chromosome1_20$r1_chromosome9),median(r1_chromosome1_20$r1_chromosome10),median(r1_chromosome1_20$r1_chromosome11),median(r1_chromosome1_20$r1_chromosome12),median(r1_chromosome1_20$r1_chromosome13),median(r1_chromosome1_20$r1_chromosome14),median(r1_chromosome1_20$r1_chromosome15),median(r1_chromosome1_20$r1_chromosome16),median(r1_chromosome1_20$r1_chromosome17),median(r1_chromosome1_20$r1_chromosome18),median(r1_chromosome1_20$r1_chromosome19),median(r1_chromosome1_20$r1_chromosome20)"
+```
+```
+> median_r1 <- c(median(r1_chromosome1_20$r1_chromosome1),median(r1_chromosome1_20$r1_chromosome2),median(r1_chromosome1_20$r1_chromosome3),median(r1_chromosome1_20$r1_chromosome4),median(r1_chromosome1_20$r1_chromosome5),median(r1_chromosome1_20$r1_chromosome6),median(r1_chromosome1_20$r1_chromosome7),median(r1_chromosome1_20$r1_chromosome8),median(r1_chromosome1_20$r1_chromosome9),median(r1_chromosome1_20$r1_chromosome10),median(r1_chromosome1_20$r1_chromosome11),median(r1_chromosome1_20$r1_chromosome12),median(r1_chromosome1_20$r1_chromosome13),median(r1_chromosome1_20$r1_chromosome14),median(r1_chromosome1_20$r1_chromosome15),median(r1_chromosome1_20$r1_chromosome16),median(r1_chromosome1_20$r1_chromosome17),median(r1_chromosome1_20$r1_chromosome18),median(r1_chromosome1_20$r1_chromosome19),median(r1_chromosome1_20$r1_chromosome20))
+```
+```
+ final_table <- data.frame(chromosome=chromosome, median_l=median_l, median_r1=median_r1, median_i=median_i)
+```
