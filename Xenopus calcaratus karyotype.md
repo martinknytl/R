@@ -195,7 +195,7 @@ XCA$i <- data.frame(
 ```
 ,i36=(XCA$$i36)
 
-#### mean and median of l percentage for each row of "l_percentage" data frame 
+#### mean and of l percentage for each row of "l_percentage" data frame 
 ```
 XCA$l_percentage$mean_l=apply (XCA$l_percentage, 1, mean)
 XCA$l_percentage$median_l=apply (XCA$l_percentage, 1, median)
@@ -232,6 +232,57 @@ l_chromosome18 <- Select_chrome(35,36)
 l_chromosome19 <- Select_chrome(37,38)
 l_chromosome20 <- Select_chrome(39,40)
 ```
+```
+> paste0("l_chromosome", 1:20, "=l_chromosome", 1:20, collapse = ",")
+[1] "l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20"
+> l_chromosome1_20 <- list(l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20)
+```
+```
+> for (i in 1:20) {
++ cat("rm(l_chromosome", i, ")", "\n")    
++ }
+rm(l_chromosome 1 ) 
+rm(l_chromosome 2 ) 
+rm(l_chromosome 3 ) 
+rm(l_chromosome 4 ) 
+rm(l_chromosome 5 ) 
+rm(l_chromosome 6 ) 
+rm(l_chromosome 7 ) 
+rm(l_chromosome 8 ) 
+rm(l_chromosome 9 ) 
+rm(l_chromosome 10 ) 
+rm(l_chromosome 11 ) 
+rm(l_chromosome 12 ) 
+rm(l_chromosome 13 ) 
+rm(l_chromosome 14 ) 
+rm(l_chromosome 15 ) 
+rm(l_chromosome 16 ) 
+rm(l_chromosome 17 ) 
+rm(l_chromosome 18 ) 
+rm(l_chromosome 19 ) 
+rm(l_chromosome 20 ) 
+> rm(l_chromosome1) 
+> rm(l_chromosome2) 
+> rm(l_chromosome3) 
+> rm(l_chromosome4) 
+> rm(l_chromosome5) 
+> rm(l_chromosome6) 
+> rm(l_chromosome7) 
+> rm(l_chromosome8) 
+> rm(l_chromosome9) 
+> rm(l_chromosome10) 
+> rm(l_chromosome11) 
+> rm(l_chromosome12) 
+> rm(l_chromosome13) 
+> rm(l_chromosome14) 
+> rm(l_chromosome15) 
+> rm(l_chromosome16) 
+> rm(l_chromosome17) 
+> rm(l_chromosome18) 
+> rm(l_chromosome19) 
+> rm(l_chromosome20)
+```
+
 
 #### Function for dissection of "i" values for each haploid chromosome
 ```
@@ -296,6 +347,8 @@ i_chromosome1_20 <- list(i_chromosome1=i_chromosome1,i_chromosome2=i_chromosome2
 ```
 XCA$r1 <- data.frame(r1_1=(XCA$XCA1_1_1$r1_1),r1_2=(XCA$XCA1_2_5$r1_2),r1_3=(XCA$XCA1_3_4$r1_3),r1_4=(XCA$XCA1_3_8$r1_4),r1_5=(XCA$XCA1_4_1$r1_5),r1_6=(XCA$XCA1_9_3$r1_6),r1_7=(XCA$XCA2_1_5$r1_7),r1_8=(XCA$XCA2_4_1$r1_8),r1_9=(XCA$XCA2_12_2$r1_9),r1_10=(XCA$XCA3_1_2$r1_10),r1_11=(XCA$XCA3_1_13$r1_11),r1_12=(XCA$XCA3_7_14$r1_12),r1_13=(XCA$XCA3_7_18$r1_13),r1_14=(XCA$XCA3_7_19$r1_14),r1_15=(XCA$CHR2_Image_9$r1_15),r1_16=(XCA$CHR9_XCA_F1_2_17_Image_6$r1_16),r1_17=(XCA$XCA28_CHR10_Image_1$r1_17),r1_18=(XCA$XCA3_CBAND_Image_8$r1_18),r1_19=(XCA$XCABaF1_2_7II_Image_15$r1_19),r1_20=(XCA$XCA4_CHR8_Image_1$r1_20),r1_21=(XCA$XCABaF1_2_19II_Image_31$r1_21),r1_22=(XCA$XCABaF1_2_10II_Image_4$r1_22),r1_23=(XCA$XCABaF1_2_4II_Image_7$r1_23),r1_24=(XCA$XCABaF1_2_15II_Image_5$r1_24),r1_25=(XCA$CHR7_Image_20$r1_25),r1_26=(XCA$XCA20_CHR6_Image_11$r1_26),r1_27=(XCA$XCABaF1_2_2II_Image_13$r1_27),r1_28=(XCA$XCABaF1_2_9II_Image_16$r1_28),r1_29=(XCA$XCAF1_2_CHR3_Image_7$r1_29),r1_30=(XCA$XCABaF1_2_13II_Image_2$r1_30),r1_31=(XCA$XCABaF1_2_14II_Image_4$r1_31),r1_32=(XCA$XCAPCC5_8_Image_7ab$r1_32),r1_33=(XCA$XCA_F1_2_16_CHR5_Image_5$r1_33),r1_34=(XCA$CHR1_XCA2_2_Image_15$r1_34),r1_35=(XCA$XCABaF1_2_7II_Image_7$r1_35))
 ```
+
+#### Function for dissection of "r1" values for each haploid chromosome
 ```
 > paste0("XCA$r1$r1_", 1:35, "[i:j]", collapse = ",")
 [1] "XCA$r1$r1_1[i:j],XCA$r1$r1_2[i:j],XCA$r1$r1_3[i:j],XCA$r1$r1_4[i:j],XCA$r1$r1_5[i:j],XCA$r1$r1_6[i:j],XCA$r1$r1_7[i:j],XCA$r1$r1_8[i:j],XCA$r1$r1_9[i:j],XCA$r1$r1_10[i:j],XCA$r1$r1_11[i:j],XCA$r1$r1_12[i:j],XCA$r1$r1_13[i:j],XCA$r1$r1_14[i:j],XCA$r1$r1_15[i:j],XCA$r1$r1_16[i:j],XCA$r1$r1_17[i:j],XCA$r1$r1_18[i:j],XCA$r1$r1_19[i:j],XCA$r1$r1_20[i:j],XCA$r1$r1_21[i:j],XCA$r1$r1_22[i:j],XCA$r1$r1_23[i:j],XCA$r1$r1_24[i:j],XCA$r1$r1_25[i:j],XCA$r1$r1_26[i:j],XCA$r1$r1_27[i:j],XCA$r1$r1_28[i:j],XCA$r1$r1_29[i:j],XCA$r1$r1_30[i:j],XCA$r1$r1_31[i:j],XCA$r1$r1_32[i:j],XCA$r1$r1_33[i:j],XCA$r1$r1_34[i:j],XCA$r1$r1_35[i:j]"
@@ -379,3 +432,13 @@ rm(r1_chromosome 20 )
 > rm(r1_chromosome19) 
 > rm(r1_chromosome20)
 ```
+
+```
+> paste0("l_chromosome", 1:20, "=l_chromosome", 1:20, collapse = ",")
+[1] "l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20"
+> l_chromosome1_20 <- list(l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20)
+```
+
+median r1 vector
+
+final table
