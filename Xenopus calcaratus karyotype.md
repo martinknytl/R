@@ -448,3 +448,34 @@ rm(r1_chromosome 20 )
 ```
  final_table <- data.frame(chromosome=chromosome, median_l=median_l, median_r1=median_r1, median_i=median_i)
 ```
+#### Chromosomal category added
+```
+for(i in 1:20) {if(final_table$median_i[i]>=35.5) {final_table$category[i] = "m"} else if (final_table$median_i[i]>=25 & final_table$median_i[i]<35.5){final_table$category[i] = "sm"} else if (final_table$median_i[i]>=12.5 & final_table$median_i[i]<25){final_table$category[i] = "st"} else if (final_table$median_i[i]>0 & final_table$median_i[i]<12.5) {final_table$category[i] = "a"} else {final_table$category[i] = "T"}}
+```
+
+#### Dotplot created
+```
+plot(final_table$median_i, final_table$median_l, pch=16, col="red", ylim = c(0, 5), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+```
+```
+XCA_dotplot <- recordPlot()
+```
+
+#### Boxplot created
+```
+> paste0("i_chromosome1_20$i_chromosome", 1:20, collapse = ",")
+[1] "i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromosome1_20$i_chromosome3,i_chromosome1_20$i_chromosome4,i_chromosome1_20$i_chromosome5,i_chromosome1_20$i_chromosome6,i_chromosome1_20$i_chromosome7,i_chromosome1_20$i_chromosome8,i_chromosome1_20$i_chromosome9,i_chromosome1_20$i_chromosome10,i_chromosome1_20$i_chromosome11,i_chromosome1_20$i_chromosome12,i_chromosome1_20$i_chromosome13,i_chromosome1_20$i_chromosome14,i_chromosome1_20$i_chromosome15,i_chromosome1_20$i_chromosome16,i_chromosome1_20$i_chromosome17,i_chromosome1_20$i_chromosome18,i_chromosome1_20$i_chromosome19,i_chromosome1_20$i_chromosome20"
+```
+
+```
+boxplot(i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromosome1_20$i_chromosome3,i_chromosome1_20$i_chromosome4,i_chromosome1_20$i_chromosome5,i_chromosome1_20$i_chromosome6,i_chromosome1_20$i_chromosome7,i_chromosome1_20$i_chromosome8,i_chromosome1_20$i_chromosome9,i_chromosome1_20$i_chromosome10,i_chromosome1_20$i_chromosome11,i_chromosome1_20$i_chromosome12,i_chromosome1_20$i_chromosome13,i_chromosome1_20$i_chromosome14,i_chromosome1_20$i_chromosome15,i_chromosome1_20$i_chromosome16,i_chromosome1_20$i_chromosome17,i_chromosome1_20$i_chromosome18,i_chromosome1_20$i_chromosome19,i_chromosome1_20$i_chromosome20, ylim=c(-1, 50), xlim=c(1, 20), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
+```
+```
+XCA_boxplot <- recordPlot()
+```
+```
+boxplot(l_chromosome1_20$l_chromosome1,l_chromosome1_20$l_chromosome2,l_chromosome1_20$l_chromosome3,l_chromosome1_20$l_chromosome4,l_chromosome1_20$l_chromosome5,l_chromosome1_20$l_chromosome6,l_chromosome1_20$l_chromosome7,l_chromosome1_20$l_chromosome8,l_chromosome1_20$l_chromosome9,l_chromosome1_20$l_chromosome10,l_chromosome1_20$l_chromosome11,l_chromosome1_20$l_chromosome12,l_chromosome1_20$l_chromosome13,l_chromosome1_20$l_chromosome14,l_chromosome1_20$l_chromosome15,l_chromosome1_20$l_chromosome16,l_chromosome1_20$l_chromosome17,l_chromosome1_20$l_chromosome18,l_chromosome1_20$l_chromosome19,l_chromosome1_20$l_chromosome20, ylim=c(0, 5), xlim=c(1, 20), horizontal = FALSE, ylab = "chromosomal length (%)", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
+```
+```
+XCA_boxplotII <- recordPlot()
+```
