@@ -274,7 +274,7 @@ paste0("median(l_chromosome", 1:20, ")", collapse = ",")
 ```
 median_l <-c(median(l_chromosome1),median(l_chromosome2),median(l_chromosome3),median(l_chromosome4),median(l_chromosome5),median(l_chromosome6),median(l_chromosome7),median(l_chromosome8),median(l_chromosome9),median(l_chromosome10),median(l_chromosome11),median(l_chromosome12),median(l_chromosome13),median(l_chromosome14),median(l_chromosome15),median(l_chromosome16),median(l_chromosome17),median(l_chromosome18),median(l_chromosome19),median(l_chromosome20))
 ```
-
+```
 > for (i in 1:20) {
 + cat("rm(l_chromosome", i, ")", "\n")    
 + }
