@@ -397,6 +397,8 @@ r1_chromosome20 <- Select_chromeIII(39,40)
 ```
 > paste0("r1_chromosome", 1:20, "=r1_chromosome", 1:20, collapse = ",")
 [1] "r1_chromosome1=r1_chromosome1,r1_chromosome2=r1_chromosome2,r1_chromosome3=r1_chromosome3,r1_chromosome4=r1_chromosome4,r1_chromosome5=r1_chromosome5,r1_chromosome6=r1_chromosome6,r1_chromosome7=r1_chromosome7,r1_chromosome8=r1_chromosome8,r1_chromosome9=r1_chromosome9,r1_chromosome10=r1_chromosome10,r1_chromosome11=r1_chromosome11,r1_chromosome12=r1_chromosome12,r1_chromosome13=r1_chromosome13,r1_chromosome14=r1_chromosome14,r1_chromosome15=r1_chromosome15,r1_chromosome16=r1_chromosome16,r1_chromosome17=r1_chromosome17,r1_chromosome18=r1_chromosome18,r1_chromosome19=r1_chromosome19,r1_chromosome20=r1_chromosome20"
+```
+```
 > r1_chromosome1_20 <- list(r1_chromosome1=r1_chromosome1,r1_chromosome2=r1_chromosome2,r1_chromosome3=r1_chromosome3,r1_chromosome4=r1_chromosome4,r1_chromosome5=r1_chromosome5,r1_chromosome6=r1_chromosome6,r1_chromosome7=r1_chromosome7,r1_chromosome8=r1_chromosome8,r1_chromosome9=r1_chromosome9,r1_chromosome10=r1_chromosome10,r1_chromosome11=r1_chromosome11,r1_chromosome12=r1_chromosome12,r1_chromosome13=r1_chromosome13,r1_chromosome14=r1_chromosome14,r1_chromosome15=r1_chromosome15,r1_chromosome16=r1_chromosome16,r1_chromosome17=r1_chromosome17,r1_chromosome18=r1_chromosome18,r1_chromosome19=r1_chromosome19,r1_chromosome20=r1_chromosome20)
 ```
 ```
