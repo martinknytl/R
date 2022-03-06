@@ -233,6 +233,49 @@ l_chromosome20 <- Select_chrome(39,40)
 > l_chromosome1_20 <- list(l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20)
 ```
 ```
+
+#### Function for dissection of "i" values for each haploid chromosome
+```
+> paste0("XCA$i$i", 1:35, "[i:j]", collapse = ",")
+[1] "XCA$i$i1[i:j],XCA$i$i2[i:j],XCA$i$i3[i:j],XCA$i$i4[i:j],XCA$i$i5[i:j],XCA$i$i6[i:j],XCA$i$i7[i:j],XCA$i$i8[i:j],XCA$i$i9[i:j],XCA$i$i10[i:j],XCA$i$i11[i:j],XCA$i$i12[i:j],XCA$i$i13[i:j],XCA$i$i14[i:j],XCA$i$i15[i:j],XCA$i$i16[i:j],XCA$i$i17[i:j],XCA$i$i18[i:j],XCA$i$i19[i:j],XCA$i$i20[i:j],XCA$i$i21[i:j],XCA$i$i22[i:j],XCA$i$i23[i:j],XCA$i$i24[i:j],XCA$i$i25[i:j],XCA$i$i26[i:j],XCA$i$i27[i:j],XCA$i$i28[i:j],XCA$i$i29[i:j],XCA$i$i30[i:j],XCA$i$i31[i:j],XCA$i$i32[i:j],XCA$i$i33[i:j],XCA$i$i34[i:j],XCA$i$i35[i:j]"
+```
+
+```
+> Select_chromeII<- function(i,j) {chromosome <- c(XCA$i$i1[i:j],XCA$i$i2[i:j],XCA$i$i3[i:j],XCA$i$i4[i:j],XCA$i$i5[i:j],XCA$i$i6[i:j],XCA$i$i7[i:j],XCA$i$i8[i:j],XCA$i$i9[i:j],XCA$i$i10[i:j],XCA$i$i11[i:j],XCA$i$i12[i:j],XCA$i$i13[i:j],XCA$i$i14[i:j],XCA$i$i15[i:j],XCA$i$i16[i:j],XCA$i$i17[i:j],XCA$i$i18[i:j],XCA$i$i19[i:j],XCA$i$i20[i:j],XCA$i$i21[i:j],XCA$i$i22[i:j],XCA$i$i23[i:j],XCA$i$i24[i:j],XCA$i$i25[i:j],XCA$i$i26[i:j],XCA$i$i27[i:j],XCA$i$i28[i:j],XCA$i$i29[i:j],XCA$i$i30[i:j],XCA$i$i31[i:j],XCA$i$i32[i:j],XCA$i$i33[i:j],XCA$i$i34[i:j],XCA$i$i35[i:j])
+}
+
+i_chromosome1 <- Select_chrome(1,2)
+i_chromosome2 <- Select_chrome(3,4)
+i_chromosome3 <- Select_chrome(5,6)
+i_chromosome4 <- Select_chrome(7,8)
+i_chromosome5 <- Select_chrome(9,10)
+i_chromosome6 <- Select_chrome(11,12)
+i_chromosome7 <- Select_chrome(13,14)
+i_chromosome8 <- Select_chrome(15,16)
+i_chromosome9 <- Select_chrome(17,18)
+i_chromosome10 <- Select_chrome(19,20)
+i_chromosome11 <- Select_chrome(21,22)
+i_chromosome12 <- Select_chrome(23,24)
+i_chromosome13 <- Select_chrome(25,26)
+i_chromosome14 <- Select_chrome(27,28)
+i_chromosome15 <- Select_chrome(29,30)
+i_chromosome16 <- Select_chrome(31,32)
+i_chromosome17 <- Select_chrome(33,34)
+i_chromosome18 <- Select_chrome(35,36)
+i_chromosome19 <- Select_chrome(37,38)
+i_chromosome20 <- Select_chrome(39,40)
+```
+```
+chromosome <- c("1a", "1b",  "2a", "2b",  "3a", "3b",  "4a", "4b",  "5a", "5b",  "6a", "6b",  "7a", "7b", "8a", "8b", "9a", "9b", "10a", "10b")
+```
+```
+paste0("median(l_chromosome", 1:20, ")", collapse = ",")
+[1] "median(l_chromosome1),median(l_chromosome2),median(l_chromosome3),median(l_chromosome4),median(l_chromosome5),median(l_chromosome6),median(l_chromosome7),median(l_chromosome8),median(l_chromosome9),median(l_chromosome10),median(l_chromosome11),median(l_chromosome12),median(l_chromosome13),median(l_chromosome14),median(l_chromosome15),median(l_chromosome16),median(l_chromosome17),median(l_chromosome18),median(l_chromosome19),median(l_chromosome20)"
+```
+```
+median_l <-c(median(l_chromosome1),median(l_chromosome2),median(l_chromosome3),median(l_chromosome4),median(l_chromosome5),median(l_chromosome6),median(l_chromosome7),median(l_chromosome8),median(l_chromosome9),median(l_chromosome10),median(l_chromosome11),median(l_chromosome12),median(l_chromosome13),median(l_chromosome14),median(l_chromosome15),median(l_chromosome16),median(l_chromosome17),median(l_chromosome18),median(l_chromosome19),median(l_chromosome20))
+```
+
 > for (i in 1:20) {
 + cat("rm(l_chromosome", i, ")", "\n")    
 + }
@@ -279,48 +322,6 @@ rm(l_chromosome19)
 rm(l_chromosome20)
 ```
 
-
-#### Function for dissection of "i" values for each haploid chromosome
-```
-> paste0("XCA$i$i", 1:35, "[i:j]", collapse = ",")
-[1] "XCA$i$i1[i:j],XCA$i$i2[i:j],XCA$i$i3[i:j],XCA$i$i4[i:j],XCA$i$i5[i:j],XCA$i$i6[i:j],XCA$i$i7[i:j],XCA$i$i8[i:j],XCA$i$i9[i:j],XCA$i$i10[i:j],XCA$i$i11[i:j],XCA$i$i12[i:j],XCA$i$i13[i:j],XCA$i$i14[i:j],XCA$i$i15[i:j],XCA$i$i16[i:j],XCA$i$i17[i:j],XCA$i$i18[i:j],XCA$i$i19[i:j],XCA$i$i20[i:j],XCA$i$i21[i:j],XCA$i$i22[i:j],XCA$i$i23[i:j],XCA$i$i24[i:j],XCA$i$i25[i:j],XCA$i$i26[i:j],XCA$i$i27[i:j],XCA$i$i28[i:j],XCA$i$i29[i:j],XCA$i$i30[i:j],XCA$i$i31[i:j],XCA$i$i32[i:j],XCA$i$i33[i:j],XCA$i$i34[i:j],XCA$i$i35[i:j]"
-```
-
-```
-> Select_chromeII<- function(i,j) {chromosome <- c(XCA$i$i1[i:j],XCA$i$i2[i:j],XCA$i$i3[i:j],XCA$i$i4[i:j],XCA$i$i5[i:j],XCA$i$i6[i:j],XCA$i$i7[i:j],XCA$i$i8[i:j],XCA$i$i9[i:j],XCA$i$i10[i:j],XCA$i$i11[i:j],XCA$i$i12[i:j],XCA$i$i13[i:j],XCA$i$i14[i:j],XCA$i$i15[i:j],XCA$i$i16[i:j],XCA$i$i17[i:j],XCA$i$i18[i:j],XCA$i$i19[i:j],XCA$i$i20[i:j],XCA$i$i21[i:j],XCA$i$i22[i:j],XCA$i$i23[i:j],XCA$i$i24[i:j],XCA$i$i25[i:j],XCA$i$i26[i:j],XCA$i$i27[i:j],XCA$i$i28[i:j],XCA$i$i29[i:j],XCA$i$i30[i:j],XCA$i$i31[i:j],XCA$i$i32[i:j],XCA$i$i33[i:j],XCA$i$i34[i:j],XCA$i$i35[i:j])
-}
-
-i_chromosome1 <- Select_chrome(1,2)
-i_chromosome2 <- Select_chrome(3,4)
-i_chromosome3 <- Select_chrome(5,6)
-i_chromosome4 <- Select_chrome(7,8)
-i_chromosome5 <- Select_chrome(9,10)
-i_chromosome6 <- Select_chrome(11,12)
-i_chromosome7 <- Select_chrome(13,14)
-i_chromosome8 <- Select_chrome(15,16)
-i_chromosome9 <- Select_chrome(17,18)
-i_chromosome10 <- Select_chrome(19,20)
-i_chromosome11 <- Select_chrome(21,22)
-i_chromosome12 <- Select_chrome(23,24)
-i_chromosome13 <- Select_chrome(25,26)
-i_chromosome14 <- Select_chrome(27,28)
-i_chromosome15 <- Select_chrome(29,30)
-i_chromosome16 <- Select_chrome(31,32)
-i_chromosome17 <- Select_chrome(33,34)
-i_chromosome18 <- Select_chrome(35,36)
-i_chromosome19 <- Select_chrome(37,38)
-i_chromosome20 <- Select_chrome(39,40)
-```
-```
-chromosome <- c("1a", "1b",  "2a", "2b",  "3a", "3b",  "4a", "4b",  "5a", "5b",  "6a", "6b",  "7a", "7b", "8a", "8b", "9a", "9b", "10a", "10b")
-```
-```
-paste0("median(l_chromosome", 1:20, ")", collapse = ",")
-[1] "median(l_chromosome1),median(l_chromosome2),median(l_chromosome3),median(l_chromosome4),median(l_chromosome5),median(l_chromosome6),median(l_chromosome7),median(l_chromosome8),median(l_chromosome9),median(l_chromosome10),median(l_chromosome11),median(l_chromosome12),median(l_chromosome13),median(l_chromosome14),median(l_chromosome15),median(l_chromosome16),median(l_chromosome17),median(l_chromosome18),median(l_chromosome19),median(l_chromosome20)"
-```
-```
-c(median(l_chromosome1),median(l_chromosome2),median(l_chromosome3),median(l_chromosome4),median(l_chromosome5),median(l_chromosome6),median(l_chromosome7),median(l_chromosome8),median(l_chromosome9),median(l_chromosome10),median(l_chromosome11),median(l_chromosome12),median(l_chromosome13),median(l_chromosome14),median(l_chromosome15),median(l_chromosome16),median(l_chromosome17),median(l_chromosome18),median(l_chromosome19),median(l_chromosome20))
-```
 ```
 > paste0("median(i_chromosome", 1:20, ")", collapse = ",")
 [1] "median(i_chromosome1),median(i_chromosome2),median(i_chromosome3),median(i_chromosome4),median(i_chromosome5),median(i_chromosome6),median(i_chromosome7),median(i_chromosome8),median(i_chromosome9),median(i_chromosome10),median(i_chromosome11),median(i_chromosome12),median(i_chromosome13),median(i_chromosome14),median(i_chromosome15),median(i_chromosome16),median(i_chromosome17),median(i_chromosome18),median(i_chromosome19),median(i_chromosome20)"
@@ -329,10 +330,29 @@ c(median(l_chromosome1),median(l_chromosome2),median(l_chromosome3),median(l_chr
 median_i <- c(median(i_chromosome1),median(i_chromosome2),median(i_chromosome3),median(i_chromosome4),median(i_chromosome5),median(i_chromosome6),median(i_chromosome7),median(i_chromosome8),median(i_chromosome9),median(i_chromosome10),median(i_chromosome11),median(i_chromosome12),median(i_chromosome13),median(i_chromosome14),median(i_chromosome15),median(i_chromosome16),median(i_chromosome17),median(i_chromosome18),median(i_chromosome19),median(i_chromosome20))
 ```
 ```
-rm(i_chromosome1),rm(i_chromosome2),rm(i_chromosome3),rm(i_chromosome4),rm(i_chromosome5),rm(i_chromosome6),rm(i_chromosome7),rm(i_chromosome8),rm(i_chromosome9),rm(i_chromosome10),rm(i_chromosome11),rm(i_chromosome12),rm(i_chromosome13),rm(i_chromosome14),rm(i_chromosome15),rm(i_chromosome16),rm(i_chromosome17),rm(i_chromosome18),rm(i_chromosome19),rm(i_chromosome20)
-```
-```
 i_chromosome1_20 <- list(i_chromosome1=i_chromosome1,i_chromosome2=i_chromosome2,i_chromosome3=i_chromosome3,i_chromosome4=i_chromosome4,i_chromosome5=i_chromosome5,i_chromosome6=i_chromosome6,i_chromosome7=i_chromosome7,i_chromosome8=i_chromosome8,i_chromosome9=i_chromosome9,i_chromosome10=i_chromosome10,i_chromosome11=i_chromosome11,i_chromosome12=i_chromosome12,i_chromosome13=i_chromosome13,i_chromosome14=i_chromosome14,i_chromosome15=i_chromosome15,i_chromosome16=i_chromosome16,i_chromosome17=i_chromosome17,i_chromosome18=i_chromosome18,i_chromosome19=i_chromosome19,i_chromosome20=i_chromosome20)
+```
+```
+rm(i_chromosome1)
+rm(i_chromosome2)
+rm(i_chromosome3)
+rm(i_chromosome4)
+rm(i_chromosome5)
+rm(i_chromosome6)
+rm(i_chromosome7)
+rm(i_chromosome8)
+rm(i_chromosome9)
+rm(i_chromosome10)
+rm(i_chromosome11)
+rm(i_chromosome12)
+rm(i_chromosome13)
+rm(i_chromosome14)
+rm(i_chromosome15)
+rm(i_chromosome16)
+rm(i_chromosome17)
+rm(i_chromosome18)
+rm(i_chromosome19)
+rm(i_chromosome20)
 ```
 
 #### "r1" folder into XCA list
@@ -352,7 +372,6 @@ XCA$r1 <- data.frame(r1_1=(XCA$XCA1_1_1$r1_1),r1_2=(XCA$XCA1_2_5$r1_2),r1_3=(XCA
 ```
 > Select_chromeIII <- function(i,j) {chromosome <- 
 c(XCA$r1$r1_1[i:j],XCA$r1$r1_2[i:j],XCA$r1$r1_3[i:j],XCA$r1$r1_4[i:j],XCA$r1$r1_5[i:j],XCA$r1$r1_6[i:j],XCA$r1$r1_7[i:j],XCA$r1$r1_8[i:j],XCA$r1$r1_9[i:j],XCA$r1$r1_10[i:j],XCA$r1$r1_11[i:j],XCA$r1$r1_12[i:j],XCA$r1$r1_13[i:j],XCA$r1$r1_14[i:j],XCA$r1$r1_15[i:j],XCA$r1$r1_16[i:j],XCA$r1$r1_17[i:j],XCA$r1$r1_18[i:j],XCA$r1$r1_19[i:j],XCA$r1$r1_20[i:j],XCA$r1$r1_21[i:j],XCA$r1$r1_22[i:j],XCA$r1$r1_23[i:j],XCA$r1$r1_24[i:j],XCA$r1$r1_25[i:j],XCA$r1$r1_26[i:j],XCA$r1$r1_27[i:j],XCA$r1$r1_28[i:j],XCA$r1$r1_29[i:j],XCA$r1$r1_30[i:j],XCA$r1$r1_31[i:j],XCA$r1$r1_32[i:j],XCA$r1$r1_33[i:j],XCA$r1$r1_34[i:j],XCA$r1$r1_35[i:j])
-return(r1_chromosome1_20 <- list(r1_chromosome1=r1_chromosome1, r1_chromosome2=r1_chromosome2))
 }
 
 r1_chromosome1 <- Select_chromeIII(1,2)
@@ -407,33 +426,28 @@ rm(r1_chromosome 19 )
 rm(r1_chromosome 20 )
 ```
 ```
-> rm(r1_chromosome1) 
-> rm(r1_chromosome2) 
-> rm(r1_chromosome3) 
-> rm(r1_chromosome4) 
-> rm(r1_chromosome5) 
-> rm(r1_chromosome6) 
-> rm(r1_chromosome7) 
-> rm(r1_chromosome8) 
-> rm(r1_chromosome9) 
-> rm(r1_chromosome10) 
-> rm(r1_chromosome11) 
-> rm(r1_chromosome12) 
-> rm(r1_chromosome13) 
-> rm(r1_chromosome14) 
-> rm(r1_chromosome15) 
-> rm(r1_chromosome16) 
-> rm(r1_chromosome17) 
-> rm(r1_chromosome18) 
-> rm(r1_chromosome19) 
-> rm(r1_chromosome20)
+ rm(r1_chromosome1) 
+ rm(r1_chromosome2) 
+ rm(r1_chromosome3) 
+ rm(r1_chromosome4) 
+ rm(r1_chromosome5) 
+ rm(r1_chromosome6) 
+ rm(r1_chromosome7) 
+ rm(r1_chromosome8) 
+ rm(r1_chromosome9) 
+ rm(r1_chromosome10) 
+ rm(r1_chromosome11) 
+ rm(r1_chromosome12) 
+ rm(r1_chromosome13) 
+ rm(r1_chromosome14) 
+ rm(r1_chromosome15) 
+ rm(r1_chromosome16) 
+ rm(r1_chromosome17) 
+ rm(r1_chromosome18) 
+ rm(r1_chromosome19) 
+ rm(r1_chromosome20)
 ```
 
-```
-> paste0("l_chromosome", 1:20, "=l_chromosome", 1:20, collapse = ",")
-[1] "l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20"
-> l_chromosome1_20 <- list(l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20)
-```
 ```
 > paste0("median(r1_chromosome1_20$r1_chromosome", 1:20, ")", collapse = ",")
 [1] "median(r1_chromosome1_20$r1_chromosome1),median(r1_chromosome1_20$r1_chromosome2),median(r1_chromosome1_20$r1_chromosome3),median(r1_chromosome1_20$r1_chromosome4),median(r1_chromosome1_20$r1_chromosome5),median(r1_chromosome1_20$r1_chromosome6),median(r1_chromosome1_20$r1_chromosome7),median(r1_chromosome1_20$r1_chromosome8),median(r1_chromosome1_20$r1_chromosome9),median(r1_chromosome1_20$r1_chromosome10),median(r1_chromosome1_20$r1_chromosome11),median(r1_chromosome1_20$r1_chromosome12),median(r1_chromosome1_20$r1_chromosome13),median(r1_chromosome1_20$r1_chromosome14),median(r1_chromosome1_20$r1_chromosome15),median(r1_chromosome1_20$r1_chromosome16),median(r1_chromosome1_20$r1_chromosome17),median(r1_chromosome1_20$r1_chromosome18),median(r1_chromosome1_20$r1_chromosome19),median(r1_chromosome1_20$r1_chromosome20)"
