@@ -328,10 +328,10 @@ rm(l_chromosome20)
 [1] "median(i_chromosome1),median(i_chromosome2),median(i_chromosome3),median(i_chromosome4),median(i_chromosome5),median(i_chromosome6),median(i_chromosome7),median(i_chromosome8),median(i_chromosome9),median(i_chromosome10),median(i_chromosome11),median(i_chromosome12),median(i_chromosome13),median(i_chromosome14),median(i_chromosome15),median(i_chromosome16),median(i_chromosome17),median(i_chromosome18),median(i_chromosome19),median(i_chromosome20)"
 ```
 ```
-median_i <- c(median(i_chromosome1),median(i_chromosome2),median(i_chromosome3),median(i_chromosome4),median(i_chromosome5),median(i_chromosome6),median(i_chromosome7),median(i_chromosome8),median(i_chromosome9),median(i_chromosome10),median(i_chromosome11),median(i_chromosome12),median(i_chromosome13),median(i_chromosome14),median(i_chromosome15),median(i_chromosome16),median(i_chromosome17),median(i_chromosome18),median(i_chromosome19),median(i_chromosome20))
-```
-```
 i_chromosome1_20 <- list(i_chromosome1=i_chromosome1,i_chromosome2=i_chromosome2,i_chromosome3=i_chromosome3,i_chromosome4=i_chromosome4,i_chromosome5=i_chromosome5,i_chromosome6=i_chromosome6,i_chromosome7=i_chromosome7,i_chromosome8=i_chromosome8,i_chromosome9=i_chromosome9,i_chromosome10=i_chromosome10,i_chromosome11=i_chromosome11,i_chromosome12=i_chromosome12,i_chromosome13=i_chromosome13,i_chromosome14=i_chromosome14,i_chromosome15=i_chromosome15,i_chromosome16=i_chromosome16,i_chromosome17=i_chromosome17,i_chromosome18=i_chromosome18,i_chromosome19=i_chromosome19,i_chromosome20=i_chromosome20)
+```
+```
+median_i <- c(median(i_chromosome1),median(i_chromosome2),median(i_chromosome3),median(i_chromosome4),median(i_chromosome5),median(i_chromosome6),median(i_chromosome7),median(i_chromosome8),median(i_chromosome9),median(i_chromosome10),median(i_chromosome11),median(i_chromosome12),median(i_chromosome13),median(i_chromosome14),median(i_chromosome15),median(i_chromosome16),median(i_chromosome17),median(i_chromosome18),median(i_chromosome19),median(i_chromosome20))
 ```
 ```
 rm(i_chromosome1)
