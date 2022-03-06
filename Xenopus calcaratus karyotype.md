@@ -230,6 +230,8 @@ l_chromosome20 <- Select_chrome(39,40)
 ```
 > paste0("l_chromosome", 1:20, "=l_chromosome", 1:20, collapse = ",")
 [1] "l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20"
+```
+```
 > l_chromosome1_20 <- list(l_chromosome1=l_chromosome1,l_chromosome2=l_chromosome2,l_chromosome3=l_chromosome3,l_chromosome4=l_chromosome4,l_chromosome5=l_chromosome5,l_chromosome6=l_chromosome6,l_chromosome7=l_chromosome7,l_chromosome8=l_chromosome8,l_chromosome9=l_chromosome9,l_chromosome10=l_chromosome10,l_chromosome11=l_chromosome11,l_chromosome12=l_chromosome12,l_chromosome13=l_chromosome13,l_chromosome14=l_chromosome14,l_chromosome15=l_chromosome15,l_chromosome16=l_chromosome16,l_chromosome17=l_chromosome17,l_chromosome18=l_chromosome18,l_chromosome19=l_chromosome19,l_chromosome20=l_chromosome20)
 ```
 
