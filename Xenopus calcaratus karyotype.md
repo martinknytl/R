@@ -478,7 +478,7 @@ XCA_dotplot <- recordPlot()
 boxplot(l_chromosome1_20$l_chromosome1,l_chromosome1_20$l_chromosome2,l_chromosome1_20$l_chromosome3,l_chromosome1_20$l_chromosome4,l_chromosome1_20$l_chromosome5,l_chromosome1_20$l_chromosome6,l_chromosome1_20$l_chromosome7,l_chromosome1_20$l_chromosome8,l_chromosome1_20$l_chromosome9,l_chromosome1_20$l_chromosome10,l_chromosome1_20$l_chromosome11,l_chromosome1_20$l_chromosome12,l_chromosome1_20$l_chromosome13,l_chromosome1_20$l_chromosome14,l_chromosome1_20$l_chromosome15,l_chromosome1_20$l_chromosome16,l_chromosome1_20$l_chromosome17,l_chromosome1_20$l_chromosome18,l_chromosome1_20$l_chromosome19,l_chromosome1_20$l_chromosome20, ylim=c(0, 5), xlim=c(1, 20), horizontal = FALSE, ylab = "chromosomal length (%)", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
 ```
 ```
-XCA_boxplotII <- recordPlot()
+XCA_boxplot <- recordPlot()
 ```
 
 ```
@@ -490,12 +490,12 @@ XCA_boxplotII <- recordPlot()
 boxplot(i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromosome1_20$i_chromosome3,i_chromosome1_20$i_chromosome4,i_chromosome1_20$i_chromosome5,i_chromosome1_20$i_chromosome6,i_chromosome1_20$i_chromosome7,i_chromosome1_20$i_chromosome8,i_chromosome1_20$i_chromosome9,i_chromosome1_20$i_chromosome10,i_chromosome1_20$i_chromosome11,i_chromosome1_20$i_chromosome12,i_chromosome1_20$i_chromosome13,i_chromosome1_20$i_chromosome14,i_chromosome1_20$i_chromosome15,i_chromosome1_20$i_chromosome16,i_chromosome1_20$i_chromosome17,i_chromosome1_20$i_chromosome18,i_chromosome1_20$i_chromosome19,i_chromosome1_20$i_chromosome20, ylim=c(-1, 50), xlim=c(1, 20), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
 ```
 ```
-XCA_boxplot <- recordPlot()
+XCA_boxplotII <- recordPlot()
 ```
 
-#### Names of table columns chenged
+#### Names of table columns changed
 ```
-> names(final_table) = c("chromosome", "median_l (%)", "median_r1", "median_i", "category")
+names(final_table) = c("chromosome", "median_l (%)", "median_r1", "median_i", "category")
 ```
 
 #### three plots in one
@@ -515,42 +515,42 @@ boxplot(i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromoso
 
 #### XCA_boxplot stats
 ```
-> (boxplot(l_chromosome1_20$l_chromosome1,l_chromosome1_20$l_chromosome2,l_chromosome1_20$l_chromosome3,l_chromosome1_20$l_chromosome4,l_chromosome1_20$l_chromosome5,l_chromosome1_20$l_chromosome6,l_chromosome1_20$l_chromosome7,l_chromosome1_20$l_chromosome8,l_chromosome1_20$l_chromosome9,l_chromosome1_20$l_chromosome10,l_chromosome1_20$l_chromosome11,l_chromosome1_20$l_chromosome12,l_chromosome1_20$l_chromosome13,l_chromosome1_20$l_chromosome14,l_chromosome1_20$l_chromosome15,l_chromosome1_20$l_chromosome16,l_chromosome1_20$l_chromosome17,l_chromosome1_20$l_chromosome18,l_chromosome1_20$l_chromosome19,l_chromosome1_20$l_chromosome20, ylim=c(0, 5), xlim=c(1, 20), horizontal = FALSE, ylab = "chromosomal length (%)", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome))
+(boxplot(l_chromosome1_20$l_chromosome1,l_chromosome1_20$l_chromosome2,l_chromosome1_20$l_chromosome3,l_chromosome1_20$l_chromosome4,l_chromosome1_20$l_chromosome5,l_chromosome1_20$l_chromosome6,l_chromosome1_20$l_chromosome7,l_chromosome1_20$l_chromosome8,l_chromosome1_20$l_chromosome9,l_chromosome1_20$l_chromosome10,l_chromosome1_20$l_chromosome11,l_chromosome1_20$l_chromosome12,l_chromosome1_20$l_chromosome13,l_chromosome1_20$l_chromosome14,l_chromosome1_20$l_chromosome15,l_chromosome1_20$l_chromosome16,l_chromosome1_20$l_chromosome17,l_chromosome1_20$l_chromosome18,l_chromosome1_20$l_chromosome19,l_chromosome1_20$l_chromosome20, ylim=c(0, 5), xlim=c(1, 20), horizontal = FALSE, ylab = "chromosomal length (%)", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome))
 $stats
          [,1]     [,2]     [,3]     [,4]     [,5]     [,6]     [,7]     [,8]     [,9]    [,10]
-[1,] 3.226216 2.986435 2.818954 2.775559 2.615323 2.377114 2.304634 2.467552 2.343665 2.336440
-[2,] 3.599843 3.522023 2.995260 3.068656 2.862928 2.714208 2.564137 2.674137 2.617413 2.517267
-[3,] 3.781723 3.789659 3.114178 3.203917 2.989551 2.796460 2.654493 2.792230 2.731991 2.636517
-[4,] 3.978187 3.939321 3.258233 3.387081 3.096284 2.950566 2.755438 2.870369 2.871043 2.767760
-[5,] 4.537229 4.255518 3.644626 3.825311 3.373983 3.243612 2.953409 3.145121 3.197429 3.105986
+[1,] 3.238750 3.087458 2.818954 2.775559 2.615323 2.377114 2.304634 2.467552 2.343665 2.336440
+[2,] 3.618799 3.578954 2.995260 3.088551 2.860517 2.714208 2.564137 2.680951 2.617413 2.514486
+[3,] 3.781723 3.789659 3.114178 3.203917 2.984431 2.796460 2.654493 2.795698 2.731991 2.632847
+[4,] 3.978187 3.939321 3.258233 3.387081 3.095660 2.943860 2.755438 2.870369 2.853383 2.764584
+[5,] 4.284397 4.255518 3.644626 3.825311 3.373983 3.243612 2.953409 3.145121 3.197429 3.105986
         [,11]    [,12]    [,13]    [,14]    [,15]    [,16]    [,17]    [,18]     [,19]     [,20]
-[1,] 2.346468 2.081271 2.078860 1.822057 2.082604 1.879283 1.126034 1.095441 0.6302140 0.6637839
-[2,] 2.592813 2.368790 2.355420 2.035916 2.360355 2.174267 1.374806 1.363762 0.8835760 0.8421777
-[3,] 2.691722 2.533095 2.469081 2.151524 2.474503 2.283615 1.466428 1.473254 0.9769945 0.9263058
-[4,] 2.771300 2.588112 2.595535 2.269352 2.619322 2.449195 1.544207 1.565273 1.0722605 0.9880363
-[5,] 3.037016 2.802170 2.823246 2.489405 2.784259 2.674049 1.720180 1.764630 1.2669116 1.1337334
+[1,] 2.405518 2.081271 2.078860 1.875698 2.082604 1.879283 1.136505 1.095441 0.6302140 0.6637839
+[2,] 2.616222 2.377433 2.366186 2.063142 2.360355 2.174267 1.379060 1.369498 0.8835760 0.8421777
+[3,] 2.691722 2.538577 2.482159 2.155733 2.474503 2.283615 1.474569 1.475049 0.9769945 0.9264198
+[4,] 2.771300 2.592444 2.606962 2.269352 2.611833 2.449195 1.545798 1.567031 1.0800464 0.9885248
+[5,] 2.896101 2.802170 2.823246 2.489405 2.784259 2.674049 1.720180 1.764630 1.2669116 1.1337334
 
 $n
  [1] 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70
 
 $conf
          [,1]     [,2]     [,3]     [,4]     [,5]     [,6]     [,7]     [,8]     [,9]    [,10]
-[1,] 3.710274 3.710854 3.064517 3.143784 2.945483 2.751825 2.618366 2.755173 2.684093 2.589212
-[2,] 3.853172 3.868464 3.163840 3.264051 3.033619 2.841096 2.690619 2.829288 2.779888 2.683822
+[1,] 3.713854 3.721605 3.064517 3.147541 2.940025 2.753091 2.618366 2.759927 2.687429 2.585617
+[2,] 3.849592 3.857713 3.163840 3.260293 3.028837 2.839829 2.690619 2.831469 2.776553 2.680077
         [,11]    [,12]    [,13]    [,14]    [,15]    [,16]    [,17]    [,18]     [,19]     [,20]
-[1,] 2.658015 2.491677 2.423737 2.107440 2.425598 2.231696 1.434437 1.435200 0.9413622 0.8987610
-[2,] 2.725429 2.574513 2.514426 2.195607 2.523408 2.335534 1.498419 1.511309 1.0126268 0.9538506
+[1,] 2.662436 2.497973 2.436689 2.116791 2.427012 2.231696 1.443081 1.437746 0.9398918 0.8987828
+[2,] 2.721008 2.579181 2.527628 2.194675 2.521993 2.335534 1.506057 1.512352 1.0140972 0.9540569
 
 $out
- [1] 4.6315113 4.5777786 3.9407952 3.5324744 3.3295577 3.4942207 3.6255232 3.5775669 3.1582776
-[10] 2.2105212 3.2921502 2.2533294 2.0946661 3.3097254 2.0946661 3.2586018 2.1194035 2.0524109
-[19] 3.0987769 3.1025154 2.1962006 2.1336673 1.9177559 3.0879059 1.6670859 1.6666676 1.4269175
-[28] 1.4942721 3.5013016 3.5013486 1.4802290 1.2917354 1.6618817 1.7193953 2.9182522 3.3579492
-[37] 3.2882799 1.9198483 2.4252013 2.2090351 0.8661211 2.0304920 1.8898360 1.4101658
+ [1] 4.6315113 4.5181758 4.5372288 4.5777786 3.3295577 3.4942207 3.1582776 2.2105212 3.2921502
+[10] 2.2533294 1.7732723 3.3097254 3.2586018 2.1194035 2.0524109 2.3464678 3.0987769 3.1025154
+[19] 3.0370160 1.9177559 3.0879059 1.6670859 1.6666676 1.4269175 1.4942721 1.4802290 1.2917354
+[28] 1.6618817 1.7193953 2.9182522 1.1260339 1.9198483 2.4252013 2.2090351 0.8661211 2.0304920
+[37] 1.8898360 1.4101658
 
 $group
- [1]  1  2  5  5  6  6  6  6  7  7  7  7  7  8  8  9 10 10 11 11 11 11 12 13 14 14 14 14 15 15 16
-[32] 16 16 16 16 16 16 17 17 17 18 18 18 19
+ [1]  1  1  1  2  6  6  7  7  7  7  7  8  9 10 10 11 11 11 11 12 13 14 14 14 14 16 16 16 16 16 17
+[32] 17 17 17 18 18 18 19
 
 $names
  [1] "1a"  "1b"  "2a"  "2b"  "3a"  "3b"  "4a"  "4b"  "5a"  "5b"  "6a"  "6b"  "7a"  "7b"  "8a" 
@@ -559,43 +559,39 @@ $names
 
 #### XCA_boxplotII stats
 ```
-> (boxplot(i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromosome1_20$i_chromosome3,i_chromosome1_20$i_chromosome4,i_chromosome1_20$i_chromosome5,i_chromosome1_20$i_chromosome6,i_chromosome1_20$i_chromosome7,i_chromosome1_20$i_chromosome8,i_chromosome1_20$i_chromosome9,i_chromosome1_20$i_chromosome10,i_chromosome1_20$i_chromosome11,i_chromosome1_20$i_chromosome12,i_chromosome1_20$i_chromosome13,i_chromosome1_20$i_chromosome14,i_chromosome1_20$i_chromosome15,i_chromosome1_20$i_chromosome16,i_chromosome1_20$i_chromosome17,i_chromosome1_20$i_chromosome18,i_chromosome1_20$i_chromosome19,i_chromosome1_20$i_chromosome20, ylim=c(-1, 50), xlim=c(1, 20), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
-+ )
+(boxplot(i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromosome1_20$i_chromosome3,i_chromosome1_20$i_chromosome4,i_chromosome1_20$i_chromosome5,i_chromosome1_20$i_chromosome6,i_chromosome1_20$i_chromosome7,i_chromosome1_20$i_chromosome8,i_chromosome1_20$i_chromosome9,i_chromosome1_20$i_chromosome10,i_chromosome1_20$i_chromosome11,i_chromosome1_20$i_chromosome12,i_chromosome1_20$i_chromosome13,i_chromosome1_20$i_chromosome14,i_chromosome1_20$i_chromosome15,i_chromosome1_20$i_chromosome16,i_chromosome1_20$i_chromosome17,i_chromosome1_20$i_chromosome18,i_chromosome1_20$i_chromosome19,i_chromosome1_20$i_chromosome20, ylim=c(-1, 50), xlim=c(1, 20), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome))
 $stats
          [,1]     [,2]     [,3]     [,4]     [,5]     [,6]     [,7]     [,8]     [,9]    [,10]
-[1,] 35.84084 35.25123 29.10558 32.12840 11.36320 11.12050 32.75425 28.48249 24.07490 20.99107
-[2,] 39.87568 41.25320 34.69278 37.07267 15.31408 14.69181 35.82360 35.16353 29.97802 25.38742
-[3,] 42.09607 43.36667 37.20800 38.74583 16.67675 16.74142 37.49808 38.42242 33.11543 27.33259
-[4,] 44.30737 45.92378 38.52679 41.73541 19.10160 18.78823 40.21685 40.04483 35.16315 29.31048
-[5,] 50.00000 50.00000 44.27692 47.22297 24.24242 23.69191 45.05597 44.79629 38.25438 33.45725
+[1,] 35.84084 35.25123 29.68460 32.12840 11.36320 11.12050 32.75425 28.48249 24.07490 20.99107
+[2,] 39.87568 40.82517 34.69278 37.07267 15.20434 14.69181 35.82360 35.16353 29.97802 25.38742
+[3,] 42.09607 43.14983 37.03789 38.67386 16.58375 16.74142 37.47840 38.42242 33.10950 27.33259
+[4,] 44.23338 45.76117 38.38949 41.52641 19.04762 18.78823 39.86246 40.00086 35.07785 29.31048
+[5,] 49.01478 50.00000 43.65747 47.22297 24.24242 23.69191 45.05597 44.79629 38.25438 33.45725
         [,11]    [,12]    [,13]    [,14]     [,15]     [,16]    [,17]    [,18]    [,19]    [,20]
-[1,] 41.47849 42.00992 36.65107 35.72651  8.245662  8.850932 35.35916 39.42596 34.27174 31.92834
-[2,] 45.50746 45.23020 41.62866 40.96124 13.921206 13.042230 41.64856 42.58549 40.60463 39.19283
-[3,] 46.93671 46.82511 43.37677 43.78446 15.190931 15.468313 44.39561 44.53656 42.92098 42.89692
-[4,] 48.30867 48.47650 45.02080 45.57206 18.148387 18.485763 45.96774 46.82906 46.26279 45.11952
-[5,] 50.00000 50.00000 50.00000 50.00000 23.673651 25.954693 50.62792 49.85852 50.00000 50.00000
+[1,] 43.49776 42.00992 36.65107 35.72651  8.245662  8.850932 35.35916 39.42596 34.27174 31.92834
+[2,] 45.50746 45.23020 41.62866 40.96124 13.647524 13.042230 41.64856 42.58549 40.60463 39.19283
+[3,] 46.93671 46.62692 43.37677 43.78446 14.733357 15.468313 44.30807 44.53656 42.78175 42.89692
+[4,] 48.15213 48.24585 45.02080 45.57206 17.748756 17.825906 45.92790 46.82300 45.98535 45.11952
+[5,] 49.88551 49.91618 49.08449 48.79207 23.673651 23.807496 48.78361 49.85852 49.15074 48.87833
 
 $n
  [1] 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70
 
 $conf
          [,1]     [,2]     [,3]     [,4]     [,5]     [,6]     [,7]     [,8]     [,9]    [,10]
-[1,] 41.25916 42.48465 36.48396 37.86529 15.96150 15.96783 36.66843 37.50060 32.13624 26.59173
-[2,] 42.93298 44.24869 37.93204 39.62637 17.39201 17.51502 38.32773 39.34423 34.09462 28.07344
+[1,] 41.27314 42.21768 36.33978 37.83279 15.85796 15.96783 36.71568 37.50890 32.14642 26.59173
+[2,] 42.91900 44.08197 37.73600 39.51493 17.30953 17.51502 38.24113 39.33593 34.07259 28.07344
         [,11]    [,12]    [,13]    [,14]    [,15]    [,16]    [,17]    [,18]    [,19]    [,20]
-[1,] 46.40771 46.21206 42.73618 42.91373 14.39264 14.44032 43.57995 43.73518 41.85245 41.77768
-[2,] 47.46570 47.43816 44.01736 44.65520 15.98922 16.49630 45.21127 45.33794 43.98950 44.01615
+[1,] 46.43727 46.05743 42.73618 42.91373 13.95885 14.56493 43.49993 43.73633 41.76562 41.77768
+[2,] 47.43614 47.19642 44.01736 44.65520 15.50786 16.37169 45.11620 45.33680 43.79788 44.01615
 
 $out
- [1] 33.014524 28.842832 33.121393 44.419208 48.896534 44.308229 50.000000 50.000000 50.000000
-[10] 50.000000 50.000000 50.000000  8.804378 26.512739 50.000000 50.000000 50.104110 49.895890
-[19] 58.477288 50.000000 50.000000 41.291043 50.000000 50.000000 32.066190 34.958512 32.993748
-[28] 24.914676 25.376555 33.689064 50.000000 50.000000 50.000000 50.000000 26.624378 52.882545
-[37] 35.996636 28.677673 27.472513 22.183546 29.710605
+ [1] 33.014524 28.842832 33.121393 44.419208 44.276923 29.105575 48.896534 44.308229  8.804378
+[10] 26.512739 41.291043 41.478494 32.066190 34.958512 32.993748 24.914676 25.376555 33.689064
+[19] 25.954693 26.624378 35.996636 28.677673 27.472513 22.183546 29.710605
 
 $group
- [1]  1  1  1  3  3  3  3  3  4  4  5  5  5  6  6  6  7  8  8  9  9 10 10 10 13 13 14 15 15 15 15
-[32] 15 16 16 17 17 18 19 20 20 20
+ [1]  1  1  1  3  3  3  3  3  5  6 10 11 13 13 14 15 15 15 16 17 18 19 20 20 20
 
 $names
  [1] "1a"  "1b"  "2a"  "2b"  "3a"  "3b"  "4a"  "4b"  "5a"  "5b"  "6a"  "6b"  "7a"  "7b"  "8a" 
@@ -611,20 +607,20 @@ $names
 [1] 3 4
 ```
 ```
-> screen(1)
-> par(mar=c(3.9, 4, 0.85, 0.50), mai=c(0.8, 0.8, 0.67, 0.10))
-> 
-> plot(final_table$median_i, final_table$`median_l (%)`, pch=16, col="red", ylim = c(0, 5), xlab = "centromeric index", ylab = "length (%)", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+screen(1)
+par(mar=c(3.9, 4, 0.85, 0.50), mai=c(0.8, 0.8, 0.67, 0.10))
+ 
+plot(final_table$median_i, final_table$`median_l (%)`, pch=16, col="red", ylim = c(0, 5), xlab = "centromeric index", ylab = "length (%)", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
 ```
 ```
-> screen(3)
-> par(mar=c(3.9, 4, 0.85, 0.50), mai=c(0.80, 0.80, 0.17, 0.10))
-> boxplot(l_chromosome1_20$l_chromosome1,l_chromosome1_20$l_chromosome2,l_chromosome1_20$l_chromosome3,l_chromosome1_20$l_chromosome4,l_chromosome1_20$l_chromosome5,l_chromosome1_20$l_chromosome6,l_chromosome1_20$l_chromosome7,l_chromosome1_20$l_chromosome8,l_chromosome1_20$l_chromosome9,l_chromosome1_20$l_chromosome10,l_chromosome1_20$l_chromosome11,l_chromosome1_20$l_chromosome12,l_chromosome1_20$l_chromosome13,l_chromosome1_20$l_chromosome14,l_chromosome1_20$l_chromosome15,l_chromosome1_20$l_chromosome16,l_chromosome1_20$l_chromosome17,l_chromosome1_20$l_chromosome18,l_chromosome1_20$l_chromosome19,l_chromosome1_20$l_chromosome20, ylim=c(0, 5), xlim=c(1, 20), horizontal = FALSE, ylab = "chromosomal length (%)", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
+screen(3)
+par(mar=c(3.9, 4, 0.85, 0.50), mai=c(0.80, 0.80, 0.17, 0.10))
+ boxplot(l_chromosome1_20$l_chromosome1,l_chromosome1_20$l_chromosome2,l_chromosome1_20$l_chromosome3,l_chromosome1_20$l_chromosome4,l_chromosome1_20$l_chromosome5,l_chromosome1_20$l_chromosome6,l_chromosome1_20$l_chromosome7,l_chromosome1_20$l_chromosome8,l_chromosome1_20$l_chromosome9,l_chromosome1_20$l_chromosome10,l_chromosome1_20$l_chromosome11,l_chromosome1_20$l_chromosome12,l_chromosome1_20$l_chromosome13,l_chromosome1_20$l_chromosome14,l_chromosome1_20$l_chromosome15,l_chromosome1_20$l_chromosome16,l_chromosome1_20$l_chromosome17,l_chromosome1_20$l_chromosome18,l_chromosome1_20$l_chromosome19,l_chromosome1_20$l_chromosome20, ylim=c(0, 5), xlim=c(1, 20), horizontal = FALSE, ylab = "length (%)", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
 ```
 ```
-> screen(4)
-> par(mar=c(3.9, 4, 0.85, 0.50), mai=c(0.80, 0.80, 0.17, 0.10))
-> boxplot(i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromosome1_20$i_chromosome3,i_chromosome1_20$i_chromosome4,i_chromosome1_20$i_chromosome5,i_chromosome1_20$i_chromosome6,i_chromosome1_20$i_chromosome7,i_chromosome1_20$i_chromosome8,i_chromosome1_20$i_chromosome9,i_chromosome1_20$i_chromosome10,i_chromosome1_20$i_chromosome11,i_chromosome1_20$i_chromosome12,i_chromosome1_20$i_chromosome13,i_chromosome1_20$i_chromosome14,i_chromosome1_20$i_chromosome15,i_chromosome1_20$i_chromosome16,i_chromosome1_20$i_chromosome17,i_chromosome1_20$i_chromosome18,i_chromosome1_20$i_chromosome19,i_chromosome1_20$i_chromosome20, ylim=c(-1, 50), xlim=c(1, 20), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
+screen(4)
+par(mar=c(3.9, 4, 0.85, 0.50), mai=c(0.80, 0.80, 0.17, 0.10))
+ boxplot(i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromosome1_20$i_chromosome3,i_chromosome1_20$i_chromosome4,i_chromosome1_20$i_chromosome5,i_chromosome1_20$i_chromosome6,i_chromosome1_20$i_chromosome7,i_chromosome1_20$i_chromosome8,i_chromosome1_20$i_chromosome9,i_chromosome1_20$i_chromosome10,i_chromosome1_20$i_chromosome11,i_chromosome1_20$i_chromosome12,i_chromosome1_20$i_chromosome13,i_chromosome1_20$i_chromosome14,i_chromosome1_20$i_chromosome15,i_chromosome1_20$i_chromosome16,i_chromosome1_20$i_chromosome17,i_chromosome1_20$i_chromosome18,i_chromosome1_20$i_chromosome19,i_chromosome1_20$i_chromosome20, ylim=c(-1, 50), xlim=c(1, 20), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
 ```
 ```
 rm(XCA_multiplot)
