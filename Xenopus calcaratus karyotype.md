@@ -627,3 +627,7 @@ rm(XCA_multiplot)
 rm(XCA_multiplotII)
 XCA_multiplot <- recordPlot()
 ```
+```
+setwd("C:/Users/Martin/Documents/R/XCA_paper")
+write.table(final_table, file = "final_table.txt")
+```
