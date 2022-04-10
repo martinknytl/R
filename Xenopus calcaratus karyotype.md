@@ -348,6 +348,7 @@ r1_chromosome20 <- Select_chromeIII(39,40)
 ```
 for(i in 1:20) {if(final_table$median_i[i]>=37.5) {final_table$category[i] = "m"} else if (final_table$median_i[i]>=25 & final_table$median_i[i]<37.5){final_table$category[i] = "sm"} else if (final_table$median_i[i]>=12.5 & final_table$median_i[i]<25){final_table$category[i] = "st"} else if (final_table$median_i[i]>0 & final_table$median_i[i]<12.5) {final_table$category[i] = "a"} else {final_table$category[i] = "T"}}```
 ```
+```
 > for (i in 1:20) {
 + cat("rm(l_chromosome", i, ")", "\n")    
 + }
@@ -497,21 +498,6 @@ XCA_boxplotII <- recordPlot()
 names(final_table) = c("chromosome", "median_l (%)", "median_r1", "median_i", "category")
 ```
 
-#### three plots in one
-
-```
-(par_dotplot <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.17,0.1), font=3))
-```
-```
-plot(final_table$median_i, final_table$`median_l (%)`, pch=16, col="red", ylim = c(0, 5), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length (%)", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5, 50), col="gray", lty=2))
-```
-```
-boxplot(l_chromosome1_20$l_chromosome1,l_chromosome1_20$l_chromosome2,l_chromosome1_20$l_chromosome3,l_chromosome1_20$l_chromosome4,l_chromosome1_20$l_chromosome5,l_chromosome1_20$l_chromosome6,l_chromosome1_20$l_chromosome7,l_chromosome1_20$l_chromosome8,l_chromosome1_20$l_chromosome9,l_chromosome1_20$l_chromosome10,l_chromosome1_20$l_chromosome11,l_chromosome1_20$l_chromosome12,l_chromosome1_20$l_chromosome13,l_chromosome1_20$l_chromosome14,l_chromosome1_20$l_chromosome15,l_chromosome1_20$l_chromosome16,l_chromosome1_20$l_chromosome17,l_chromosome1_20$l_chromosome18,l_chromosome1_20$l_chromosome19,l_chromosome1_20$l_chromosome20, ylim=c(0, 5), xlim=c(1, 20), horizontal = FALSE, ylab = "chromosomal length (%)", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
-```
-```
-boxplot(i_chromosome1_20$i_chromosome1,i_chromosome1_20$i_chromosome2,i_chromosome1_20$i_chromosome3,i_chromosome1_20$i_chromosome4,i_chromosome1_20$i_chromosome5,i_chromosome1_20$i_chromosome6,i_chromosome1_20$i_chromosome7,i_chromosome1_20$i_chromosome8,i_chromosome1_20$i_chromosome9,i_chromosome1_20$i_chromosome10,i_chromosome1_20$i_chromosome11,i_chromosome1_20$i_chromosome12,i_chromosome1_20$i_chromosome13,i_chromosome1_20$i_chromosome14,i_chromosome1_20$i_chromosome15,i_chromosome1_20$i_chromosome16,i_chromosome1_20$i_chromosome17,i_chromosome1_20$i_chromosome18,i_chromosome1_20$i_chromosome19,i_chromosome1_20$i_chromosome20, ylim=c(-1, 50), xlim=c(1, 20), horizontal = FALSE, ylab = "centromeric index", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome)
-```
-
 #### XCA_boxplot stats
 ```
 (boxplot(l_chromosome1_20$l_chromosome1,l_chromosome1_20$l_chromosome2,l_chromosome1_20$l_chromosome3,l_chromosome1_20$l_chromosome4,l_chromosome1_20$l_chromosome5,l_chromosome1_20$l_chromosome6,l_chromosome1_20$l_chromosome7,l_chromosome1_20$l_chromosome8,l_chromosome1_20$l_chromosome9,l_chromosome1_20$l_chromosome10,l_chromosome1_20$l_chromosome11,l_chromosome1_20$l_chromosome12,l_chromosome1_20$l_chromosome13,l_chromosome1_20$l_chromosome14,l_chromosome1_20$l_chromosome15,l_chromosome1_20$l_chromosome16,l_chromosome1_20$l_chromosome17,l_chromosome1_20$l_chromosome18,l_chromosome1_20$l_chromosome19,l_chromosome1_20$l_chromosome20, ylim=c(0, 5), xlim=c(1, 20), horizontal = FALSE, ylab = "chromosomal length (%)", xlab = "chromosome", las = 1, pch = 20, whisklty = 3, boxcol = "red", boxfill = gray(0.95), boxlwd = 2, boxwex = 0.7, names = chromosome))
@@ -609,7 +595,7 @@ $names
 screen(1)
 par(mar=c(3.9, 4, 0.85, 0.50), mai=c(0.8, 0.8, 0.67, 0.10))
  
-plot(final_table$median_i, final_table$`median_l (%)`, pch=16, col="red", ylim = c(0, 5), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length (%)", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5, 50), col="gray", lty=2))
+plot(final_table$median_i, final_table$`median_l (%)`, pch=16, col="red", ylim = c(0, 5), xlim = c(0, 50), xlab = "centromeric index", ylab = "length (%)", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5, 50), col="gray", lty=2))
 ```
 ```
 screen(3)
@@ -626,6 +612,7 @@ rm(XCA_multiplot)
 rm(XCA_multiplotII)
 XCA_multiplot <- recordPlot()
 ```
+save as image (999 x 605)
 ```
 setwd("C:/Users/Martin/Documents/R/XCA_paper")
 write.table(final_table, file = "final_table.txt")
