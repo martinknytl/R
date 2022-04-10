@@ -45,12 +45,12 @@ CAU$lenght_i[66:81, "mean_i_corrected"] <- 0
 
 #### a new column "category" of each chromosome
 ```
-for(i in 1:100) {if(CAU$lenght_i$mean_i_corrected[i]>=35.5) {CAU$lenght_i$category[i] = "m"} else if (CAU$lenght_i$mean_i_corrected[i]>=25 & CAU$lenght_i$mean_i_corrected[i]<35.5){CAU$lenght_i$category[i] = "sm"} else if (CAU$lenght_i$mean_i_corrected[i]>=12.5 & CAU$lenght_i$mean_i_corrected[i]<25){CAU$lenght_i$category[i] = "st"} else if (CAU$lenght_i$mean_i_corrected[i]>0 & CAU$lenght_i$mean_i_corrected[i]<12.5) {CAU$lenght_i$category[i] = "a"} else {CAU$lenght_i$category[i] = "T"}}
+for(i in 1:100) {if(CAU$lenght_i$mean_i_corrected[i]>=37.5) {CAU$lenght_i$category[i] = "m"} else if (CAU$lenght_i$mean_i_corrected[i]>=25 & CAU$lenght_i$mean_i_corrected[i]<37.5){CAU$lenght_i$category[i] = "sm"} else if (CAU$lenght_i$mean_i_corrected[i]>=12.5 & CAU$lenght_i$mean_i_corrected[i]<25){CAU$lenght_i$category[i] = "st"} else if (CAU$lenght_i$mean_i_corrected[i]>0 & CAU$lenght_i$mean_i_corrected[i]<12.5) {CAU$lenght_i$category[i] = "a"} else {CAU$lenght_i$category[i] = "T"}}
 ```
 
 #### CAU dotplot creation
 ```
-plot(CAU$lenght_i$mean_i, CAU$lenght_i$mean_lenght, pch=16, col="blue", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+plot(CAU$lenght_i$mean_i, CAU$lenght_i$mean_lenght, pch=16, col="blue", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5), col="gray", lty=2))
 ```
 ```
 CAU_dotplot <- recordPlot()
@@ -179,12 +179,12 @@ CCA$lenght_i[59:74, "mean_i_corrected"] <- 0
 
 #### a new column "category" of each chromosome
 ```
-for(i in 1:100) {if(CCA$lenght_i$mean_i_corrected[i]>=35.5) {CCA$lenght_i$category[i] = "m"} else if (CCA$lenght_i$mean_i_corrected[i]>=25 & CCA$lenght_i$mean_i_corrected[i]<35.5){CCA$lenght_i$category[i] = "sm"} else if (CCA$lenght_i$mean_i_corrected[i]>=12.5 & CCA$lenght_i$mean_i_corrected[i]<25){CCA$lenght_i$category[i] = "st"} else if (CCA$lenght_i$mean_i_corrected[i]>0 & CCA$lenght_i$mean_i_corrected[i]<12.5) {CCA$lenght_i$category[i] = "a"} else {CCA$lenght_i$category[i] = "T"}}
+for(i in 1:100) {if(CCA$lenght_i$mean_i_corrected[i]>=37.5) {CCA$lenght_i$category[i] = "m"} else if (CCA$lenght_i$mean_i_corrected[i]>=25 & CCA$lenght_i$mean_i_corrected[i]<37.5){CCA$lenght_i$category[i] = "sm"} else if (CCA$lenght_i$mean_i_corrected[i]>=12.5 & CCA$lenght_i$mean_i_corrected[i]<25){CCA$lenght_i$category[i] = "st"} else if (CCA$lenght_i$mean_i_corrected[i]>0 & CCA$lenght_i$mean_i_corrected[i]<12.5) {CCA$lenght_i$category[i] = "a"} else {CCA$lenght_i$category[i] = "T"}}
 ``` 
 
 #### CCA dotplot creation
 ```
-plot(CCA$lenght_i$mean_i, CCA$lenght_i$mean_lenght, pch=16, col="red", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+plot(CCA$lenght_i$mean_i, CCA$lenght_i$mean_lenght, pch=16, col="red", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5), col="gray", lty=2))
 ```
 ```
 CCA_dotplot <- recordPlot()
@@ -317,12 +317,12 @@ CGI$lenght_i[51:75, "mean_i_corrected"] <- 0
 
 #### a new column "category" of each chromosome
 ```
-for(i in 1:100) {if(CGI$lenght_i$mean_i_corrected[i]>=35.5) {CGI$lenght_i$category[i] = "m"} else if (CGI$lenght_i$mean_i_corrected[i]>=25 & CGI$lenght_i$mean_i_corrected[i]<35.5){CGI$lenght_i$category[i] = "sm"} else if (CGI$lenght_i$mean_i_corrected[i]>=12.5 & CGI$lenght_i$mean_i_corrected[i]<25){CGI$lenght_i$category[i] = "st"} else if (CGI$lenght_i$mean_i_corrected[i]>0 & CGI$lenght_i$mean_i_corrected[i]<12.5) {CGI$lenght_i$category[i] = "a"} else {CGI$lenght_i$category[i] = "T"}}
+for(i in 1:100) {if(CGI$lenght_i$mean_i_corrected[i]>=37.5) {CGI$lenght_i$category[i] = "m"} else if (CGI$lenght_i$mean_i_corrected[i]>=25 & CGI$lenght_i$mean_i_corrected[i]<37.5){CGI$lenght_i$category[i] = "sm"} else if (CGI$lenght_i$mean_i_corrected[i]>=12.5 & CGI$lenght_i$mean_i_corrected[i]<25){CGI$lenght_i$category[i] = "st"} else if (CGI$lenght_i$mean_i_corrected[i]>0 & CGI$lenght_i$mean_i_corrected[i]<12.5) {CGI$lenght_i$category[i] = "a"} else {CGI$lenght_i$category[i] = "T"}}
 ```
 
 #### CGI dotplot creation
 ```
-plot(CGI$lenght_i$mean_i, CGI$lenght_i$mean_lenght, pch=16, col="yellow3", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+plot(CGI$lenght_i$mean_i, CGI$lenght_i$mean_lenght, pch=16, col="yellow3", ylim = c(15, 45), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5), col="gray", lty=2))
 ```
 ```
 CGI_dotplot <- recordPlot()
@@ -359,11 +359,11 @@ CGI_boxplot <- recordPlot()
 
 #### assign of category to each chromosome in the "mean_i_corrected" folder
 
-for(i in 1:100) {if(CGI$lenght_i$mean_i_corrected[i]>=35.5) {CGI$lenght_i$category[i] = "m"} else if (CGI$lenght_i$mean_i_corrected[i]>=25 & CGI$lenght_i$mean_i_corrected[i]<35.5){CGI$lenght_i$category[i] = "sm"} else if (CGI$lenght_i$mean_i_corrected[i]>=12.5 & CGI$lenght_i$mean_i_corrected[i]<25){CGI$lenght_i$category[i] = "st"} else if (CGI$lenght_i$mean_i_corrected[i]>0 & CGI$lenght_i$mean_i_corrected[i]<12.5) {CGI$lenght_i$category[i] = "a"} else {CGI$lenght_i$category[i] = "T"}}
+for(i in 1:100) {if(CGI$lenght_i$mean_i_corrected[i]>=37.5) {CGI$lenght_i$category[i] = "m"} else if (CGI$lenght_i$mean_i_corrected[i]>=25 & CGI$lenght_i$mean_i_corrected[i]<37.5){CGI$lenght_i$category[i] = "sm"} else if (CGI$lenght_i$mean_i_corrected[i]>=12.5 & CGI$lenght_i$mean_i_corrected[i]<25){CGI$lenght_i$category[i] = "st"} else if (CGI$lenght_i$mean_i_corrected[i]>0 & CGI$lenght_i$mean_i_corrected[i]<12.5) {CGI$lenght_i$category[i] = "a"} else {CGI$lenght_i$category[i] = "T"}}
 
 #### assign of category to each chromosome in the first folder (CGI_D10_6g) of CGI list
 ```
-for(i in 1:100) {if(CGI$CGI_D10_6g$i1[i]>=35.5) {CGI$CGI_D10_6g$category[i] = "m"} else if (CGI$CGI_D10_6g$i1[i]>=25 & CGI$CGI_D10_6g$i1[i]<35.5){CGI$CGI_D10_6g$category[i] = "sm"} else if (CGI$CGI_D10_6g$i1[i]>=12.5 & CGI$CGI_D10_6g$i1[i]<25){CGI$CGI_D10_6g$category[i] = "st"} else if (CGI$CGI_D10_6g$i1[i]>0 & CGI$CGI_D10_6g$i1[i]<12.5) {CGI$CGI_D10_6g$category[i] = "a"} else {CGI$CGI_D10_6g$category[i] = "T"}}
+for(i in 1:100) {if(CGI$CGI_D10_6g$i1[i]>=37.5) {CGI$CGI_D10_6g$category[i] = "m"} else if (CGI$CGI_D10_6g$i1[i]>=25 & CGI$CGI_D10_6g$i1[i]<37.5){CGI$CGI_D10_6g$category[i] = "sm"} else if (CGI$CGI_D10_6g$i1[i]>=12.5 & CGI$CGI_D10_6g$i1[i]<25){CGI$CGI_D10_6g$category[i] = "st"} else if (CGI$CGI_D10_6g$i1[i]>0 & CGI$CGI_D10_6g$i1[i]<12.5) {CGI$CGI_D10_6g$category[i] = "a"} else {CGI$CGI_D10_6g$category[i] = "T"}}
 ```
 ```
 CGI$CGI_D10_6g <- CGI$CGI_D10_6g[order(CGI$CGI_D10_6g$category, -CGI$CGI_D10_6g$lenght),]
@@ -371,16 +371,16 @@ CGI$CGI_D10_6g <- CGI$CGI_D10_6g[order(CGI$CGI_D10_6g$category, -CGI$CGI_D10_6g$
 
 #### assign of category to each chromosome in the second folder (CGI_D5_9g) of CGI list
 ```
-for(i in 1:100) {if(CGI$CGI_D5_9g$i2[i]>=35.5) {CGI$CGI_D5_9g$category[i] = "m"} else if (CGI$CGI_D5_9g$i2[i]>=25 & CGI$CGI_D5_9g$i2[i]<35.5){CGI$CGI_D5_9g$category[i] = "sm"} else if (CGI$CGI_D5_9g$i2[i]>=12.5 & CGI$CGI_D5_9g$i2[i]<25){CGI$CGI_D5_9g$category[i] = "st"} else if (CGI$CGI_D5_9g$i2[i]>0 & CGI$CGI_D5_9g$i2[i]<12.5) {CGI$CGI_D5_9g$category[i] = "a"} else {CGI$CGI_D5_9g$category[i] = "T"}}
+for(i in 1:100) {if(CGI$CGI_D5_9g$i2[i]>=37.5) {CGI$CGI_D5_9g$category[i] = "m"} else if (CGI$CGI_D5_9g$i2[i]>=25 & CGI$CGI_D5_9g$i2[i]<37.5){CGI$CGI_D5_9g$category[i] = "sm"} else if (CGI$CGI_D5_9g$i2[i]>=12.5 & CGI$CGI_D5_9g$i2[i]<25){CGI$CGI_D5_9g$category[i] = "st"} else if (CGI$CGI_D5_9g$i2[i]>0 & CGI$CGI_D5_9g$i2[i]<12.5) {CGI$CGI_D5_9g$category[i] = "a"} else {CGI$CGI_D5_9g$category[i] = "T"}}
 ```
 ```
 CGI$CGI_D5_9g <- CGI$CGI_D5_9g[order(CGI$CGI_D5_9g$category, -CGI$CGI_D5_9g$lenght),]
 ```
 ```
-> for(i in 1:100) {if(CGI$CGI_X7_2_7$i3[i]>=35.5) {CGI$CGI_X7_2_7$category[i] = "m"} else if (CGI$CGI_X7_2_7$i3[i]>=25 & CGI$CGI_X7_2_7$i3[i]<35.5){CGI$CGI_X7_2_7$category[i] = "sm"} else if (CGI$CGI_X7_2_7$i3[i]>=12.5 & CGI$CGI_X7_2_7$i3[i]<25){CGI$CGI_X7_2_7$category[i] = "st"} else if (CGI$CGI_X7_2_7$i3[i]>0 & CGI$CGI_X7_2_7$i3[i]<12.5) {CGI$CGI_X7_2_7$category[i] = "a"} else {CGI$CGI_X7_2_7$category[i] = "T"}}
+> for(i in 1:100) {if(CGI$CGI_X7_2_7$i3[i]>=37.5) {CGI$CGI_X7_2_7$category[i] = "m"} else if (CGI$CGI_X7_2_7$i3[i]>=25 & CGI$CGI_X7_2_7$i3[i]<37.5){CGI$CGI_X7_2_7$category[i] = "sm"} else if (CGI$CGI_X7_2_7$i3[i]>=12.5 & CGI$CGI_X7_2_7$i3[i]<25){CGI$CGI_X7_2_7$category[i] = "st"} else if (CGI$CGI_X7_2_7$i3[i]>0 & CGI$CGI_X7_2_7$i3[i]<12.5) {CGI$CGI_X7_2_7$category[i] = "a"} else {CGI$CGI_X7_2_7$category[i] = "T"}}
 ```
 ```
-for(i in 1:100) {if(CGI$CGI_D10_4g$i4[i]>=35.5) {CGI$CGI_D10_4g$category[i] = "m"} else if (CGI$CGI_D10_4g$i4[i]>=25 & CGI$CGI_D10_4g$i4[i]<35.5){CGI$CGI_D10_4g$category[i] = "sm"} else if (CGI$CGI_D10_4g$i4[i]>=12.5 & CGI$CGI_D10_4g$i4[i]<25){CGI$CGI_D10_4g$category[i] = "st"} else if (CGI$CGI_D10_4g$i4[i]>0 & CGI$CGI_D10_4g$i4[i]<12.5) {CGI$CGI_D10_4g$category[i] = "a"} else {CGI$CGI_D10_4g$category[i] = "T"}}
+for(i in 1:100) {if(CGI$CGI_D10_4g$i4[i]>=37.5) {CGI$CGI_D10_4g$category[i] = "m"} else if (CGI$CGI_D10_4g$i4[i]>=25 & CGI$CGI_D10_4g$i4[i]<37.5){CGI$CGI_D10_4g$category[i] = "sm"} else if (CGI$CGI_D10_4g$i4[i]>=12.5 & CGI$CGI_D10_4g$i4[i]<25){CGI$CGI_D10_4g$category[i] = "st"} else if (CGI$CGI_D10_4g$i4[i]>0 & CGI$CGI_D10_4g$i4[i]<12.5) {CGI$CGI_D10_4g$category[i] = "a"} else {CGI$CGI_D10_4g$category[i] = "T"}}
 ```
 ```
 > CGI$CGI_D10_4g <- CGI$CGI_D10_4g[order(CGI$CGI_D10_4g$category, -CGI$CGI_D10_4g$lenght),]
@@ -407,11 +407,11 @@ all three scripts (CAU, CCA, CGI) uploaded (CAU as the last one) = CAU chromosom
 (par_dotplot <- par(mfcol=c(3,1), mai=c(0.53,0.55,0.17,0.1), font=3))
 ```
 ```
-plot(CAU$length_i$mean_i, CAU$length_i$mean_length, pch=16, col="blue", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5, 50), col="gray", lty=2))
+plot(CAU$length_i$mean_i, CAU$length_i$mean_length, pch=16, col="blue", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5, 50), col="gray", lty=2))
 legend("bottomright", legend = "Carassius auratus", pch = 16, col = "blue")
-plot(CCA$length_i$mean_i, CCA$length_i$mean_length, pch=16, col="red", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5, 50), col="gray", lty=2))
+plot(CCA$length_i$mean_i, CCA$length_i$mean_length, pch=16, col="red", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5, 50), col="gray", lty=2))
 legend("bottomright", legend = "Carassius carassius", pch = 16, col = "red")
-plot(CGI$length_i$mean_i, CGI$length_i$mean_length, pch=16, col="yellow3", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5,50), col="gray", lty=2))
+plot(CGI$length_i$mean_i, CGI$length_i$mean_length, pch=16, col="yellow3", ylim = c(15, 45), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5,50), col="gray", lty=2))
 legend("topright", legend = "Carassius gibelio", pch = 16, col = "yellow3")
 ```
 ```
