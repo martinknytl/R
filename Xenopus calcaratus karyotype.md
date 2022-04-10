@@ -190,7 +190,7 @@ XCA$i <- data.frame(
 )
 ```
 
-#### mean and of l percentage for each row of "l_percentage" data frame 
+#### mean and median of l percentage for each row of "l_percentage" data frame 
 ```
 XCA$l_percentage$mean_l=apply (XCA$l_percentage, 1, mean)
 XCA$l_percentage$median_l=apply (XCA$l_percentage, 1, median)
@@ -346,8 +346,7 @@ r1_chromosome20 <- Select_chromeIII(39,40)
 ```
 #### Chromosomal category added
 ```
-for(i in 1:20) {if(final_table$median_i[i]>=35.5) {final_table$category[i] = "m"} else if (final_table$median_i[i]>=25 & final_table$median_i[i]<35.5){final_table$category[i] = "sm"} else if (final_table$median_i[i]>=12.5 & final_table$median_i[i]<25){final_table$category[i] = "st"} else if (final_table$median_i[i]>0 & final_table$median_i[i]<12.5) {final_table$category[i] = "a"} else {final_table$category[i] = "T"}}
-```
+for(i in 1:20) {if(final_table$median_i[i]>=37.5) {final_table$category[i] = "m"} else if (final_table$median_i[i]>=25 & final_table$median_i[i]<37.5){final_table$category[i] = "sm"} else if (final_table$median_i[i]>=12.5 & final_table$median_i[i]<25){final_table$category[i] = "st"} else if (final_table$median_i[i]>0 & final_table$median_i[i]<12.5) {final_table$category[i] = "a"} else {final_table$category[i] = "T"}}```
 ```
 > for (i in 1:20) {
 + cat("rm(l_chromosome", i, ")", "\n")    
@@ -466,7 +465,7 @@ rm(r1_chromosome 20 )
 
 #### Dotplot created
 ```
-plot(final_table$median_i, final_table$median_l, pch=16, col="red", ylim = c(0, 5), xlab = "centromeric index", ylab = "chromosomal length (%)", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 35.5), col="gray", lty=2))
+plot(final_table$median_i, final_table$median_l, pch=16, col="red", ylim = c(0, 5), xlim = c(0, 50), xlab = "centromeric index", ylab = "chromosomal length (%)", ann=TRUE, las=1, abline(v=c(0, 12.5, 25, 37.5, 50), col="gray", lty=2))
 ```
 ```
 XCA_dotplot <- recordPlot()
