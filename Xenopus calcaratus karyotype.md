@@ -617,3 +617,14 @@ save as image (999 x 605)
 setwd("C:/Users/Martin/Documents/R/XCA_paper")
 write.table(final_table, file = "final_table.txt")
 ```
+
+#### export data frame (Table 1) from R to LaTeX
+
+```
+library(xtable)
+```
+```
+print(xtable(CAU_CCA_CGI_median, type = "latex"), file = "CAU_CCA_CGI_median_i.tex")
+```
+
+open table in R, ctrl+c from R and ctrl+v to LaTeX
