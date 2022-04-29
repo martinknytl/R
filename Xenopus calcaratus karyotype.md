@@ -632,9 +632,162 @@ open table in R, ctrl+c from R and ctrl+v to LaTeX
 #### Statistical test of variability
 
 ```
-l_chromosome1_2 <- paste (c(l_chromosome1, l_chromosome2))
-chromosome1 <- c(rep("1a", times=70), rep("1b", times=70))
-l_chromosome1_ANOVA <- data.frame(chromosome1=chromosome1, l_chromosome1_2)
-one.way <- aov(l_chromosome1_2 ~ chromosome1, data = l_chromosome1_ANOVA)
+> paste0("l_chromosome", seq(from=1, to=20, by=2), "_", seq(from=2, to=20, by=2), " <- paste (c(l_chromosome", seq(from=1, to=20, by=2), ", l_chromosome", seq(from=2, to=20, by=2), "))")
+ [1] "l_chromosome1_2 <- paste (c(l_chromosome1, l_chromosome2))"    
+ [2] "l_chromosome3_4 <- paste (c(l_chromosome3, l_chromosome4))"    
+ [3] "l_chromosome5_6 <- paste (c(l_chromosome5, l_chromosome6))"    
+ [4] "l_chromosome7_8 <- paste (c(l_chromosome7, l_chromosome8))"    
+ [5] "l_chromosome9_10 <- paste (c(l_chromosome9, l_chromosome10))"  
+ [6] "l_chromosome11_12 <- paste (c(l_chromosome11, l_chromosome12))"
+ [7] "l_chromosome13_14 <- paste (c(l_chromosome13, l_chromosome14))"
+ [8] "l_chromosome15_16 <- paste (c(l_chromosome15, l_chromosome16))"
+ [9] "l_chromosome17_18 <- paste (c(l_chromosome17, l_chromosome18))"
+[10] "l_chromosome19_20 <- paste (c(l_chromosome19, l_chromosome20))"
+```
+
+Manually modifyed outputs as new scripts:
+```
+l_chromosome1_2 <- paste (c(l_chromosome1, l_chromosome2))    
+l_chromosome3_4 <- paste (c(l_chromosome3, l_chromosome4))    
+l_chromosome5_6 <- paste (c(l_chromosome5, l_chromosome6))    
+l_chromosome7_8 <- paste (c(l_chromosome7, l_chromosome8))   
+l_chromosome9_10 <- paste (c(l_chromosome9, l_chromosome10)) 
+l_chromosome11_12 <- paste (c(l_chromosome11, l_chromosome12))
+l_chromosome13_14 <- paste (c(l_chromosome13, l_chromosome14))
+l_chromosome15_16 <- paste (c(l_chromosome15, l_chromosome16))
+l_chromosome17_18 <- paste (c(l_chromosome17, l_chromosome18))
+l_chromosome19_20 <- paste (c(l_chromosome19, l_chromosome20))
+```
+
+```
+> paste0("chromosome", 1:10, " <- c(rep('", 1:10, "a', times=70), rep('", 1:10, "b', times=70))")
+ [1] "chromosome1 <- c(rep('1a', times=70), rep('1b', times=70))"   
+ [2] "chromosome2 <- c(rep('2a', times=70), rep('2b', times=70))"   
+ [3] "chromosome3 <- c(rep('3a', times=70), rep('3b', times=70))"   
+ [4] "chromosome4 <- c(rep('4a', times=70), rep('4b', times=70))"   
+ [5] "chromosome5 <- c(rep('5a', times=70), rep('5b', times=70))"   
+ [6] "chromosome6 <- c(rep('6a', times=70), rep('6b', times=70))"   
+ [7] "chromosome7 <- c(rep('7a', times=70), rep('7b', times=70))"   
+ [8] "chromosome8 <- c(rep('8a', times=70), rep('8b', times=70))"   
+ [9] "chromosome9 <- c(rep('9a', times=70), rep('9b', times=70))"   
+[10] "chromosome10 <- c(rep('10a', times=70), rep('10b', times=70))"
+```
+
+Manually modifyed outputs as new scripts:
+
+```
+chromosome1 <- c(rep('1a', times=70), rep('1b', times=70))   
+chromosome2 <- c(rep('2a', times=70), rep('2b', times=70))   
+chromosome3 <- c(rep('3a', times=70), rep('3b', times=70))   
+chromosome4 <- c(rep('4a', times=70), rep('4b', times=70))   
+chromosome5 <- c(rep('5a', times=70), rep('5b', times=70))   
+chromosome6 <- c(rep('6a', times=70), rep('6b', times=70))   
+chromosome7 <- c(rep('7a', times=70), rep('7b', times=70))   
+chromosome8 <- c(rep('8a', times=70), rep('8b', times=70))   
+chromosome9 <- c(rep('9a', times=70), rep('9b', times=70))   
+chromosome10 <- c(rep('10a', times=70), rep('10b', times=70))
+```
+
+```
+> paste0("l_chromosome", 1:10, "_ANOVA = data.frame(chromosome", 1:10, "=chromosome", 1:10, ", l_chromosome", seq(from=1, to=20, by=2), "_", seq(from=2, to=20, by=2))
+ [1] "l_chromosome1_ANOVA = data.frame(chromosome1=chromosome1, l_chromosome1_2"     
+ [2] "l_chromosome2_ANOVA = data.frame(chromosome2=chromosome2, l_chromosome3_4"     
+ [3] "l_chromosome3_ANOVA = data.frame(chromosome3=chromosome3, l_chromosome5_6"     
+ [4] "l_chromosome4_ANOVA = data.frame(chromosome4=chromosome4, l_chromosome7_8"     
+ [5] "l_chromosome5_ANOVA = data.frame(chromosome5=chromosome5, l_chromosome9_10"    
+ [6] "l_chromosome6_ANOVA = data.frame(chromosome6=chromosome6, l_chromosome11_12"   
+ [7] "l_chromosome7_ANOVA = data.frame(chromosome7=chromosome7, l_chromosome13_14"   
+ [8] "l_chromosome8_ANOVA = data.frame(chromosome8=chromosome8, l_chromosome15_16"   
+ [9] "l_chromosome9_ANOVA = data.frame(chromosome9=chromosome9, l_chromosome17_18"   
+[10] "l_chromosome10_ANOVA = data.frame(chromosome10=chromosome10, l_chromosome19_20"
+```
+```
+Manually modifyed outputs as new scripts:
+
+```
+ANOVA <- list(
+    l_chromosome1_ANOVA = data.frame(chromosome1=chromosome1, l_chromosome1_2),
+    l_chromosome2_ANOVA = data.frame(chromosome2=chromosome2, l_chromosome3_4),
+    l_chromosome3_ANOVA = data.frame(chromosome3=chromosome3, l_chromosome5_6),
+    l_chromosome4_ANOVA = data.frame(chromosome4=chromosome4, l_chromosome7_8),
+    l_chromosome5_ANOVA = data.frame(chromosome5=chromosome5, l_chromosome9_10),   
+    l_chromosome6_ANOVA = data.frame(chromosome6=chromosome6, l_chromosome11_12),   
+    l_chromosome7_ANOVA = data.frame(chromosome7=chromosome7, l_chromosome13_14), 
+    l_chromosome8_ANOVA = data.frame(chromosome8=chromosome8, l_chromosome15_16), 
+    l_chromosome9_ANOVA = data.frame(chromosome9=chromosome9, l_chromosome17_18 ),
+    l_chromosome10_ANOVA = data.frame(chromosome10=chromosome10, l_chromosome19_20)
+     )
+```     
+```
+> paste0("one.way <- aov(l_chromosome", seq(from=1, to=20, by=2), "_", seq(from=2, to=20, by=2), " ~ chromosome", 1:10, ", data = ANOVA$l_chromosome", 1:10, "_ANOVA)")
+ [1] "one.way <- aov(l_chromosome1_2 ~ chromosome1, data = ANOVA$l_chromosome1_ANOVA)"    
+ [2] "one.way <- aov(l_chromosome3_4 ~ chromosome2, data = ANOVA$l_chromosome2_ANOVA)"    
+ [3] "one.way <- aov(l_chromosome5_6 ~ chromosome3, data = ANOVA$l_chromosome3_ANOVA)"    
+ [4] "one.way <- aov(l_chromosome7_8 ~ chromosome4, data = ANOVA$l_chromosome4_ANOVA)"    
+ [5] "one.way <- aov(l_chromosome9_10 ~ chromosome5, data = ANOVA$l_chromosome5_ANOVA)"   
+ [6] "one.way <- aov(l_chromosome11_12 ~ chromosome6, data = ANOVA$l_chromosome6_ANOVA)"  
+ [7] "one.way <- aov(l_chromosome13_14 ~ chromosome7, data = ANOVA$l_chromosome7_ANOVA)"  
+ [8] "one.way <- aov(l_chromosome15_16 ~ chromosome8, data = ANOVA$l_chromosome8_ANOVA)"  
+ [9] "one.way <- aov(l_chromosome17_18 ~ chromosome9, data = ANOVA$l_chromosome9_ANOVA)"  
+[10] "one.way <- aov(l_chromosome19_20 ~ chromosome10, data = ANOVA$l_chromosome10_ANOVA)"
+```
+```
+one.way <- aov(l_chromosome1_2 ~ chromosome1, data = ANOVA$l_chromosome1_ANOVA)
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome3_4 ~ chromosome2, data = ANOVA$l_chromosome2_ANOVA)    
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome5_6 ~ chromosome3, data = ANOVA$l_chromosome3_ANOVA)    
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome7_8 ~ chromosome4, data = ANOVA$l_chromosome4_ANOVA)   
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome9_10 ~ chromosome5, data = ANOVA$l_chromosome5_ANOVA)   
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome11_12 ~ chromosome6, data = ANOVA$l_chromosome6_ANOVA)  
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome13_14 ~ chromosome7, data = ANOVA$l_chromosome7_ANOVA)  
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome15_16 ~ chromosome8, data = ANOVA$l_chromosome8_ANOVA)  
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome17_18 ~ chromosome9, data = ANOVA$l_chromosome9_ANOVA)
+```
+```
+summary(one.way)
+```
+```
+one.way <- aov(l_chromosome19_20 ~ chromosome10, data = ANOVA$l_chromosome10_ANOVA)
+```
+```
 summary(one.way)
 ```
