@@ -629,7 +629,7 @@ print(xtable(CAU_CCA_CGI_median, type = "latex"), file = "CAU_CCA_CGI_median_i.t
 
 open table in R, ctrl+c from R and ctrl+v to LaTeX
 
-#### Statistical test of variability
+#### Analysis of variability (ANOVA)
 
 ```
 > paste0("l_chromosome", seq(from=1, to=20, by=2), "_", seq(from=2, to=20, by=2), " <- paste (c(l_chromosome", seq(from=1, to=20, by=2), ", l_chromosome", seq(from=2, to=20, by=2), "))")
