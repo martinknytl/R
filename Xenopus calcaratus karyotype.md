@@ -618,7 +618,7 @@ setwd("C:/Users/Martin/Documents/R/XCA_paper")
 write.table(final_table, file = "final_table.txt")
 ```
 
-#### export data frame (Table 1) from R to LaTeX
+#### Export data frame (Table 1) from R to LaTeX
 
 ```
 library(xtable)
@@ -628,3 +628,13 @@ print(xtable(CAU_CCA_CGI_median, type = "latex"), file = "CAU_CCA_CGI_median_i.t
 ```
 
 open table in R, ctrl+c from R and ctrl+v to LaTeX
+
+#### Statistical test of variability
+
+```
+l_chromosome1_2 <- paste (c(l_chromosome1, l_chromosome2))
+chromosome1 <- c(rep("1a", times=70), rep("1b", times=70))
+l_chromosome1_ANOVA <- data.frame(chromosome1=chromosome1, l_chromosome1_2)
+one.way <- aov(l_chromosome1_2 ~ chromosome1, data = l_chromosome1_ANOVA)
+summary(one.way)
+```
