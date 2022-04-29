@@ -701,7 +701,7 @@ chromosome10 <- c(rep('10a', times=70), rep('10b', times=70))
  [9] "l_chromosome9_ANOVA = data.frame(chromosome9=chromosome9, l_chromosome17_18"   
 [10] "l_chromosome10_ANOVA = data.frame(chromosome10=chromosome10, l_chromosome19_20"
 ```
-```
+
 Manually modifyed outputs as new scripts:
 
 ```
