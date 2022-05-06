@@ -358,9 +358,9 @@ CGI_boxplot <- recordPlot()
 
 
 #### assign of category to each chromosome in the "mean_i_corrected" folder
-
+```
 for(i in 1:100) {if(CGI$lenght_i$mean_i_corrected[i]>=37.5) {CGI$lenght_i$category[i] = "m"} else if (CGI$lenght_i$mean_i_corrected[i]>=25 & CGI$lenght_i$mean_i_corrected[i]<37.5){CGI$lenght_i$category[i] = "sm"} else if (CGI$lenght_i$mean_i_corrected[i]>=12.5 & CGI$lenght_i$mean_i_corrected[i]<25){CGI$lenght_i$category[i] = "st"} else if (CGI$lenght_i$mean_i_corrected[i]>0 & CGI$lenght_i$mean_i_corrected[i]<12.5) {CGI$lenght_i$category[i] = "a"} else {CGI$lenght_i$category[i] = "T"}}
-
+```
 #### assign of category to each chromosome in the first folder (CGI_D10_6g) of CGI list
 ```
 for(i in 1:100) {if(CGI$CGI_D10_6g$i1[i]>=37.5) {CGI$CGI_D10_6g$category[i] = "m"} else if (CGI$CGI_D10_6g$i1[i]>=25 & CGI$CGI_D10_6g$i1[i]<37.5){CGI$CGI_D10_6g$category[i] = "sm"} else if (CGI$CGI_D10_6g$i1[i]>=12.5 & CGI$CGI_D10_6g$i1[i]<25){CGI$CGI_D10_6g$category[i] = "st"} else if (CGI$CGI_D10_6g$i1[i]>0 & CGI$CGI_D10_6g$i1[i]<12.5) {CGI$CGI_D10_6g$category[i] = "a"} else {CGI$CGI_D10_6g$category[i] = "T"}}
